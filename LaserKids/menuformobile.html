@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Меню для телефона</title>
+
+	<link rel="stylesheet" href="styleformobile.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="wrapper">
+	<div class="menu">
+		
+		<nav>
+			<div class="btn"><i class="fa fa-bars"></i>
+			</div>
+			<p>Меню</p>
+			<a href="#">Главная</a>
+			<a href="#">О нас</a>
+			<a href="#">Портфолио</a>
+			<a href="#">Каталог</a>
+		</nav>
+	</div>
+	<div class="top">
+		<div class="header">
+			<span id="one">Sign In</span>
+			<span id="three">Welcome to my website</span>
+			<a href="index.html" id="two">Logo Img</a>
+		</div>
+		<p>
+			Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Гор даль, пустился необходимыми переулка оксмокс которое, подзаголовок заглавных lorem его парадигматическая рот ipsum правилами раз языкового жизни? Возвращайся, однажды Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Повстречался себя последний запятых рукописи вершину языкового.
+		</p>
+		<div class="img">
+			<img src="images/img9.jpg">
+	   </div>
+	   <p style="text-align: center;">Кликни на кнопку сверху-слева что бы увидеть много нового</p>
+	   <div class="btn2">Можно и нажать</div>
+</div>
+	
+	<script>
+	  let men = document.getElementsByClassName('btn'),
+          man = document.getElementsByClassName('menu'),
+          man2 = document.getElementsByClassName('top'),
+          men2 = document.getElementsByClassName('btn2');
+
+      men[0].addEventListener('click', function(){
+
+	  if(!(this.classList.contains('active'))){
+		  this.classList.add('active');
+	      man[0].style.left = 0;
+	  } else {
+		  this.classList.remove('active');
+		  man[0].style.left = -35 + '%';
+	    }
+      })
+
+       men2[0].addEventListener('click', function(){
+       	if(!(this.classList.contains('active'))){
+		  this.classList.add('active');
+	      man2[0].style.top = 0;
+	  } else {
+		  this.classList.remove('active');
+		  man2[0].style.top = -87 + '%';
+	    }
+      })
+
+	</script>		
+</body>
+</html>

@@ -1,0 +1,28 @@
+@media only screen and (max-width: 800px){
+  .price{
+  display: grid;
+  grid-template-columns: 1fr;
+
+   }
+
+  article{
+	width: 60%;
+   }
+
+   #sitebar_catalog{
+	margin: 20px 0px 0 0px;
+	
+   }
+
+    .headkatalog{
+	color: #FF6D3C;
+	text-align: center;
+	margin: 15px 30px 0 30px;
+	padding: 20px 25px;
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Lora', serif;
+	border-radius: 5px;
+	background-color: #669
+
+    }
+}
