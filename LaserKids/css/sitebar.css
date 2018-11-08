@@ -1,7 +1,3 @@
-
-aside {
-	width:35%;
-}
 .sitebar_content{
 	width:100%;
 	display: flex;
@@ -59,21 +55,24 @@ aside {
     font-size:14px;
     overflow: hidden;
     max-height: 0;
-    transition: max-height 1s ease-out;
+    transition: max-height 0.8s ease-out;
     margin-top: 5px;
 }
-
+.active+#ul4{
+    max-height: 75px;
+    transition: all 0.8s ease-out;
+}
 .active+#ul3{
      max-height: 148px;
-     transition: all 1s ease-out;
+     transition: all 0.8s ease-out;
 }
 .active+#ul2{
      max-height: 221px;
-     transition: all 1.2s ease-out;
+     transition: all 0.8s ease-out;
 }
 .active+#ul1{
     max-height: 181px;
-    transition: all 1s ease-out;
+    transition: all 0.8s ease-out;
 }
 .headmenusitebar{
     display: flex;
