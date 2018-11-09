@@ -130,10 +130,10 @@ span i{
     left: -5px;
 }
 
-#yandex-map{
-	display: flex;
-	justify-content: center;
+.yandex-map{
 	margin: 0px auto;
+    width: 320px;
+    height: 280px;
 }
 
 .sitebarbox{
