@@ -1,13 +1,11 @@
+html,
 body{
       margin: 0;
       padding: 0;
-      width: 1005px;    
-}
-aside{
-	width:35%;
+      min-width: 1005px;  
+      height: 100%;  
 }
 main{
 	display: flex;
 	flex-direction: row-reverse;
-	width: 100%;
 }
