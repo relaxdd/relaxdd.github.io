@@ -4,9 +4,16 @@
   grid-template-columns: 1fr;
 
    }
-
+   .pricebox{
+   	width: 70%;
+   	margin: 0 auto;
+   	margin-bottom: 15px;
+   }
   article{
-	width: 70%;
+	width: 60%;
+   }
+   aside{
+   	width: 40%;
    }
 
    #sitebar_catalog{

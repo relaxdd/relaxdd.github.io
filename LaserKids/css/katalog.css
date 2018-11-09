@@ -2,19 +2,14 @@ body{
 	margin: 0;
 	padding: 0;
 }
-main{
+/* main{
 	display: flex;
 	flex-direction: row-reverse;
 	width: 100%;
-}
+} */
 article{
 	width: 70%;
 }
-#sitebar_catalog{
-	margin-top: 20px;
-	width: 100%;
-}
-
 /*Основные стили каталога*/
 .contentcatalog{
 	width: 100%;

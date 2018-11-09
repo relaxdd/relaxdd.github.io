@@ -1,9 +1,13 @@
-body {
+body{
       margin: 0;
       padding: 0;
-      width: 1005px;
-      
-    }
-    aside {
+      width: 1005px;    
+}
+aside{
 	width:35%;
+}
+main{
+	display: flex;
+	flex-direction: row-reverse;
+	width: 100%;
 }
