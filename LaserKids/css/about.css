@@ -1,0 +1,20 @@
+#demo{
+        display: block;
+        border: 2px dashed #767B8B;
+        padding: 15px 15px;
+        padding-top: 5px;
+        margin-top: 20px;
+        width: 600px;
+        text-align: center;
+      }
+      #demo a{
+        text-decoration: none;
+        color: grey;
+      } 
+      #demo a:hover{
+        text-decoration: underline;
+      }
+      #demo h2{
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }

@@ -84,15 +84,18 @@ aside{
 .headmenusitebar{
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 20px;
     font-family: "Roboto", sans-serif, Helvetica, Arial;
     font-style: italic;
     padding: 7px 0;
-    margin: 15px 40px 5px 40px;
+    margin: 0 auto;
+    /*margin: 15px 40px 5px 40px; */
     background:#262626;
     border-radius: 3px;
     color:#fff;
     font-weight: 500;
+    width: 270px;
 }
 .headmenusitebar:nth-child(3){
     margin-top: 50px;
@@ -132,8 +135,10 @@ span i{
 
 .yandex-map{
 	margin: 0px auto;
+    margin-bottom: 15px;
     width: 320px;
     height: 280px;
+    border: 2px dashed #000; 
 }
 
 .sitebarbox{
@@ -161,10 +166,10 @@ span i{
     font-size: 18px;
     font-weight: bold;
 }
-.barbox a{
+/* .barbox a{
     text-decoration: none;
     color:grey;
-}
+} */
 .sitebarbox a:hover{
     text-decoration: underline;
 }

@@ -12,11 +12,11 @@
 .clearfix { display: block; }
 
 html, body {
-      position: relative;
+      /*position: relative;*/
       height: 100%;
     }
     .swiper-container {
-      width: 95%;
+      width: 100%;
       height: 400px;
       margin-top: 5px;
      
@@ -106,4 +106,7 @@ html, body {
 	padding-bottom: 20px;
 	font-family: 'Raleway', sans-serif;
 	font-family: 'Lora', serif;
+}
+iframe{
+  margin: 5px auto;
 }
