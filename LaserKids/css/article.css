@@ -17,7 +17,6 @@ html, body {
     }
     .swiper-container {
       width: 100%;
-      height: 400px;
       margin-top: 5px;
      
     }
@@ -38,7 +37,6 @@ html, body {
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
-      
     }
 
 .contetn {
