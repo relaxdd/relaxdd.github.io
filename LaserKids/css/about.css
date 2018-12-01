@@ -1,19 +1,27 @@
-#demo{
+.about{
         display: block;
-        border: 2px dashed #767B8B;
+        border: 2px solid #767B8B;
         padding: 15px 15px;
-        padding-top: 5px;
-        margin: 20px 10px;
+        margin: 15px auto;
         text-align: center;
-      }
-      #demo a{
-        text-decoration: none;
-        color: grey;
-      } 
-      #demo a:hover{
-        text-decoration: underline;
-      }
-      #demo h2{
-        margin-top: 5px;
-        margin-bottom: 10px;
-      }
+        border-radius: 5px;
+        background-color: #D0D4E1;
+        width: 600px;
+}
+.about>p{
+  font-size: 18px;
+  font-style: italic;
+  text-align: left;
+  font-weight: 500;
+}
+.about>p>a{
+  text-decoration: none;
+  color: blue;
+} 
+.about>p>a:hover{
+  text-decoration: underline;
+ }
+.aboutheader>h2,
+.about>h3{
+margin: 0;
+}
