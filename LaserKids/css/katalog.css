@@ -112,7 +112,7 @@ p.textprice{
 	font-weight: bold;
 	font-size: 22px;
 	width: 50%;
-	border:2px solid #92CCD5;
+	border:2px solid grey;
 	border-radius: 5px;
 	margin: 5px auto;
 	padding: 0;
@@ -124,7 +124,7 @@ p.textprice{
 }
 
 p.textprice:hover{
-	color: #20bcd5;
+	color: grey;
 
 }
 
@@ -148,7 +148,7 @@ p.textprice:hover{
 	
 }
 .buton:hover{
-	color: #20bcd5;
+	color: grey;
 }
 
  .div{
