@@ -2,14 +2,14 @@
         display: block;
         border: 2px solid #767B8B;
         padding: 15px 15px;
-        margin: 15px auto;
+        margin: 10px auto;
         text-align: center;
         border-radius: 5px;
         background-color: #D0D4E1;
         width: 600px;
 }
 .about>p{
-  font-size: 18px;
+  font-size: 20px;
   font-style: italic;
   text-align: left;
   font-weight: 500;
