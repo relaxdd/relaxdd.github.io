@@ -105,6 +105,14 @@ html, body {
 	font-family: 'Raleway', sans-serif;
 	font-family: 'Lora', serif;
 }
+.textinercontent>a{
+  color: grey;
+  text-decoration: none;
+}
+.textinercontent>a:hover{
+  color: black;
+  text-decoration: underline;
+}
 iframe{
   margin: 5px auto;
 }
