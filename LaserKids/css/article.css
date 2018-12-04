@@ -98,10 +98,11 @@ html, body {
 }
 .textinercontent{
 	text-align: center;
-	font-size:18px;
+	font-size:21px;
 	margin: 1px 50px;
 	padding-top: 10px;
 	padding-bottom: 20px;
+  font-style: italic;
 	font-family: 'Raleway', sans-serif;
 	font-family: 'Lora', serif;
 }
