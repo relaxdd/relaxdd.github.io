@@ -74,3 +74,9 @@ margin: 0;
   color: #8DE1D9;
   transition:all 0.2s ease;
 }
+.imgstart{
+  border: 2px solid black;
+  height: 380px;
+  width: 590px;
+  margin: 10px auto;
+}
