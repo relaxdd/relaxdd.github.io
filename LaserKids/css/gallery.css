@@ -12,7 +12,7 @@ hr{
 	display: grid;
 	grid-gap: 5px;
 	grid-template-rows: repeat(9, 300px);
-	grid-template-areas: "a a a a a b b b b"
+	grid-template-areas: "a a a a b b b b b"
 	                     "d d d k k k k k k"
 	                     "j j j j j f f f f"
 	                     "j j j j j c c c c"
@@ -91,3 +91,38 @@ hr{
 	grid-area: kk;
 	background-image: url(../images/galery/img3.jpg);
 } 
+.next-page{
+	text-align: center;
+	margin-top: 15px;
+}
+.next-page-text{
+	display: inline-block;
+	padding: 10px 15px;
+	margin: 0 auto;
+	font-size: 16px;
+	text-decoration: none;
+	color: black;
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	font-weight: 400;
+}
+.next-page-text:hover{
+	opacity: 0.7;
+
+}
+.next-page-item{
+	margin-top: 15px;
+}
+.next-page-number{
+	padding: 5px 10px;
+	color: black;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.number-active{
+	background-color: #D0D4E1;
+	color: #fff;
+}
+.number-noactive:hover{
+	color: grey;
+}
