@@ -11,17 +11,23 @@ hr{
 	padding: 0 10px;
 	display: grid;
 	grid-gap: 5px;
-	grid-template-rows: repeat(5, 300px);
+	grid-template-rows: repeat(9, 300px);
 	grid-template-areas: "a a a a a b b b b"
 	                     "d d d k k k k k k"
 	                     "j j j j j f f f f"
 	                     "j j j j j c c c c"
-	                     "e e e e e e e e e";
+	                     "e e e e e e e e e"
+	                     "bb bb bb bb bb aa aa aa aa"
+	                     "cc cc cc cc cc aa aa aa aa"
+	                     "dd dd dd ee ee ee ee ee ee"
+	                     "ff ff ff ff kk kk kk kk kk";
+	                     
 	                     
 }
 .galleryphoto{
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	border: 2px solid grey;
 	
 }
@@ -35,7 +41,7 @@ hr{
 }
 .grid-item-c{
 	grid-area: c;
-	background-image: url(../images/galery/img3.jpg);
+	background-image: url(../images/galery/img19.jpg);
 }
 .grid-item-d{
 	grid-area: d;
@@ -55,5 +61,33 @@ hr{
 }
 .grid-item-k{
 	grid-area: k;
-	background-image: url(../images/galery/img11.jpg);
+	background-image: url(../images/galery/img8.jpg);
 }
+.grid-item-aa{
+	grid-area: aa;
+	background-image: url(../images/galery/img12.jpg);
+}
+.grid-item-bb{
+	grid-area: bb;
+	background-image: url(../images/img4.jpg);
+}
+ .grid-item-cc{
+	grid-area: cc;
+	background-image: url(../images/galery/img16.jpg);
+}
+.grid-item-dd{
+	grid-area: dd;
+	background-image: url(../images/galery/img15.jpg);
+}
+.grid-item-ee{
+	grid-area: ee;
+	background-image: url(../images/galery/img5.jpg);
+}
+.grid-item-ff{
+	grid-area: ff;
+	background-image: url(../images/galery/img11.jpg);
+} 
+.grid-item-kk{
+	grid-area: kk;
+	background-image: url(../images/galery/img3.jpg);
+} 
