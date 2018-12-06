@@ -41,9 +41,6 @@ font-style: italic;
   text-decoration: none;
   margin-left: 5px;
 }
-.social_about_inner a:hover{
-  text-decoration: underline;
-}
 .social_about_inner i{
   display: block;
   transition:all 0.2s ease;
