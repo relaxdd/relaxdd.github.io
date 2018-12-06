@@ -1,0 +1,59 @@
+.galleryheader h2{
+	text-align: center;
+	margin: 15px 0;
+}
+hr{
+	width: 600px;
+}
+
+.grid_gallery{
+	margin-top: 20px;
+	padding: 0 10px;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-rows: repeat(5, 300px);
+	grid-template-areas: "a a a a a b b b b"
+	                     "d d d k k k k k k"
+	                     "j j j j j f f f f"
+	                     "j j j j j c c c c"
+	                     "e e e e e e e e e";
+	                     
+}
+.galleryphoto{
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 2px solid grey;
+	
+}
+.grid-item-a{
+	background-image: url(../images/galery/img2.jpg);
+	grid-area: a;
+}
+.grid-item-b{
+	grid-area: b;
+	background-image: url(../images/galery/img13.jpg);
+}
+.grid-item-c{
+	grid-area: c;
+	background-image: url(../images/galery/img3.jpg);
+}
+.grid-item-d{
+	grid-area: d;
+	background-image: url(../images/galery/img4.jpg);
+}
+.grid-item-e{
+	grid-area: e;
+	background-image: url(../images/galery/img6.jpg);
+}
+.grid-item-f{
+	grid-area: f;
+	background-image: url(../images/galery/img7.jpg);
+}
+.grid-item-j{
+	grid-area: j;
+	background-image: url(../images/galery/img9.jpg);
+}
+.grid-item-k{
+	grid-area: k;
+	background-image: url(../images/galery/img11.jpg);
+}
