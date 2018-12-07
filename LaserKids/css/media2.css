@@ -1,0 +1,71 @@
+@media only screen and (max-width: 3270px){
+   .menu,
+   .imgheader{
+    display: none;
+   }
+   #site-header{
+    height: 80px;
+    justify-content: center;
+   }
+   .sitebar_content{
+    display: none;
+   }
+   .inercontent2{
+    width: 100%;
+   }
+   .textinercontent{
+    font-size: 40px;
+    margin: 30px 40px;
+   }
+   .inercontent2 h2{
+    font-size: 50px;
+    margin: 0;
+   }
+   .inercontent2 hr{
+    width: 85%;
+   }
+  .img-item{
+    width: 85%;
+    height: 515px;
+  }
+  .inercontent1{
+        height:485px;
+    }
+    .minibox{
+    width: 370px;
+    }
+    .inercontent1 #h2{
+      font-size: 30px;
+    }
+    .text {
+    font-size: 27px;
+    margin-top: 10px;
+    }
+    #endminibox {
+    font-size: 26px;
+    }
+    #namesitehead {
+    font-size: 45px;
+    }
+    .swiper-container{
+      display: none;
+    }
+    iframe{
+      display: none;
+    }
+    .widget-social li {
+      font-size: 25px;
+    }
+    .namesite {
+    font-size: 40px;
+    }
+    #copy{
+      font-size: 22px;
+    }
+    #weabout{
+      font-size: 30px;
+    }
+    .footermenublock a{
+      font-size: 20px;
+    }
+}
