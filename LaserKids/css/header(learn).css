@@ -21,7 +21,9 @@ body{
 	font-style:italic;
 	transition: all 0.3s ease;
 }
-
+.toggle-button{
+	display: none;
+}
 .menu ul li a:hover{
 	
 	color: #FF7777;

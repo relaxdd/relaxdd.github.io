@@ -140,6 +140,10 @@ span i{
     border: 2px solid #000; 
     border-radius: 5px;
 }
+.yandex-map img{
+    width: 320px;
+    height: 280px;
+}
 
 .sitebarbox{
 	background-color: #D0D4E1;

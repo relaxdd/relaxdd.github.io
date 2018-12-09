@@ -1,14 +1,48 @@
-@media only screen and (max-width: 3270px){
+@media only screen and (max-width: 980px){
    .menu,
    .imgheader{
     display: none;
    }
+   
    #site-header{
-    height: 80px;
+    height: 95px;
     justify-content: center;
+    align-items: center
    }
    .sitebar_content{
-    display: none;
+    position: fixed;
+     left: -450px; 
+    top: -10px;
+    width: 450px;
+    background-color: #57626f;
+    border-right: 2px solid black;
+    transition: all 0.4s ease-out;
+   }
+   #toggle-button{
+     position: absolute;
+     top: 23px;
+     left: 460px;
+     width: 70px;
+     height: 70px;
+     background-color: #e0e5ea;
+     border-radius: 10px;
+     cursor: pointer;
+   }
+   .sitebar_content.active{
+     left: 0px;
+   }
+   .toggle-button span{
+     display: block;
+     width: 80%;
+     height: 10px;
+     color: #666;
+     margin-top: 30px;
+   }
+   .toggle-button span:hover{
+     background-color: #fafafa;
+   }
+   .toggle-button:hover{
+     background-color: #556270;
    }
    .inercontent2{
     width: 100%;
@@ -25,14 +59,14 @@
     width: 85%;
    }
   .img-item{
-    width: 85%;
+    width: 90%;
     height: 515px;
   }
   .inercontent1{
-        height:485px;
+        height:530px;
     }
     .minibox{
-    width: 370px;
+    width: 400px;
     }
     .inercontent1 #h2{
       font-size: 30px;
@@ -68,4 +102,29 @@
     .footermenublock a{
       font-size: 20px;
     }
+    .sitebarbox{
+      width: 90%;
+      height: 230px;
+      line-height: 36px;
+      padding-top: 20px;
+    }   
+    .sitebarbox p{
+     font-size: 30px;
+     margin: 0;
+    }   
+    .yandex-map{
+      width: 90%;
+      height: 350px;
+    }
+    .yandex-map img{
+      width: 100%;
+      height: 350px;
+    }
+    .mobile{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 660px){
+
 }
