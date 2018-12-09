@@ -11,17 +11,24 @@
    }
    .sitebar_content{
     position: fixed;
-     left: -450px; 
-    top: -10px;
-    width: 450px;
-    background-color: #57626f;
+     left: -706px; 
+    top: 0px;
+    width: 70%;
+    height: 100%;
+    background-color: #3E4955;
+    border-radius: 10px;
     border-right: 2px solid black;
     transition: all 0.4s ease-out;
    }
+   .menusitebar span,
+   .menusitebar li a{
+     color: #fff;
+     font-size: 30px;
+   }
    #toggle-button{
      position: absolute;
-     top: 23px;
-     left: 460px;
+     top: 10px;
+     left: 715px;
      width: 70px;
      height: 70px;
      background-color: #e0e5ea;
@@ -103,22 +110,22 @@
       font-size: 20px;
     }
     .sitebarbox{
-      width: 90%;
-      height: 230px;
-      line-height: 36px;
-      padding-top: 20px;
+      width: 85%;
+      
+      line-height: 45px;
+      padding: 30px 10px;
     }   
     .sitebarbox p{
-     font-size: 30px;
+     font-size: 35px;
      margin: 0;
     }   
     .yandex-map{
-      width: 90%;
-      height: 350px;
+      width: 85%;
+      height: 450px;
     }
     .yandex-map img{
       width: 100%;
-      height: 350px;
+      height: 450px;
     }
     .mobile{
       display: none;
