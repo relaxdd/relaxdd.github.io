@@ -63,7 +63,7 @@
         font-size: 35px;
     }
     .div p{
-        font-size: 35px;
+        font-size: 34px;
     }
     .active+ .pricetag{
         max-height: 450px;
@@ -72,5 +72,8 @@
 @media only screen and (max-width: 426px){
     .active+ .pricetag{
         max-height: 300px;
+    }
+    .sitebar_content{
+        display: none;
     }
 }
