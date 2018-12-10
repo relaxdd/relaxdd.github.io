@@ -51,8 +51,12 @@
     }
     .buton{
         font-size: 35px;
+        width: 60%;
     }
     .catalog a{
         font-size: 25px;
     }
+}
+@media only screen and (max-width: 426px){
+    
 }
