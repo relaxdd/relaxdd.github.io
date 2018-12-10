@@ -56,7 +56,10 @@
     .catalog a{
         font-size: 25px;
     }
+    .catalog{
+        max-width: 85%;
+    }
 }
 @media only screen and (max-width: 426px){
-    
+
 }
