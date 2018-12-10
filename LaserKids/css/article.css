@@ -16,9 +16,9 @@ html, body {
       height: 100%;
     }
     .swiper-container {
-      width: 100%;
+      width: 1005px;
       margin-top: 5px;
-     
+     margin: 0 auto;
     }
 
     .swiper-slide {
@@ -47,7 +47,7 @@ html, body {
    background-image: url(../images/image3.jpg);
    background-repeat:no-repeat;
    background-size:cover;
-   width:100%;
+   width: 1005px;
    height:400px;
    margin-bottom: 5px;
 }
@@ -97,9 +97,10 @@ html, body {
   font-style: italic;
 }
 .textinercontent{
+  width: 565px;
 	text-align: center;
 	font-size:21px;
-	margin: 1px 50px;
+	margin: 1px auto;
 	padding-top: 10px;
 	padding-bottom: 20px;
   font-style: italic;
