@@ -47,7 +47,7 @@
         width: 90%;
     }
     .pricebox p{
-        font-size: 30px;
+        font-size: 35px;
     }
     .buton{
         font-size: 35px;
@@ -64,6 +64,9 @@
     }
     .div p{
         font-size: 35px;
+    }
+    .active+ .pricetag{
+        max-height: 450px;
     }
 }
 @media only screen and (max-width: 426px){
