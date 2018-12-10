@@ -2,18 +2,17 @@
 <html lang=ru_RU>
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
   
-  
-	 <title>Лазеркидс Каталог - Автоматы</title>
-   <meta name="viewport" content="width=device-width">
-   
-   <link rel="stylesheet" href="css/style.css">
+	<title>Лазеркидс Каталог - Пулеметы</title>
+
 	 <link rel="stylesheet" href="css/katalog.css">
    <link rel="stylesheet" href="css/mediakatalog.css">
    <link rel="stylesheet" href="css/media.css">
 	 <link rel="stylesheet" href="css/header(learn).css">
 	 <link rel="stylesheet" href="css/sitebar.css">
 	 <link rel="stylesheet" href="css/footer(learn).css">
+   <link rel="stylesheet" href="css/style.css">
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 	 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Mono" rel="stylesheet">
@@ -23,49 +22,21 @@
 </head>
 
 <body>
-	<header id="site-header">
-
-      <div class="namesite_header">
-
-        <div class="headersite">
-          <div class="imgheader"></div>
-           <span id="namesitehead">LaserKids</span>
-        </div>
-      </div>
-            <nav class="menu">
-            <ul>
-                <li><a  href="index.html"><i class="fa fa-home"></i>Главная</a></li>
-                <li><a href="katalog-gun.html"><i class="fa fa-th-list"></i>Каталог</a></li>
-                <li><a href="about.html"><i class="fa fa-th-list"></i>О нас</a></li>
-                <li><a href="contact.html"><i class="fa fa-th-list"></i>Контакты</a></li>
-                
-            </ul>
-            </nav> 
-    </header>
+  
+<?php require_once "header.php"; ?>
 
 <main>
   <article>
 
-    <div class="catalog">
-
-          <a class="buten" href="katalog-gun.html">Пистолеты</a>
-          <a class="buten" href="katalog-layouts.html">Макеты</a>
-          <a class="buten" href="katalog-devices.html">Девайсы</a>
-    			<a class="buten" href="katalog-Machinegun.html">Пулеметы</a>
-          <a class="buten ext" href="katalog-rifle.html">Автоматы</a>
-          <a class="buten" href="katalog-Mannequins.html">Манекены</a>	
-      </div>
-
-      <hr width="600px"/>
+    <?php require_once "catalog-header.php"; ?>
     	
     <div class="price" id="pr1" >
       <div class="priceleft">
 
         <div class="pricebox">
-          <div class="imgbox img1">
-          <img src="images/price/Rifle/img1.jpg" alt="">    
+          <div class="imgbox img1">    
           </div>
-          <h3>M16A5 Laserkids<hr/></h3>
+          <h3>Заголовки карточек<hr/></h3>
           <p class="textbox">Описания боксов с товаром Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семь текстов большого lorem, составитель жаренные одна агенство путь грамматики lorem, составитель жаренные одна агенство путь грамматики
           </p>
 
@@ -98,10 +69,9 @@
         
 
          <div class="pricebox">
-          <div class="imgbox img1">
-          <img src="images/price/Rifle/img4.jpg" alt="">    
+          <div class="imgbox img1">    
           </div>
-          <h3>Снайперская винтовка LaseKids<hr/></h3>
+          <h3>Заголовки карточек<hr/></h3>
           <p class="textbox">Описания боксов с товаром Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семь текстов большого lorem, составитель жаренные одна агенство путь грамматики lorem, составитель жаренные одна агенство путь грамматики
           </p>
 
@@ -135,10 +105,9 @@
 
        <div class="priceright">
         <div  class="pricebox">
-          <div class="imgbox img1"> 
-          <img src="images/price/Rifle/img3.jpg" alt="">   
+          <div class="imgbox img1">    
           </div>
-          <h3>SuperSliyerBoll LaserKids<hr/></h3>
+          <h3>Заголовки карточек<hr/></h3>
           <p class="textbox">Описания боксов с товаром Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семь текстов большого lorem, составитель жаренные одна агенство путь грамматики lorem, составитель жаренные одна агенство путь грамматики
           </p>
 
@@ -208,106 +177,13 @@
 
   </article>
 
-  <aside>
-    <div class="sitebar_content">
-      <div class="sitebar" id="sitebar_catalog">
-        <div class="headmenusitebar">Меню
-        </div>
-
-        <nav class="menusitebar">
-          <ul> 
-            <li><a href="index.html">Главная</a></li>        
-            <li>
-              <span class="btn"><i class="fa fa-caret-down"></i>Навигация</span>
-                <ul id="ul1" class="selection1">
-                  <li><a class="iconmenu1" href="#"><i class="fa fa-play"></i>Инструкция по применению</a></li>
-                  <li><a class="iconmenu" href="whatlasertag.html"><i class="fa fa-play"></i>Что такое Лазертаг?</a></li>
-                  <li><a class="iconmenu1" href="started.html"><i class="fa fa-play"></i>Как начать свой Лазертаг Бизнес?</a></li>
-                </ul>
-            </li>
-            <li>
-               <span class="btn"><i class="fa fa-caret-down"></i>Каталог</span>
-              <ul id="ul2" class="selection1">
-                <li><a class="iconmenu" href="katalog-rifle.html"><i class="fa fa-play"></i>Автоматы</a></li>
-                <li><a class="iconmenu" href="katalog-gun.html"><i class="fa fa-play"></i>Пистолеты</a></li>
-                <li><a class="iconmenu" href="katalog-Mannequins.html"><i class="fa fa-play"></i>Манекены</a></li>
-                <li><a class="iconmenu" href="katalog-devices.html"><i class="fa fa-play"></i>Наши девайсы</a></li>
-                <li><a class="iconmenu" href="katalog-Machinegun.html"><i class="fa fa-play"></i>Пулеметы</a></li>
-                <li><a class="iconmenu" href="katalog-layouts.html"><i class="fa fa-play"></i>Макеты</a></li>
-              </ul>
-            </li>
-            
-            <li>
-              <span class="btn"><i class="fa fa-caret-down"></i>О нас</span>
-                <ul id="ul3" class="selection1">
-                  
-                  <li><a class="iconmenu" href="contact.html"><i class="fa fa-play"></i>Контакты</a></li>
-                  <li><a class="iconmenu" href="gallery.html"><i class="fa fa-play"></i>Наша галерея</a></li>
-                  
-                </ul>
-            </li>
-            <li><a href="roznica.html">Лазертаг в розницу</a></li>
-            <li><a href="school.html">Предложения школам</a></li>
-            <li><a href="comment.html">Отзывы покупателей</a></li>
-          </ul>
-        </nav>
-           <div class="headmenusitebar"> Как нас найти?
-        </div>            
-        <div class="sitebarbox">
-          <p>Мы находимя по адресу:<br/>г. Димитровград, ул. Гвардейская 44,<br/> 
-             (Вход с левого торца здания)<br/>Телефон: +7 (960) 362 15 43
-          </p>
-        </div>
-
-         <div class="yandex-map">
-          <img src="images/yandexmap.png" alt="YandexMap" style="width: 320px; height: 280px;">
-        </div>
-         
-        <div class="headmenusitebar">Наши успехи         
-        </div>
-              
-        <div class="sitebarbox box2">
-          <p class="p2">Выставка "Детский мир 2018"</p>
-          <p class="box2_text">Не так давно мы учавствовали в выставке "Мир Детства 2018" и проказали свои новые разработки, такие как обновлённая версия базы, которая помимо этого теперь является дополнительно и электронным флагом.<br>
-        </p>
-        <span class="btn history"> Читать дальше</span>
-        <div class="box2_textfull"> 
-          Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Грустный, пояс, прямо! Коварных свой вопроса заманивший осталось за семь рукописи журчит ipsum повстречался семантика своего, лучше буквоград подзаголовок безопасную имеет ручеек наш текстов. Но меня обеспечивает бросил всемогущая использовало сих пор одна силуэт, снова текста, семь своих приставка агенство.
-        
-      </div>
-       
-        </div>
-    </div>
-  </aside> 
+  <?php require_once "sitebar.php"; ?> 
 </main>
 
-  <footer class="footer">
-      <div class="top_footer">
-        <div class="namesitefooter">
-          <div class="imgfooter"></div>
-          <span class="namesite">LaserKids</span>
-        </div>
-        <div id="social">
-          <ul class="widget-social"><span id="weabout">Мы в Соцсетях:</span>         
-            <li><a href="https://vk.com/kidlaser" target="_blank" id="vk" class="fa fa-vk"></a></li>
-            <li><a href="#" id="facebook" class="fa fa-facebook"></a></li>
-            <li><a id="twitter" href="#" class="fa fa-twitter"></a></li>
-            <li><a id="you-tube" href="#" class="fa fa-youtube-play"></a></li>      
-          </ul>    
-        </div> 
-      </div>
-    <nav class="footermenu">
-        <div class="footermenublock"><a href="index.html">Главная</a> 
-          <a href="about.html" class="bottom">О нас</a></div>
-        <div class="footermenublock"> <a href="katalog-gun.html">Каталог</a> 
-          <a href="#" class="bottom">Оплата и доставка</a></div>
-        <div class="footermenublock"> <a href="comment.html">Отзывы</a>
-            <a href="gallery.html" class="bottom">Галерея</a></div>
-    </nav>
-    <p id="copy">2014-2018г &copy; Релакс</p> 
-  </footer>
-  <script src="js/menu.js"></script>
+ <?php require_once "footer.php"; ?>
+  
   <script>
+
     var btn = document.getElementsByClassName('btn');
      
   for(let i = 0; i < btn.length; i++) {
@@ -323,8 +199,6 @@
         }
     })
    } 
-
-
   </script>
   
 </body>
