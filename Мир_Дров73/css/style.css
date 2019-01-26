@@ -3,10 +3,6 @@
 }
 
 /*Стилизуем шапку*/
-.number{
-	font-size: 32px;
-	font-weight: bold;
-}
 .nav-text{
 	color: #e28133!important;
 	font-size: 18px;
@@ -15,14 +11,13 @@
 .logo-name{
 	color: #e28133!important;
 	font-weight: bold;
-	font-size: 32px;
+	
 }
 .logo-img{
 	height: 50px;
 }
 
 .h3-preview{
-	font-size: 36px;
 	font-family: 'Old Standard TT', serif;
 }
 .preview-block{
@@ -40,4 +35,14 @@
 }
 .fz-32{
 	font-size: 32px;
+}
+.fz-22{
+	font-size: 22px;
+}
+.fz-16{
+	font-size: 16px;
+}
+
+@media(max-width: 576px){
+	
 }
