@@ -1,0 +1,43 @@
+*{
+	font-family: 'Noto Serif SC', serif;
+}
+
+/*Стилизуем шапку*/
+.number{
+	font-size: 32px;
+	font-weight: bold;
+}
+.nav-text{
+	color: #e28133!important;
+	font-size: 18px;
+	font-weight: 500;
+}
+.logo-name{
+	color: #e28133!important;
+	font-weight: bold;
+	font-size: 32px;
+}
+.logo-img{
+	height: 50px;
+}
+
+.h3-preview{
+	font-size: 36px;
+	font-family: 'Old Standard TT', serif;
+}
+.preview-block{
+	background-image: url(../img/img-6-background.jpeg);
+	background-size: cover;
+	/*opacity: 0.9;*/
+}
+.text-price{
+	font-size: 16px!important;
+}
+
+/*Кастомные стили для удобства*/
+.fz-36{
+	font-size: 36px;
+}
+.fz-32{
+	font-size: 32px;
+}
