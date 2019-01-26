@@ -20,10 +20,10 @@
 .h3-preview{
 	font-family: 'Old Standard TT', serif;
 }
-.preview-block{
+.bg{
 	background-image: url(../img/img-6-background.jpeg);
 	background-size: cover;
-	/*opacity: 0.9;*/
+
 }
 .text-price{
 	font-size: 16px!important;
@@ -41,8 +41,4 @@
 }
 .fz-16{
 	font-size: 16px;
-}
-
-@media(max-width: 576px){
-	
 }
