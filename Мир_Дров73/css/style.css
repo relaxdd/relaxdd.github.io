@@ -2,43 +2,59 @@
 	font-family: 'Noto Serif SC', serif;
 }
 
-/*Стилизуем шапку*/
-.nav-text{
-	color: #e28133!important;
-	font-size: 18px;
-	font-weight: 500;
-}
-.logo-name{
-	color: #e28133!important;
-	font-weight: bold;
-	
-}
-.logo-img{
-	height: 50px;
-}
+/*Основной цвет текста*/
+ .custom-color{
+ 	color: #e28133!important;
+ }
 
+/*Стилизуем шапку*/
 .h3-preview{
 	font-family: 'Old Standard TT', serif;
 }
+
+/*Задний фон*/
 .bg{
 	background-image: url(../img/img-6-background.jpeg);
 	background-size: cover;
-
-}
-.text-price{
-	font-size: 16px!important;
 }
 
-/*Кастомные стили для удобства*/
+
+/*Кастомные стили font-size для удобства*/
 .fz-36{
-	font-size: 36px;
+	font-size: 36px!important;
+}
+.fz-34{
+	font-size: 34px!important;
 }
 .fz-32{
-	font-size: 32px;
+	font-size: 32px!important;
+}
+.fz-30{
+	font-size: 30px!important;
+}
+.fz-28{
+	font-size: 28px!important;
+}
+.fz-26{
+	font-size: 26px!important;
+}
+.fz-24{
+	font-size: 24px!important;
 }
 .fz-22{
-	font-size: 22px;
+	font-size: 22px!important;
+}
+.fz-20{
+	font-size: 20px!important;
+}
+.fz-18{
+	font-size: 18px!important;
 }
 .fz-16{
-	font-size: 16px;
+	font-size: 16px!important;
 }
+.fz-14{
+	font-size: 14px;
+}
+
+
