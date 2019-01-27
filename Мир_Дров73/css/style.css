@@ -18,6 +18,12 @@
 	background-size: cover;
 }
 
+@media(max-width: 576px){
+	input{
+		width: 80%;
+		padding: 20px;
+	}
+}
 
 /*Кастомные стили font-size для удобства*/
 .fz-36{
