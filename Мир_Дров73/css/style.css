@@ -11,17 +11,65 @@
 .h3-preview{
 	font-family: 'Old Standard TT', serif;
 }
+input{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
 
 /*Задний фон*/
 .bg{
 	background-image: url(../img/img-6-background.jpeg);
 	background-size: cover;
 }
+.bg-about{
+	background-image: url(../img/img-8.jpeg);
+	background-size: cover;
+}
+.p-box{
+	overflow: auto;
+}
+
+/*Custom Mediaqwery*/
+@media(max-width: 768px){
+	input{
+		width: 70%;
+		padding: 15px 0 15px 10px;
+	}
+	
+}
+@media (min-width: 576px) and (max-width: 768px){
+	.j-box{
+		height: 145px;
+	}
+}
+
+@media(min-width: 576px){
+	.p-box{
+		height: 145px;
+	}
+	
+}
 
 @media(max-width: 576px){
 	input{
-		width: 80%;
-		padding: 20px;
+		width: 85%;
+		
+	}
+}
+
+@media(min-width: 1164px){
+	.ml-custom-5{
+		margin-left: 3rem!important;
+	}
+	.p-box{
+		height: 115px;
+	}
+}
+@media(min-width: 768px) and (max-width: 930px){
+	.media-box{
+		height: 201px;
+		overflow: auto;
 	}
 }
 
