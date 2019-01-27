@@ -140,10 +140,14 @@
   		</div>
   		
   		<div class="col-12 col-md-8 my-auto px-0 text-center">
-  			<form class="" action="">
+  			<form action="mail.php" method="POST">
 
-  				<input class="mb-2 mb-md-4 mx-4 mx-sm-1" type="text" placeholder="Как вас зовут?">
-  				<input class="mb-2 mb-md-4 mx-4 mx-sm-1" type="text" placeholder="Номер телефона">
+  				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="admin@mail.com">
+				<input type="hidden" name="form_subject" value="Form Subject">
+
+  				<input class="mb-2 mb-md-4 mx-4 mx-sm-1" height="50px" type="text" placeholder="Ваше имя?">
+    			<input class="mb-2 mb-md-4 mx-4 mx-sm-1" type="tel" placeholder="Номер телефона">
   				<button class="btn btn-outline-white ml-lg-4 mx-4 mx-md-1">Заказать звонок</button>	
   					
   			</form>		
