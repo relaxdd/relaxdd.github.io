@@ -19,16 +19,26 @@ input{
 
 /*Задний фон*/
 .bg{
-	background-image: url(../img/img-6-background.jpeg);
+	background: url(../img/img-6-background.jpeg) no-repeat center center;
 	background-size: cover;
 }
 .bg-about{
-	background-image: url(../img/img-8.jpeg);
+	background: url(../img/img-8.jpeg) no-repeat center center;
 	background-size: cover;
 }
 .p-box{
 	overflow: auto;
 }
+.img-logo{
+	height: 60px;
+	width: 60px;
+}
+input{
+	border-radius: 5px;
+}
+/*footer{
+	background-color: #25313f;
+}*/
 
 /*Custom Mediaqwery*/
 @media(max-width: 768px){

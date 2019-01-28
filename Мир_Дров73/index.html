@@ -10,9 +10,9 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" href="font/font-awesome-4.7.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Custom style from Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Noto+Serif+SC" rel="stylesheet">
@@ -21,24 +21,58 @@
 
 <body>
 
+<!-- Модальное окно вызова обратного звонка -->
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Заказать обратный звонок</h4>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        
+      </div>
+
+      <div class="modal-body mx-3">
+		<p class="fz-18 text-center px-2">Заполните форму и в течении 10 минут с вами свяжется наш менеджер!</p>
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form34" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form34">Как вас зовут?</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-phone prefix grey-text"></i>
+          <input type="tel" id="form32" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form32">Номер телефона</label>
+        </div>
+       
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-outline-orange">Заказать звонок<i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
  <header>
  	<nav class="navbar justify-content-between">
 
  		<a href="index.html" class="d-flex justify-content-center align-items-center mx-auto mx-sm-0">
- 			<img src="img/img-7-logo.jpeg" alt="logo" class="rounded-circle d-none d-md-inline mr-2" height="60px" width="60px">
-	 		<span href="index.html" class="fz-32 custom-color font-weight-bold mb-2 mb-sm-0 mx-auto mx-sm-0 d-flex flex-column">
+ 			<img src="img/img-7-logo.jpeg" alt="logo" class="img-logo rounded-circle d-none d-md-inline mr-2">
+	 		<span class="fz-32 custom-color font-weight-bold mb-2 mb-sm-0 mx-auto mx-sm-0 d-flex flex-column">
 	 			
 	 			<span class="mx-auto pb-2">Мир Дров</span>
 	 			<span class="text-black-50 fz-16 mx-auto">Продажа дров</span>
 	 		</span>
  		</a>
- 		
 
- 			<div class="d-flex flex-column justify-content-center my-2 mx-auto mx-sm-0">
- 				<span class="fz-32 font-weight-bold mx-auto mb-1">+7 (964) 856-7525</span>
- 				<span class="font-weight-normal fz-18 custom-color text-center">Интересуют дрова? - Звоните!</span>
- 			</div>
- 		</div>
+		<div class="d-flex flex-column justify-content-center my-2 mx-auto mx-sm-0">
+			<span class="fz-32 font-weight-bold mx-auto mb-1">+7 (964) 856-7525</span>
+			<span class="font-weight-normal fz-18 custom-color text-center">Интересуют дрова? - Звоните!</span>
+		</div>
  	</nav>
  </header>
 
@@ -80,9 +114,8 @@
 		    	<p class="fz-16 p-box">Самым пригодным вариантом выбора дров после дуба считается береза. Пусть она немного уступает дубу по теплоотдаче, но присутствует ряд других преимуществ. Температура пламени при сжигании березовых дров достигает фактически до 800 градусов, что выше, чем у дуба.
 		    	</p>
 		    	<p class="font-weight-bold font-italic text-cub">1 куб. метр - 1400р</p>
-		    	<a href="#">
-          			<button id="btn" class="btn btn-orange mt-4">Заказать</button>
-        		</a>
+		    	
+          		<button class="btn btn-orange mt-4" data-toggle="modal" data-target="#modalContactForm">Заказать</button>
 			</div>
 			
     	</div>
@@ -97,9 +130,8 @@
 	  			</div>
 		    	
 		    	<p class="font-weight-bold font-italic text-cub">1 куб. метр - 1300р</p>
-		    	<a href="#">
-          			<button class="btn btn-orange mt-4">Заказать</button>
-        		</a>
+		    	
+          		<button class="btn btn-orange mt-4" data-toggle="modal" data-target="#modalContactForm">Заказать</button>
 			</div>
     	</div>
     	<div class="col-12 col-sm-6 col-md-3 px-3 px-sm-1 pt-0 mb-4 mb-md-0">
@@ -110,9 +142,8 @@
 		    	<p class="fz-16 p-box">Все знают о том, что липа обладает целительными свойствами и ее так же, как и березу, применяют для протапливания русских бань.
 		    	</p>
 		    	<p class="font-weight-bold font-italic text-cub">1 куб. метр - 600р</p>
-		    	<a href="#">
-          			<button class="btn btn-orange mt-4">Заказать</button>
-        		</a>
+
+          		<button class="btn btn-orange mt-4" data-toggle="modal" data-target="#modalContactForm">Заказать</button>
 			</div>
     	</div>
     	<div class="col-12 col-sm-6 col-md-3 px-3 px-sm-1 pt-0 mb-4 mb-md-0">
@@ -123,13 +154,13 @@
 		    	<p class="fz-16 p-box">У липовой древесины есть своя особенность - она достаточно долго и трудно разжигается, но затем очень интенсивно говрит, быстро нагревая печь.
 		    	</p>
 		    	<p class="font-weight-bold font-italic text-cub">1 куб. метр - 500р</p>
-		    	<a href="#">
-          			<button class="btn btn-orange mt-4">Заказать</button>
-        		</a>
+
+          		<button class="btn btn-orange mt-4" data-toggle="modal" data-target="#modalContactForm">Заказать</button>
 			</div>
     	</div>
     	
-    	<h4 class="font-size-32 col-sm-8 my-5 font-weight-normal">Если интересует другая порода древесины, звоните, справшивайте, можем сделать под заказ<br></h4>
+    	<h4 class="col-sm-8 mt-5 mb-2 font-weight-bold">Если интересует другая порода древесины, звоните, справшивайте, можем сделать под заказ,</h4>
+    	<h5 class="col-sm-8 fz-28 mb-5">Доставка по городу бесплатная, стоимость доставки в пригород зависит от удаленности населенного пункта от города</h5>
 
 
    <!--  <hr class="col-10 mb-5 stylish-color"> -->
@@ -140,7 +171,7 @@
   	<div class="row py-4" style="background-color: rgba(39,47,51, 0.3);">
 
   		<div class="col-12 col-md-4 text-center mb-4 my-xl-auto">
-  			<p class="fz-20 text-white my-auto">Закажите бесплатный звонок и в течении 10 минут с вамисвяжется наш сотрудник</p>
+  			<p class="fz-20 text-white my-auto">Закажите бесплатный звонок и в течении 10 минут с вами свяжется наш менеджер</p>
   		</div>
   		
   		<div class="col-12 col-md-8 my-auto px-0 text-center">
@@ -153,11 +184,17 @@
   				<input class="mb-3 mb-md-4 mb-xl-0 mx-3 mx-md-1" type="text" placeholder="Ваше имя?">
     			<input class="mb-4 mb-md-4 mb-xl-0 mx-3 mx-md-1" type="tel" placeholder="Номер телефона">
 
-  				<button class="btn btn-outline-white ml-custom-5 mt-3 mt-lg-0">Заказать звонок</button>	
-  					
+  				<button class="btn btn-outline-white ml-custom-5 mt-3 mt-lg-0">Заказать звонок</button>
   			</form>		
 	  	</div>
   		
+  	</div>
+  </div>
+  <div class="container">
+  	<div class="row">
+  		<div class="col">
+  			
+  		</div>
   	</div>
   </div>
 
@@ -176,35 +213,50 @@
 	  		<p class="mb-4"><i class="fa fa-share text-success mr-1"></i> И самое главное - мы любим своих клиентов,</p>
 
 	  		<div class="list-unstyled font-weight-bold font-italic pl-sm-5 pl-md-4">
-	  			<li>
-				<i class="fa fa-check text-warning mr-2"></i>При заказе учитываем все ваши пожелания!
-				</li>
-				<li>
+	  			<p class="mb-1">
+					<i class="fa fa-check text-warning mr-2"></i>При заказе учитываем все ваши пожелания!
+				</p>
+				<p class="mb-1">
 					<i class="fa fa-check text-warning mr-2"></i>При повторных, крупных заказах вы получаете скидку!
-				</li>
-				<li>
+				</p>
+				<p class="mb-1">
 					<i class="fa fa-check text-warning mr-2"></i>Мы дарим вам свою заботу, получая в ответ вашу благодарность!
-				</li>
+				</p>
 	  		</div>
-	  		
-
-	  		
   		</div>
-  		
-
+  	
   	</div>
   </div>
 
- </main>
+</main>
 
- <footer>
- 	
+ <footer class="page-footer stylish-color-dark" >
+ 	<div class="container-fluid " >
+ 		<div class="row d-flex justify-content-between">
+ 			<div class="col-12 col-sm-5 col-md-4 text-center my-3">
+ 				<h4 class="mb-3">Наши контакты</h4>
+ 				<p class="contact fz-16 mb-1">Телефон +7(964)8567525</p>
+ 				<p class="contact fz-16 mb-0">E-mail dimles@list.ru</p>
+ 			</div>
+ 			<div class="col-12 col-sm-6 my-3 text-center">
+ 				<h4 class="mb-2">Наш офис находится по адресу</h4>
+ 				<p class="px-4 px-sm-0">433508, Ульяновская область, г. Димитровград, ул. Энгельска 4, офис "Мир Дров"</p>
+ 			</div>
+ 			
+ 		</div>
+ 		<div class="row">
+			<div class="col-12 text-center footer-copyright py-2">
+				© 2019 Copyright:
+				<a href="index.html">Мир Дров</a>
+			</div>
+ 		</div>
+ 	</div>
  </footer>
 
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/mdb.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/mdb.js"></script>
 </body>
 
 </html>
