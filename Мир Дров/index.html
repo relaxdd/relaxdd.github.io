@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/mdb.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.ico">
 
   <!-- Custom style from Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Noto+Serif+SC" rel="stylesheet">
@@ -39,25 +40,21 @@
 	      <div class="modal-body mx-3">
 			<p class="fz-18 text-center px-2">Заполните форму и в течении 10 минут с вами свяжется наш менеджер!</p>
 
-			<input type="hidden" name="project_name" value="Мир Дров">
-			<input type="hidden" name="admin_email" value="awenn2015@gmail.com">
-			<input type="hidden" name="form_subject" value="Вам пришло это сообщение так как вы оставляли заявку на обратный звонок">
-
 	        <div class="md-form mb-5">
 	          <i class="fas fa-user prefix grey-text"></i>
-	          <input type="text" name="Name" id="form34" class="form-control validate">
+	          <input type="text" name="user_name" id="form34" class="form-control validate">
 	          <label data-error="wrong" data-success="right" for="form34">Как вас зовут?</label>
 	        </div>
 
 	        <div class="md-form mb-5">
 	          <i class="fas fa-phone prefix grey-text"></i>
-	          <input type="tel" name="Phone" id="form32" class="form-control validate">
+	          <input type="tel" name="user_phone" id="form32" class="form-control validate">
 	          <label data-error="wrong" data-success="right" for="form32">Номер телефона</label>
 	        </div>
 	       
 	      </div>
 	      <div class="modal-footer d-flex justify-content-center">
-	        <button class="btn btn-outline-orange">Заказать звонок<i class="fas fa-paper-plane-o ml-1"></i></button>
+	        <button type="submit" class="btn btn-outline-orange">Заказать звонок<i class="fas fa-paper-plane-o ml-1"></i></button>
 	      </div>
 		</form>
       
@@ -166,12 +163,7 @@
           		<button class="btn btn-orange mt-4" data-toggle="modal" data-target="#modalContactForm">Заказать</button>
 			</div>
     	</div>
-    	
-    	
-    	
-
-
-   <!--  <hr class="col-10 mb-5 stylish-color"> -->
+  
 	</div>
   </div>
 
@@ -199,16 +191,12 @@
   		</div>
   		
   		<div class="col-12 col-md-8 my-auto px-0 text-center">
-  			<form action="modx-mail.php" method="POST">
+  			<form action="mail.php" method="POST">
 
-  				<input type="hidden" name="project_name" value="Мир Дров">
-				<input type="hidden" name="admin_email" value="awenn2015@gmail.com">
-				<input type="hidden" name="form_subject" value="Вам пришло это сообщение так как вы оставляли заявку на обратный звонок">
+  				<input class="mb-3 mb-md-4 mb-xl-0 mx-3 mx-md-1" name="user_name" type="text" placeholder="Ваше имя?">
+    			<input class="mb-4 mb-md-4 mb-xl-0 mx-3 mx-md-1" name="user_phone" type="tel" placeholder="Номер телефона">
 
-  				<input class="mb-3 mb-md-4 mb-xl-0 mx-3 mx-md-1" name="Name" type="text" placeholder="Ваше имя?" required>
-    			<input class="mb-4 mb-md-4 mb-xl-0 mx-3 mx-md-1" name="Phone" type="tel" placeholder="Номер телефона">
-
-  				<button class="btn btn-outline-white ml-custom-5 mt-3 mt-lg-0">Заказать звонок</button>
+  				<button type="submit" class="btn btn-outline-white ml-custom-5 mt-3 mt-lg-0">Заказать звонок</button>
   			</form>		
 	  	</div>
   		
@@ -270,7 +258,7 @@
  		</div>
  		<div class="row">
 			<div class="col-12 text-center footer-copyright py-2">
-				© 2019 Copyright:
+				© 2019 Все права защищены!
 				<a href="index.html">Мир Дров</a>
 			</div>
  		</div>
@@ -281,7 +269,6 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/mdb.js"></script>
-  <script src="js/script.js"></script>
 </body>
 
 </html>
