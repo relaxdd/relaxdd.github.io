@@ -26,6 +26,10 @@ input{
 	background: url(../img/img-8.jpeg) no-repeat center center;
 	background-size: cover;
 }
+.bg-transport{
+	background: url(../img/img-10.jpg) no-repeat center center;
+	background-size: cover;
+}
 .p-box{
 	overflow: auto;
 }
