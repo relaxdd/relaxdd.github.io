@@ -34,39 +34,10 @@ $mail->Body    = '' .$name . ' оставил заявку, вот его тел
 $mail->AltBody = '';
 
 if(!$mail->send()) {
-    echo 'Error';
+    echo 'Внутренняя ошибка сервера, пожалуйста попробуйте позже!';
 } else {
-  if($name == ''){
-  	// header('Location: /index.html');
-    ?>
-         <script>
-            alert("Введите имя!");
-            window.location.href = '/index.html';
-
-        </script>
-    <?php
-    
-  } else{
-    if($phone == ''){
-
-    ?>
-         <script type="text/javascript">
-            alert("Введите номер телефона!");
-            window.location.href = '/index.html';
-        </script>
-    <?php
-
-
-    } else{
-       ?>
-         <script type="text/javascript">
-            alert("Спасибо за заявку, мы вам скоро перезвоним!");
-            window.location.href = '/index.html';
-        </script>
-        <?php
-    }
-  }
-   
+	echo 'Спасибо за заявку, мы вам скоро перезвоним перейдите на <a href="index.html">Главную страницу</a>';
+	
 }
 ?>
 <!DOCTYPE html>

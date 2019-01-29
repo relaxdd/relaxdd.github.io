@@ -27,7 +27,7 @@
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-    	<form action="mail.php" method="POST">
+    	<form action="mail.php" method="POST" onsubmit="return checkForm(this)">
 			<div class="modal-header text-center">
 	        <h4 class="modal-title w-100 font-weight-bold">Заказать обратный звонок</h4>
 	        
@@ -42,16 +42,21 @@
 
 	        <div class="md-form mb-5">
 	          <i class="fas fa-user prefix grey-text"></i>
-	          <input type="text" name="user_name" id="form34" class="form-control validate">
+	          <input type="text" name="user_name" id="form34" class="form-control validate" required>
 	          <label data-error="wrong" data-success="right" for="form34">Как вас зовут?</label>
 	        </div>
 
 	        <div class="md-form mb-5">
 	          <i class="fas fa-phone prefix grey-text"></i>
-	          <input type="tel" name="user_phone" id="form32" class="form-control validate">
+	          <input type="tel" name="user_phone" id="form32" class="form-control validate" required>
 	          <label data-error="wrong" data-success="right" for="form32">Номер телефона</label>
 	        </div>
-	       
+
+         <!--  <div class="md-form mb-5">
+            <input type="number" name="user_phone" id="form32" class="form-control validate" required>
+            <label data-error="wrong" data-success="right" for="form32">Сколько будет 12 плюс 56?</label>
+          </div> -->
+  
 	      </div>
 	      <div class="modal-footer d-flex justify-content-center">
 	        <button type="submit" class="btn btn-outline-orange">Заказать звонок<i class="fas fa-paper-plane-o ml-1"></i></button>
@@ -97,7 +102,7 @@
     <div class="row d-flex justify-content-center" style="background-color: rgba(39,47,51, 0.3);">
       <div class=" col-sm-11 col-xl-8 text-center">
         <p class=" fz-32 my-5 font-weight-bold font-italic text-white">
-          Для отопления дачного дома или котеджа, для бани пикника, вам всегда пригодятся дрова, очень рекомендуем использовать березовые дрова т.к. доступные по цене и сочетают высокую теплоотдачу и температуру пламени. Горят долго и без искр!
+          Для отопления дачного дома или котеджа, для бани пикника, вам всегда пригодятся дрова, очень рекомендуем использовать березовые дрова т.к. доступные по цене, они сочетают высокую теплоотдачу и температуру пламени. Горят долго и без искр!
         </p>
       </div>
     </div> 
@@ -115,7 +120,7 @@
 	  		<img class="card-img-top" src="img/img-2.jpeg" alt="img">
 
 	  		<div class="px-1 pb-1">
-		    	<h4 class="mt-1"><a>Береза колотая</a></h4>
+		    	<h4 class="mt-1 font-weight-bold"><a>Береза колотая</a></h4>
 		    	<p class="fz-16 p-box">Самым пригодным вариантом выбора дров после дуба считается береза. Пусть она немного уступает дубу по теплоотдаче, но присутствует ряд других преимуществ. Температура пламени при сжигании березовых дров достигает фактически до 800 градусов, что выше, чем у дуба.
 		    	</p>
 		    	<p class="font-weight-bold font-italic text-cub">1 куб. метр - 1400р</p>
@@ -129,7 +134,7 @@
 
 	  		<div class="px-1 pb-1 ">
 	  			<div class="media-box">
-	  				<h4 class="mt-1"><a>Береза чурбaками</a></h4>
+	  				<h4 class="mt-1 font-weight-bold"><a>Береза чурбaками</a></h4>
 			    	<p class="fz-16 j-box">Березовые дрова чаще всего применяют для топки каминов. Они легко колются и хорошо горят. Березовые дрова содержат мало влаги, поэтому их можно топить и сырыми.
 			    	</p>
 	  			</div>
@@ -143,7 +148,7 @@
 	  		<img class="card-img-top" src="img/img-5.jpeg" alt="img">
 
 	  		<div class="px-1 pb-1">
-		    	<h4 class="mt-1"><a>Липа колотая</a></h4>
+		    	<h4 class="mt-1 font-weight-bold"><a>Липа колотая</a></h4>
 		    	<p class="fz-16 p-box">Все знают о том, что липа обладает целительными свойствами и ее так же, как и березу, применяют для протапливания русских бань.
 		    	</p>
 		    	<p class="font-weight-bold font-italic text-cub">1 куб. метр - 600р</p>
@@ -155,7 +160,7 @@
 	  		<img class="card-img-top" src="img/img-4.jpeg" alt="img">
 
 	  		<div class="px-1 pb-1">
-		    	<h4 class="mt-1"><a>Липа чурбаками</a></h4>
+		    	<h4 class="mt-1 font-weight-bold"><a>Липа чурбаками</a></h4>
 		    	<p class="fz-16 p-box">У липовой древесины есть своя особенность - она достаточно долго и трудно разжигается, но затем очень интенсивно говрит, быстро нагревая печь.
 		    	</p>
 		    	<p class="font-weight-bold font-italic text-cub">1 куб. метр - 500р</p>
@@ -193,8 +198,8 @@
   		<div class="col-12 col-md-8 my-auto px-0 text-center">
   			<form action="mail.php" method="POST">
 
-  				<input class="mb-3 mb-md-4 mb-xl-0 mx-3 mx-md-1" name="user_name" type="text" placeholder="Ваше имя?">
-    			<input class="mb-4 mb-md-4 mb-xl-0 mx-3 mx-md-1" name="user_phone" type="tel" placeholder="Номер телефона">
+  				<input class="mb-3 mb-md-4 mb-xl-0 mx-3 mx-md-1" name="user_name" type="name" placeholder="Ваше имя?" required="">
+    			<input class="mb-4 mb-md-4 mb-xl-0 mx-3 mx-md-1" name="user_phone" type="tel" placeholder="Номер телефона" required="">
 
   				<button type="submit" class="btn btn-outline-white ml-custom-5 mt-3 mt-lg-0">Заказать звонок</button>
   			</form>		
@@ -202,6 +207,17 @@
   		
   	</div>
   </div>
+
+  <div class="container-fluid mb-2">
+    <div class="row d-flex justify-content-center">
+      <div class="col-11">
+        <blockquote class="bq-warning px-3">
+          <p class="fz-28 text-black ml-3">"Кто закупит дров на зиму, тот закупит солнечного тепла и зимой, когда захочет, то и зажжёт дрова и выпустит тепло солнечное себе в горницу" - Лев Толстой</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
   	<div class="row">
   		<div class="col">
@@ -247,8 +263,8 @@
  		<div class="row d-flex justify-content-between">
  			<div class="col-12 col-sm-5 col-md-4 text-center my-3">
  				<h4 class="mb-3">Наши контакты</h4>
- 				<p class="contact fz-16 mb-1"><i class="fa fa-phone pr-1"></i>Телефон +7(964)8567525</p>
- 				<p class="contact fz-16 mb-0"><i class="fa fa-envelope pr-2"></i>E-mail dimles@list.ru</p>
+ 				<p class="contact fz-16 mb-1"><i class="fa fa-phone pr-1"></i>Телефон +7(964) 856 7525</p>
+ 				<p class="contact fz-16 mb-0"><i class="fa fa-envelope pr-3"></i>E-mail dimles@list.ru</p>
  			</div>
  			<div class="col-12 col-sm-6 my-3 px-5 text-center">
  				<h4 class="mb-2">Наш офис находится по адресу</h4>
@@ -269,6 +285,7 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/mdb.js"></script>
+
 </body>
 
 </html>
