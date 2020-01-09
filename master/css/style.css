@@ -4,6 +4,7 @@
 }*/
 footer{
 	background-color: #474747;
+	width: 100%;
 }
 .carousel{
 	margin-top: 20px;
@@ -16,6 +17,8 @@ footer{
 }
 .name-web{
 	margin-left: 15px;
+	font-family: 'Amatic SC', cursive;
+	font-size: 40px;
 }
 .top-text{
 	font-size: 30px;
@@ -93,7 +96,7 @@ footer{
 	transition: ease-out 0.3s;
 }
 .social:hover{
-	color: #cdcdcd;
+	color: #4c75a3;
 	text-decoration: none;
 }
 .social:hover > i{
@@ -114,4 +117,9 @@ footer{
 }
 .social{
 	font-size: 20px;
+}
+.bottom-name{
+	font-family: 'Amatic SC', cursive;
+	font-size: 35px;
+	margin-left: 10px;
 }

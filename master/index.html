@@ -21,8 +21,8 @@
 	<div class="container-fluid">
 		<header class="row justify-content-center">
 			<div class="col-12 col-sm-11 col-md-11 col-xl-9">
-				<div class="row d-flex justify-content-sm-between align-items-center justify-content-center ">
-					<div class="top top-left" >
+				<div class="row d-flex justify-content-sm-between align-items-center justify-content-center">
+					<div class="top top-left d-flex align-items-center justify-content-center">
 						<img class="img-logo" src="img/logo.jpg" alt="logo">
 						<span class="name-web">
 							Домашний мастер
@@ -167,13 +167,16 @@
 		</article>
 	</div>
 
-	<footer>
+	<footer class="container-fluid">
 		<div class="row pb-4 justify-content-center">
 			<div class="col-11 col-lg-10">
 				<div class="row d-flex justify-content-center justify-content-md-between text-center">
 					<div class="bottom pt-3 col-11 col-md-6 text-md-left">
-						<img src="img/logo.jpg" alt="logo" class="img-logo">
-						<span class="ml-2">Домашний мастер</span>
+						<div class="d-flex align-items-center">
+							<img src="img/logo.jpg" alt="logo" class="img-logo">
+						<span class="bottom-name">Домашний мастер</span>
+						</div>
+						
 					</div>
 					<div class="col-11 col-md-6 bottom-right d-flex flex-column pt-4 text-md-right">
 						<a href="https://vk.com/club185235391" target="_blank" class="bottom social">
@@ -185,22 +188,17 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="row justify-content-center">
-				<div class="col-10">
-						
-				</div>
-		</div> -->
 	</footer>
 
 	<script src="js/jqwery-3.4.1-min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script>
-			$("body").on('click', '[href*="#"]', function(e){
-	var fixed_offset = 35;
-	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 800);
-	e.preventDefault();
-	});
+		$("body").on('click', '[href*="#"]', function(e){
+		var fixed_offset = 35;
+		$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 800);
+		e.preventDefault();
+		});
 	</script>
 	
 	

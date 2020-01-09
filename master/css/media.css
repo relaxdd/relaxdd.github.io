@@ -33,9 +33,9 @@
 		width: 100%;
 	}
 }
-@media (min-width: 460px) and (max-width: 575px){
+@media (min-width: 441px) and (max-width: 575px){
 	.top-left{
 		width: 100%;
-		text-align: center;
+		/*text-align: center;*/
 	}
 }
