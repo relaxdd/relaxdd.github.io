@@ -1,7 +1,7 @@
-body{
+/*body{
 	background-image: url(../img/3.jpg);
 	background-attachment: fixed;
-}
+}*/
 .carousel{
 	margin-top: 20px;
 }
@@ -37,7 +37,7 @@ body{
 }
 
 .top-left{
-	margin-left: 20px;
+	margin-left: 18px;
 }
 .number{
 	color: #3e3b3b;
@@ -58,6 +58,7 @@ body{
 }
 .img-logo{
 	height: 60px;
+	border-radius: 5px;
 }
 .nav-link{
 	color: #3e3b3b;
@@ -70,6 +71,25 @@ body{
 }
 .img-carusel{
 	height: 500px;
+}
+@media (max-width: 768px){
+	.img-carusel{
+		height: 250px;
+	}
+	.top-left{
+		margin-left: 0;
+	}
+}
+@media (min-width: 760px) and (max-width: 990px){
+	nav{
+		width: 100%;
+	}
+}
+@media (min-width: 460px) and (max-width: 576px){
+	.top-left{
+		width: 100%;
+		text-align: center;
+	}
 }
 .img-2{
 	border-radius: 4px;
