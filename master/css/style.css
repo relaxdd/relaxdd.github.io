@@ -2,6 +2,9 @@
 	background-image: url(../img/3.jpg);
 	background-attachment: fixed;
 }*/
+footer{
+	background-color: #474747;
+}
 .carousel{
 	margin-top: 20px;
 }
@@ -9,6 +12,7 @@
 	font-family: 'Playfair Display', serif;
 	font-size: 24px;
 	line-height: 37px;
+	color: black;
 }
 .name-web{
 	margin-left: 15px;
@@ -72,38 +76,15 @@
 .img-carusel{
 	height: 500px;
 }
-@media (max-width: 768px){
-	.img-carusel{
-		height: 250px;
-	}
-	.top-left{
-		margin-left: 0;
-	}
-}
-@media (min-width: 760px) and (max-width: 990px){
-	nav{
-		width: 100%;
-	}
-}
-@media (min-width: 460px) and (max-width: 576px){
-	.top-left{
-		width: 100%;
-		text-align: center;
-	}
-}
 .img-2{
 	border-radius: 4px;
-}
-footer{
-	background-color: #474747;
-	height: 100px;
 }
 .number-bottom{
 	color: #adadad;
 	font-style: italic;
 	font-size: 25px;
 	font-family: 'Playfair Display', serif;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 	transition: ease-out 0.3s;
 }
 .number-bottom:hover{
@@ -130,9 +111,7 @@ footer{
 	font-family: 'Playfair Display', serif;
 	font-size: 28px;
 	color: #cdcdcd;
-	margin-top: 12px;
 }
 .social{
 	font-size: 20px;
-	margin-top: 25px;
 }
