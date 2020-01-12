@@ -1,0 +1,134 @@
+.nav-logo h1{
+	font-size: 50px;
+	font-family: 'Ma Shan Zheng', cursive;
+	padding: 30px 0;
+	display: block;
+	margin-bottom: 0;
+}
+.nav-logo a{
+	color: black;
+}
+.nav-logo a:hover{
+	color: black;
+	text-decoration: none;
+}
+.nav-logo{
+	/*background-color: #353136;*/
+
+}
+.our-price{
+	font-family: 'Caveat', cursive;
+	font-size: 30px;
+	margin: 0!important;
+}
+.price-text, .price-cost, .price-title, .btn, select{
+	font-family: 'Lora', serif;
+	font-style: italic;
+}
+.price-title{
+	margin: 20px 0;
+
+}
+.price-cost{
+	display: block;
+	font-size: 20px;
+	border: 1px grey solid;
+	padding: 10px 5px;
+	width: 30%;
+	margin-bottom: 20px;
+}
+.price-text{
+	font-size: 18px;
+}
+form{
+	margin-bottom: 20px;
+}
+select{
+	padding: 12px;
+	width: 50%;
+}
+.btn{
+	width: 40%;
+	padding: 12px!important;
+	border-radius: 0!important;
+	color: black!important;
+}
+
+.bottom-name{
+	color: #a6a6a6;
+	font-size: 45px;
+	font-family: 'Ma Shan Zheng', cursive;
+	padding: 15px 5px;
+}
+.card-text, .card-title{
+	font-family: 'Lora', serif;
+	color: black;
+}
+.card a:hover{
+	text-decoration: none;
+}
+.card-text{
+	margin-bottom: 10px!important;
+}
+.card-body{
+	padding-bottom: 12px!important;
+}
+.footer-social{
+	color: #a6a6a6;
+	font-size: 20px;
+	font-family: 'Lora', serif;
+	font-style: italic;
+	padding: 12px 10px;
+}
+.footer-social p{
+	margin: 0;
+}
+hr{
+	margin: 0!important;
+}
+footer{
+	background-color: #25313f;
+}
+.footer-social{
+	line-height: 25px;
+}
+.footer-social a{
+	margin-left: 7px;
+	color: #a6a6a6;
+}
+.footer-social a:hover{
+	text-decoration: none;
+}
+.social-vk:hover{
+	color: #4c75a3;
+	transition: ease-out 0.3s;
+}
+.social-inst:hover{
+	color: 	#c1558b;
+	transition: ease-out 0.3s;
+}
+.social-inner{
+	text-align: center;
+	margin-bottom: 5px;
+}
+.social-email:hover{
+	color: grey;
+	transition: ease-out 0.3s;
+}
+.row{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.price{
+	margin-top: 20px;
+}
+/*.card{
+	width: 25rem;
+}*/
+.status{
+}
