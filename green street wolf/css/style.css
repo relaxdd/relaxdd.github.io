@@ -35,7 +35,7 @@
 	border: 1px grey solid;
 	padding: 10px 5px;
 	width: 30%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .price-text{
 	font-size: 18px;
@@ -47,11 +47,13 @@ select{
 	padding: 12px;
 	width: 50%;
 }
-.btn{
+.price-btn{
 	width: 40%;
 	padding: 12px!important;
 	border-radius: 0!important;
 	color: black!important;
+	margin-left: 10px;
+	color: white!important;
 }
 
 .bottom-name{
