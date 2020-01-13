@@ -27,24 +27,17 @@
 }
 .price-title{
 	margin: 20px 0;
-
+	margin-bottom: 30px;
 }
 .price-cost{
 	display: block;
 	font-size: 20px;
 	border: 1px grey solid;
 	padding: 10px 5px;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 }
 .price-text{
 	font-size: 18px;
-}
-form{
-	margin-bottom: 20px;
-}
-select{
-	padding: 12px;
-	width: 50%;
 }
 .price-btn{
 	width: 40%;
@@ -53,6 +46,14 @@ select{
 	color: black!important;
 	margin-left: 10px;
 	color: white!important;
+}
+
+form{
+	margin-bottom: 20px;
+}
+select{
+	padding: 12px;
+	width: 50%;
 }
 
 .bottom-name{
@@ -152,3 +153,36 @@ footer{
 		justify-content: space-between!important;
 	}
 }
+@media (min-width: 1550px){
+	.col-sxl{
+		flex: 0 0 35%!important;
+		max-width: 35%!important;
+	}
+}
+@media (min-width: 1850px){
+	.col-sxl{
+		flex: 0 0 30%!important;
+		max-width: 30%!important;
+	}
+}
+@media (min-width: 2200px){
+	.col-sxl{
+		flex: 0 0 25%!important;
+		max-width: 25%!important;
+	}
+}
+@media (max-width: 778px) {
+	form{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		opacity: 1;
+		z-index: 101;
+		margin-bottom: 5px!important;
+	}
+	.price-btn{
+		margin-left: 3px;
+	}
+}
+
