@@ -87,8 +87,9 @@ select{
 hr{
 	margin: 0!important;
 }
-footer > .row{
+footer{
 	background-color: #25313f;
+	width: 100%;
 }
 .footer-social{
 	line-height: 25px;
