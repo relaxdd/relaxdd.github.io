@@ -129,8 +129,26 @@ footer{
 .price{
 	margin-top: 20px;
 }
-/*.card{
-	width: 25rem;
-}*/
-.status{
+@media (max-width: 778px){
+	.bottom-name-our{
+		width: 100%;
+	}
+	.footer-container{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center!important;
+	}
+}
+@media (min-width: 779px){
+	.footer-container{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between!important;
+	}
 }
