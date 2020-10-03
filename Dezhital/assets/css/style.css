@@ -529,4 +529,8 @@
 		font-size: 18px;
 		color: white;
 	}
+
+	.logo-site {
+		padding: 0 15px;
+	}
 }
