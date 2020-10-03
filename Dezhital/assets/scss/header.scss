@@ -9,7 +9,9 @@
 
 	&__link {
 		display: inline-block;
-		padding: 7px 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		text-align: right;
 
 		.link__icon, a {
 			color: $text-color-header;
@@ -31,18 +33,17 @@
 		}
 	}
 
-	&__link:not(:last-child) {
-		margin-right: 20px;
-	}
+	// &__link:not(:last-child) {
+	// 	margin-right: 20px;
+	// }
 }
 
 // Навигация и логотип 
 .header-content {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	padding: 5px 0;
-	// box-shadow: 0 5px 5px -5px;
-	background-color: rgba($primary-bg-color, .5);
+	background-color: rgba($primary-bg-color, .7);
 	transition: padding .3s linear, background .3s linear;
 	z-index: 1;
 
@@ -54,45 +55,47 @@
 			font-size: 32px;
 			color: white;
 			cursor: pointer;
-			padding: 0 15px;
 		}
-
-	 	.header-nav {
-	 		display: flex;
-	 		justify-content: flex-end;
-	 		align-items: center;
-
-	 		&__item {
-	 			color: white;
-	 			font-size: 18px;
-	 			position: relative;
-
-	 			&:hover {
-	 				@extend %reboot-link;
-	 			}
-
-	 			&:after {
-	 				content: "";
-	 				display: block;
-	 				position: absolute;
-	 				height: 2px;
-	 				background-color: transparent;
-	 				width: 100%;
-	 				transition: background .3s linear;
-	 				margin-top: 5px;
-	 			}
-
-	 			&:hover:after {
-	 				background: white;
-	 			}
-	 		}
-
-	 		&__item:not(:last-child) {
-	 			margin-right: 25px;
-	 		}
-	 	}
 	}
 
+	.header-nav {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		&__item {
+			color: white;
+			font-size: 18px;
+			position: relative;
+
+			&:hover {
+				@extend %reboot-link;
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 2px;
+				background-color: transparent;
+				width: 100%;
+				transition: background .3s linear;
+				margin-top: 5px;
+			}
+
+			&:hover:after {
+				background: white;
+			}
+
+		}
+
+		&__item:not(:last-child) {
+			margin-right: 25px;
+		}
+
+	}
+
+	// Если включено прилипание шапки
 	&.sticked {
 		position: fixed;
 		top: 0;
@@ -124,12 +127,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+	height: calc(100% - 56px);
 	overflow: hidden;
 
 	&__content {
 		// position: absolute;
-		margin-top: 56px;
 	}
 }
 
@@ -144,7 +146,7 @@
 	font-size: 18px;
 }
 
-.preview__contact-form {
+.cf__preview {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -153,46 +155,49 @@
 	border-radius: 5px;
 }
 
-.contact-form__title {
+.cf__title {
 	color: black;
 	font-size: 30px;
 	margin-bottom: 25px;
 	text-align: center;
 }
 
-.contact-form__input,
-.contact-form__submit {
+.cf__input,
+.cf__submit {
 	padding: 7px 10px;
 	width: 100%;
 	border-radius: 3px; 
+
+	&:focus {
+		outline: none;
+	}
 }
 
-.contact-form__input {
+.cf__input {
 	margin-bottom: 15px;
 	border: 1px solid;
 	transition: border-color .1s linear;
 
 	&:focus {
-		outline: none;
 		border-color: #8FCDA4;
 	}
 
 }
 
-.contact-form__textarea {
+.cf__textarea {
 	resize: none;
 }
 
-.contact-form__submit {
-	background-color: $primary-bg-color;
+.cf__submit {
+	background-color: $btn-bg-color;
 	color: white;
 	text-transform: uppercase;
 	font-size: 20px;
 	border-color: transparent;
-	// transition: background-color .1s linear;
+	transition: background-color .1s linear;
 	cursor: pointer;
 
 	&:hover {
-		background-color: #80B893;
+		background-color: $btn-bg-color-hover;
 	}
 }

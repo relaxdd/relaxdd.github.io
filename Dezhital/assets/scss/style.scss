@@ -2,10 +2,15 @@
 $primary-font-family: 'Piazzolla', serif;
 $secondary-font-family: 'Lobster', cursive;
 
+// Стандартные цвета
 $primary-color: #333;
-$primary-bg-color: #8FCDA4;
+$primary-bg-color: #6bbd86;
 $bg-color-header: white;
 $text-color-header: #333;
+
+// Кнопки на сайте
+$btn-bg-color: #5ab578;
+$btn-bg-color-hover: #6bbd86;
 
 %reboot-link {
 	text-decoration: none;
@@ -74,7 +79,7 @@ $text-color-header: #333;
 
 	&__green {
 		background-color: rgba($primary-bg-color, .4);
-		padding: 35px 0;
+		padding: 35px 15px;
 	}
 
 	&__title {
@@ -123,18 +128,32 @@ $text-color-header: #333;
 	&__item-btn {
 		display: block;
 		padding: 10px 50px;
-		background-color: $primary-bg-color;
+		background-color: $btn-bg-color;
 		color: white;
 		text-transform: uppercase;
 		cursor: pointer;
 		border-radius: 5px;
 		font-size: 17px;
+		transition: background-color .1s;
 
 		&:hover {
-			background-color: #80B893;
+			background-color: $btn-bg-color-hover;
 		}
 	}
 }
 
 
+// Контактная форма под блоком "Памятники из мрамора"
+.contact-form-first {
+	flex-direction: column;
+	align-items: center;
+
+	&__text {
+		font-size: 24px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
 @import 'footer.scss';
+@import "media.scss";
