@@ -1,0 +1,15 @@
+.footer {
+	background-color: #8C8C91;
+	min-height: 200px;
+	width: 100%;
+	color: white;
+
+	&__top {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	&__logo {
+		color: white;
+	}
+}

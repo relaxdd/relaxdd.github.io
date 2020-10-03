@@ -1,0 +1,140 @@
+// Переменные
+$primary-font-family: 'Piazzolla', serif;
+$secondary-font-family: 'Lobster', cursive;
+
+$primary-color: #333;
+$primary-bg-color: #8FCDA4;
+$bg-color-header: white;
+$text-color-header: #333;
+
+%reboot-link {
+	text-decoration: none;
+}
+
+* {
+	font-family: $primary-font-family;
+	color: $primary-color;
+	margin: 0;
+	padding: 0;
+}
+
+@import "slider.scss";
+
+.section{
+	padding: 60px 0;
+
+	&:not(:first-child) {
+		padding: 0 0 70px;
+	}
+}
+
+@import "header.scss";
+
+// * About *
+.about {
+	justify-content: space-around;
+	align-items: center;
+
+	&__img {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__title {
+		font-size: 36px;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		
+
+		& li {
+			list-style: none;
+			position: relative;
+			font-size: 18px;
+			margin-bottom: 7px;
+			text-transform: uppercase;
+			padding-left: 30px;
+
+			&:before {
+				content: "\f00c";
+				font-family: FontAwesome;
+				position: absolute;
+				font-weight: bold;
+				display: inline-block;
+				left: 0;
+			}
+		}
+	}
+}
+
+// Что мы предлагаем?
+.section-header {
+	margin-bottom: 60px;
+
+	&__green {
+		background-color: rgba($primary-bg-color, .4);
+		padding: 35px 0;
+	}
+
+	&__title {
+		font-size: 34px;
+		text-align: center;
+		font-family: $secondary-font-family;
+		margin-bottom: 15px;
+	}
+
+	&__sub-title {
+		max-width: 860px;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 15px;
+	}
+}
+
+.our-work {
+
+	.container .row:not(:first-child) {
+		margin-top: 40px;
+	}
+
+	&__item-img {
+		text-align: center;
+
+		& img {
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
+	&__item-body {
+		padding: 20px 30px;
+		text-align: center;
+	}
+
+	&__item-title {
+		margin-bottom: 15px;
+	}
+
+	&__item-text {
+		margin-bottom: 20px;
+	}
+
+	&__item-btn {
+		display: block;
+		padding: 10px 50px;
+		background-color: $primary-bg-color;
+		color: white;
+		text-transform: uppercase;
+		cursor: pointer;
+		border-radius: 5px;
+		font-size: 17px;
+
+		&:hover {
+			background-color: #80B893;
+		}
+	}
+}
+
+
+@import 'footer.scss';
