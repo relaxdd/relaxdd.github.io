@@ -35,7 +35,7 @@
 		<div class="header-preview">
 
 			<div id="sticky" class="header-content">
-				<div class="container">
+				<div class="container relative">
 					<div class="row header-content__inner">
 						
 						<h1 class="logo-site">Дежиталь</h1>
@@ -53,8 +53,10 @@
 							</nav>
 						</div>	
 					</div>
+				</div>
 
-					<div class="row d-lg-none justify-content-center">
+				<div class="container-fluid d-lg-none">
+					<div class="row justify-content-center relative">
 						<div class="col-12 mobile-nav show">
 							<nav class="header-nav">
 								<a href="#" class="header-nav__item">Меню 1</a>
@@ -64,8 +66,8 @@
 							</nav>
 						</div>
 					</div>
-					
 				</div>
+
 			</div>
 
 			<div class="preview">
@@ -78,7 +80,7 @@
 									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo sapiente tempore a fugiat, expedita at nulla voluptatibus error distinctio atque debitis ipsam odio necessitatibus deserunt rem repudiandae, ab voluptas sunt? Aut eum, ab rerum maxime eveniet aspernatur odit delectus modi beatae magni doloremque sequi, facilis dignissimos voluptatum, veniam quos cupiditate animi ex itaque, omnis. Vero, nisi nostrum, quam beatae possimus ab officia modi voluptas repellendus quaerat fugiat quidem natus vel, consectetur autem deserunt illo ad?
 								</p>
 							</div>
-							<div class="col-11 col-sm-10 col-md-8 col-lg-5 d-none d-lg-block cf__container">
+							<div class="col-11 col-sm-10 col-md-8 col-lg-5 d-none d-lg-block cf__container mb-4">
 								<div class="cf__preview">
 									<h3 class="cf__title">Закажите обратный звонок и мы перезвоним вам</h3>
 	
@@ -91,7 +93,7 @@
 									<button type="submit" class="cf__submit">Заказать звонок</button>
 								</div>
 							</div>
-							<div class="col-8 col-md-6 d-lg-none cf-m__btn">
+							<div class="col-8 d-lg-none cf-m__btn">
 								<span>Заказать звонок</span>
 							</div>
 						</div>
@@ -238,7 +240,17 @@
 						</p>
 					</div>
 					<div class="col-xl-8">
-						"контактная форма"
+						<form id="cf__first">
+							<div class="cf__first-input">
+								<input type="text">
+							</div>
+							<div class="cf__first-input">
+								<input type="text">
+							</div>
+							<div class="cf__first-input">
+								<input type="submit">
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

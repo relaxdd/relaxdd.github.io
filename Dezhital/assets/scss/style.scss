@@ -16,6 +16,10 @@ $btn-bg-color-hover: #6bbd86;
 	text-decoration: none;
 }
 
+.relative {
+	position: relative !important;
+}
+
 * {
 	font-family: $primary-font-family;
 	color: $primary-color;

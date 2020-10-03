@@ -4,14 +4,17 @@
 		// box-shadow: 0 5px 5px -5px;
 
 		.mobile-nav {
-			position: absolute;
-			width: 100%;
-			background-color: rgba(black, .8);
-			overflow: hidden;
-			padding: 10px 0;
+			background-color: transparent;
+			// overflow: hidden;
 
 			.header-nav {
+				position: absolute;
+				top: 5px;
+				width: 100%;
 				flex-direction: column;
+				// max-height: 0;
+				padding: 10px 0;
+				transition: max-height .4s linear;
 
 				&__item {
 					margin: 0;
@@ -20,6 +23,15 @@
 					&:after {
 						content: none;
 					}
+				}
+
+			}
+
+			&.show {
+				background-color: rgba(black, .8);
+
+				.header-nav {
+
 				}
 
 			}
@@ -46,8 +58,8 @@
 	text-align: center;
 
 		span {
-			display: inline-block;
-			padding: 15px 60px;
+			display: block;
+			padding: 15px 0;
 			background-color: $btn-bg-color;
 			text-transform: uppercase;
 			font-size: 18px;
