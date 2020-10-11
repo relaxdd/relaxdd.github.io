@@ -1367,6 +1367,10 @@ button.disabled {
     max-width: 70%;
     margin-bottom: 15px;
   }
+
+  #cf__first .cf__first_input:nth-child(2) {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 575.98px) {
