@@ -1202,7 +1202,7 @@ button.disabled {
 
   .header-content {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .header-content .mobile-nav .header-nav {
@@ -1218,7 +1218,7 @@ button.disabled {
     -webkit-transition: max-height .2s, top .2s, background-color .2s;
     -o-transition: max-height .2s, top .2s, background-color .2s;
     transition: max-height .2s, top .2s, background-color .2s;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
   }
 
