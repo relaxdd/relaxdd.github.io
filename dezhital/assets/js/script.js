@@ -351,19 +351,6 @@ $(function () {
     fixDiv();
   }
 
-  $('.gallery_tabs__item').click(e => {
-    const ind = $(e.target).index();
-
-    for (var i = 0; i < $('.gallery_tabs__item').length; i++) {
-      $('.gallery_tabs__item').eq(i).removeClass('active');
-      $('.wrapper_inner').eq(i).removeClass('active');
-    }
-
-    $('.gallery_tabs__item').eq(ind).addClass('active');
-    $('.wrapper_inner').eq(ind).addClass('active');
-  });
-  $('gallery_tabs__item').eq(0).addClass('active');
-  $('.wrapper_inner').eq(0).addClass('active');
   const slider = new Slider({
     container: '#block-for-slider',
     slides: ['img/1-Block/1.jpg', 'img/1-Block/2.jpg', 'img/1-Block/3.jpg', 'img/1-Block/4.jpg', 'img/1-Block/5.jpg', 'img/1-Block/6.jpg'],
@@ -473,6 +460,48 @@ $(function () {
     folder: 'http://placehold.it/300x300',
     countLoremItem: 12,
     imageCountAtLine: 3
+  }); // Даю нужным элементам в галерее клас active
+
+  $('gallery_tabs__item').eq(0).addClass('active');
+  $('.wrapper_inner').eq(0).addClass('active'); // Даю контактной форме класс active
+
+  $('footer_block__title').eq(2).addClass('active'); // Если был клику по тайтлу в галерее
+
+  $('.gallery_tabs__item').click(e => {
+    const ind = $(e.target).index();
+
+    for (var i = 0; i < $('.gallery_tabs__item').length; i++) {
+      $('.gallery_tabs__item').eq(i).removeClass('active');
+      $('.wrapper_inner').eq(i).removeClass('active');
+    }
+
+    $('.gallery_tabs__item').eq(ind).addClass('active');
+    $('.wrapper_inner').eq(ind).addClass('active');
+  });
+  let footerBlockHeightStart = 0; // Даю контактной форме высоту
+
+  for (let i = 0; i < $('.footer_block__body').eq(2).children().length; i++) {
+    footerBlockHeightStart += parseInt($('.footer_block__body').eq(2).children().eq(i).css('height'));
+  }
+
+  $('.footer_block__body').eq(2).css('max-height', footerBlockHeightStart + 'px'); // Если был клик по тайтлу в подвале
+
+  $('.footer_block__title').click(e => {
+    let prnt = $(e.target).parent(),
+        ind = $(prnt).index(),
+        footerBlockHeight = 0;
+
+    for (let i = 0; i < $('.footer_block__title').length; i++) {
+      $('.footer_block__body').eq(i).css('max-height', '0px');
+      $('.footer_block__title').eq(i).removeClass('active');
+    }
+
+    for (let i = 0; i < $('.footer_block__body').eq(ind).children().length; i++) {
+      footerBlockHeight += parseInt($('.footer_block__body').eq(ind).children().eq(i).css('height'));
+    }
+
+    $('.footer_block__body').eq(ind).css('max-height', footerBlockHeight + 'px');
+    $('.footer_block__title').eq(ind).addClass('active');
   });
 });
 $(function () {
