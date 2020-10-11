@@ -587,9 +587,9 @@
   width: 100%;
   padding: 5px 0;
   background-color: rgba(107, 189, 134, 0.7);
-  -webkit-transition: padding .3s linear, background .3s linear;
-  -o-transition: padding .3s linear, background .3s linear;
-  transition: padding .3s linear, background .3s linear;
+  -webkit-transition: padding .2s, background .2s;
+  -o-transition: padding .2s, background .2s;
+  transition: padding .2s, background .2s;
   z-index: 1;
 }
 
@@ -650,26 +650,6 @@
 
 .header-content .header-nav__item:not(:last-child) {
   margin-right: 25px;
-}
-
-.header-content.sticked {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  padding: 0px 0;
-  background-color: #6bbd86;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.header-content.sticked .header-nav__item {
-  color: black;
-}
-
-.header-content.sticked .header-nav__item:after {
-  content: none;
 }
 
 .header-preview {
@@ -1204,7 +1184,12 @@ button.disabled {
 }
 
 @media (max-width: 991.98px) {
+  .preview {
+    height: 100%;
+  }
+
   .header-content {
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
   }
 
@@ -1218,9 +1203,9 @@ button.disabled {
     -ms-flex-direction: column;
     flex-direction: column;
     max-height: 0;
-    -webkit-transition: max-height .4s linear;
-    -o-transition: max-height .4s linear;
-    transition: max-height .4s linear;
+    -webkit-transition: max-height .2s, top .2s;
+    -o-transition: max-height .2s, top .2s;
+    transition: max-height .2s, top .2s;
     background-color: rgba(0, 0, 0, 0.8);
     overflow: hidden;
   }
@@ -1228,10 +1213,6 @@ button.disabled {
   .header-content .mobile-nav .header-nav__item {
     margin: 0;
     padding: 10px;
-  }
-
-  .header-content .mobile-nav .header-nav__item:first-child {
-    padding-top: 20px;
   }
 
   .header-content .mobile-nav .header-nav__item:last-child {
@@ -1243,7 +1224,20 @@ button.disabled {
   }
 
   .header-content .mobile-nav .header-nav.active {
-    max-height: 220px;
+    max-height: 210px;
+  }
+
+  .header-content.sticked {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 0px 0;
+  }
+
+  .header-content.sticked .mobile-nav .header-nav {
+    top: 0;
   }
 
   .mobile-toggler {

@@ -338,13 +338,12 @@ class Gallery {
 
 ;
 $(function () {
-  let headerSticky = false;
+  let headerSticky = true;
 
-  if (headerSticky) {
+  if (headerSticky && screen.width < 992) {
     function fixDiv() {
       let $cache = $('#sticky');
-      let heightTopHeader = parseInt($('.top-header').css('height'));
-      if ($(window).scrollTop() >= heightTopHeader) $cache.addClass('sticked');else $cache.removeClass('sticked');
+      if ($(window).scrollTop() > 0) $cache.addClass('sticked');else $cache.removeClass('sticked');
     }
 
     $(window).scroll(fixDiv);
