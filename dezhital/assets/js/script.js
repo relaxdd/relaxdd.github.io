@@ -460,6 +460,10 @@ $(function () {
     folder: 'http://placehold.it/300x300',
     countLoremItem: 12,
     imageCountAtLine: 3
+  }); // Мобильное меню
+
+  $('.mobile-toggler').click(() => {
+    $('.header-nav').toggleClass('active');
   }); // Даю нужным элементам в галерее клас active
 
   $('gallery_tabs__item').eq(0).addClass('active');
