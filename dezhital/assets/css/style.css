@@ -507,6 +507,12 @@
   position: relative !important;
 }
 
+.justify-content-evenly {
+  -webkit-box-pack: space-evenly !important;
+  -ms-flex-pack: space-evenly !important;
+  justify-content: space-evenly !important;
+}
+
 * {
   font-family: "Piazzolla", serif;
   color: #333;
@@ -825,6 +831,10 @@
   line-height: 1;
 }
 
+.section-header__title.our_advantage__header {
+  margin-top: 15px;
+}
+
 .section-header__sub-title {
   max-width: 860px;
   margin: 0 auto;
@@ -1038,6 +1048,37 @@ button.disabled {
 
 .form-response.fail {
   border: 2px solid red;
+}
+
+.our_advantage__icon i {
+  font-size: 45px;
+}
+
+.our_advantage__item {
+  text-align: center;
+}
+
+.our_advantage__body {
+  padding: 25px 15px;
+}
+
+.our_advantage__title {
+  margin-bottom: 15px;
+  font-family: "Lobster", cursive;
+}
+
+.our_advantage__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100px;
+  margin-bottom: 0;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.1;
+  font-size: 23px;
 }
 
 .footer * {
