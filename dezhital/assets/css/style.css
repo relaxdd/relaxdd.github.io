@@ -1160,7 +1160,21 @@ button.disabled {
   font-family: "Cormorant Garamond", serif;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 991.99px) {
+  .wrapper_inner.column-3 .gallery__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 32.03333%;
+    flex: 0 0 32.03333%;
+    max-width: 32.03333%;
+  }
+
+  .wrapper_inner.column-4 .gallery__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 23.7%;
+    flex: 0 0 23.7%;
+    max-width: 23.7%;
+  }
+
   .header-content {
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -1234,5 +1248,15 @@ button.disabled {
     max-width: 35%;
     padding: 0 15px;
     margin-bottom: 5px;
+  }
+
+  .our-work .product-wrapper-3 .our-work__item-body {
+    padding: 15px 7px;
+  }
+}
+
+@media (max-width: 765.99px) {
+  .section:not(:first-child) {
+    padding: 0 0 30px;
   }
 }
