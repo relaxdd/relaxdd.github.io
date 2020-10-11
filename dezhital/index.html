@@ -25,6 +25,38 @@
 		<script src="https://use.fontawesome.com/3cdcb2db9f.js"></script>
 	</head>
 	<body>
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Заказать обратный звонок</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="user-name">Как вас зовут?</label>
+								<input type="text" name="user-name" class="form-control" id="user-name" placeholder="Имя">
+								<small id="emailHelp" class="form-text text-muted">Мы не передаем данные наших клиентов третьим лицам</small>
+							</div>
+							<div class="form-group">
+								<label for="user-phone">Ваш номер телефона</label>
+								<input type="tel" name="user-phone" class="form-control" id="user-phone" placeholder="8 999 999 9999">
+							</div>
+							<button type="submit" class="btn btn-primary">Заказать</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<header class="header">
 	<div class="top-header d-none d-lg-block">
 		<div class="container">
@@ -110,6 +142,7 @@
 		
 	</div>
 </header>
+
 		<article>
 			<div class="section">
 				<div class="container-fluid container-lg">
@@ -462,7 +495,9 @@
 					</div>
 				</div>
 			</section>
-			
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+				Запустить модальное окно
+			</button>
 		</article>
 		<footer class="footer">
 	<div class="container">
