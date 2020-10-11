@@ -1293,6 +1293,25 @@ button.disabled {
     transition: transform .3s, -webkit-transform .3s;
   }
 
+  .gallery_wrapper .wrapper_inner .gallery__item {
+    margin-right: 7px;
+    margin-bottom: 7px;
+  }
+
+  .gallery_wrapper .wrapper_inner.column-3 .gallery__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc((100% - 14px) / 3);
+    flex: 0 0 calc((100% - 14px) / 3);
+    max-width: calc((100% - 14px) / 3);
+  }
+
+  .gallery_wrapper .wrapper_inner.column-4 .gallery__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc((100% - 21px) / 4);
+    flex: 0 0 calc((100% - 21px) / 4);
+    max-width: calc((100% - 21px) / 4);
+  }
+
   .section:not(:first-child) {
     padding: 0 0 30px;
   }
