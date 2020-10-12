@@ -26,8 +26,8 @@
 	</head>
 	<body>
 
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
+		<div class="modal fade" id="popup-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title">Заказать обратный звонок</h5>
@@ -36,22 +36,22 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<form>
+						<form id="form-popup">
 							<div class="form-group">
 								<label for="user-name">Как вас зовут?</label>
-								<input type="text" name="user-name" class="form-control" id="user-name" placeholder="Имя">
-								<small id="emailHelp" class="form-text text-muted">Мы не передаем данные наших клиентов третьим лицам</small>
+								<input type="text" name="user-name" class="form-control" id="user-name" placeholder="Имя" autocomplete="off" required>
 							</div>
 							<div class="form-group">
 								<label for="user-phone">Ваш номер телефона</label>
-								<input type="tel" name="user-phone" class="form-control" id="user-phone" placeholder="8 999 999 9999">
+								<input type="tel" name="user-phone" class="form-control" id="user-phone" placeholder="8 999 999 9999" autocomplete="off" required>
+								<small class="form-text text-muted">Мы не передаем данные наших клиентов третьим лицам</small>
 							</div>
-							<button type="submit" class="btn btn-primary">Заказать</button>
+							<input type="hidden" name="reason-call" id="reason-modal" value="">
 						</form>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="submit" form="form-popup" class="btn btn-submit-modal">Заказать</button>
 					</div>
 				</div>
 			</div>
@@ -61,16 +61,18 @@
 	<div class="top-header d-none d-lg-block">
 		<div class="container">
 			<div class="row top-header__inner">
-				<div class="top-header__link">
-					<i class="fa fa-map-marker link__icon" aria-hidden="true"></i>
-					<a href="https://yandex.ru/maps/-/CCQ3FOwJpB" target="_blank">г. Ульяновск, ул. Урицкого д. 98</a>
+				<div class="col-12 text-right">
+					<div class="top-header__link">
+						<i class="fa fa-map-marker link__icon" aria-hidden="true"></i>
+						<a href="https://yandex.ru/maps/-/CCQ3FOwJpB" target="_blank">г. Ульяновск, ул. Урицкого д. 98</a>
+					</div>
+					<div class="top-header__link">
+						<i class="fa fa-phone link__icon" aria-hidden="true"></i>
+						<a href="tel:+79272700885">+7 (927) 270 0885</a>
+					</div>
 				</div>
-				<div class="top-header__link">
-					<i class="fa fa-phone link__icon" aria-hidden="true"></i>
-					<a href="tel:+79272700885">+7 (927) 270 0885</a>
-				</div>
+					
 			</div>
-			
 		</div>
 	</div>
 	<div class="header-preview">
@@ -87,7 +89,6 @@
 							<a href="#monuments-marble" class="header-nav__item">Памятники из мрамора</a>
 							<a href="#monuments-granite" class="header-nav__item">Памятники из гранита</a>
 							<a href="#photo-ceramics" class="header-nav__item">Фотокерамика</a>
-							<a href="#cast-marble" class="header-nav__item">Изделия из литьевого мрамора</a>
 							<a href="#gallery_ourworks" class="header-nav__item">Наши работы</a>
 						</nav>
 					</div>
@@ -101,7 +102,6 @@
 							<a href="#monuments-marble" class="header-nav__item">Памятники из мрамора</a>
 							<a href="#monuments-granite" class="header-nav__item">Памятники из гранита</a>
 							<a href="#photo-ceramics" class="header-nav__item">Фотокерамика</a>
-							<a href="#cast-marble" class="header-nav__item">Изделия из литьевого мрамора</a>
 							<a href="#gallery_ourworks" class="header-nav__item">Наши работы</a>
 						</nav>
 					</div>
@@ -133,7 +133,7 @@
 							</div>
 						</div>
 						<div class="col-8 d-lg-none cf-m__btn">
-							<span>Заказать звонок</span>
+							<span class="open-modal" data-reason="order-call">Заказать звонок</span>
 						</div>
 					</div>
 				</div>
@@ -190,7 +190,7 @@
 									<p class="our-work__item-text">
 										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
 									</p>
-									<span class="our-work__item-btn">Заказать</span>
+									<span class="our-work__item-btn open-modal" data-reason="vertical-monument-marble">Заказать</span>
 								</div>
 							</div>
 						</div>
@@ -204,7 +204,7 @@
 									<p class="our-work__item-text">
 										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
 									</p>
-									<span class="our-work__item-btn">Заказать</span>
+									<span class="our-work__item-btn open-modal" data-reason="monument-marble-with-cross">Заказать</span>
 								</div>
 							</div>
 						</div>
@@ -218,7 +218,7 @@
 									<p class="our-work__item-text">
 										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
 									</p>
-									<span class="our-work__item-btn">Заказать</span>
+									<span class="our-work__item-btn open-modal" data-reason="horisontal-monument-marble">Заказать</span>
 								</div>
 							</div>
 						</div>
@@ -246,7 +246,7 @@
 										</div>
 										<div class="our-work__item-body">
 											<h3 class="our-work__item-title">С ангелом</h3>
-											<span class="our-work__item-btn">Заказать</span>
+											<span class="our-work__item-btn open-modal" data-reason="monuments-granite-with-angel">Заказать</span>
 										</div>
 									</div>
 								</div>
@@ -258,7 +258,7 @@
 										</div>
 										<div class="our-work__item-body">
 											<h3 class="our-work__item-title">С крестом</h3>
-											<span class="our-work__item-btn">Заказать</span>
+											<span class="our-work__item-btn open-modal" data-reason="monuments-granite-with-cross">Заказать</span>
 										</div>
 									</div>
 								</div>
@@ -270,7 +270,7 @@
 										</div>
 										<div class="our-work__item-body">
 											<h3 class="our-work__item-title">Вертикальные</h3>
-											<span class="our-work__item-btn">Заказать</span>
+											<span class="our-work__item-btn open-modal" data-reason="monuments-granite-vertical">Заказать</span>
 										</div>
 									</div>
 								</div>
@@ -282,7 +282,7 @@
 										</div>
 										<div class="our-work__item-body">
 											<h3 class="our-work__item-title">Нестандартные</h3>
-											<span class="our-work__item-btn">Заказать</span>
+											<span class="our-work__item-btn open-modal" data-reason="monuments-granite-horisontal">Заказать</span>
 										</div>
 									</div>
 								</div>
@@ -308,7 +308,7 @@
 									<div class="img-photo-ceramic-1"></div>
 								</div>
 								<div class="our-work__item-body">
-									<span class="our-work__item-btn">Заказать</span>
+									<span class="our-work__item-btn open-modal" data-reason="photo-ceramics-1">Заказать</span>
 								</div>
 							</div>
 						</div>
@@ -318,7 +318,7 @@
 									<div class="img-photo-ceramic-2"></div>
 								</div>
 								<div class="our-work__item-body">
-									<span class="our-work__item-btn">Заказать</span>
+									<span class="our-work__item-btn open-modal" data-reason="photo-ceramics-2">Заказать</span>
 								</div>
 							</div>
 						</div>
@@ -328,65 +328,7 @@
 									<div class="img-photo-ceramic-3"></div>
 								</div>
 								<div class="our-work__item-body">
-									<span class="our-work__item-btn">Заказать</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="section our-work">
-				<div id="cast-marble" class="section-header section-header__green">
-					<h2 class="section-header__title">Изделия из литьевого мрамора</h2>
-					<p class="section-header__sub-title">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam accusamus voluptatibus architecto esse, similique magni, sed atque laboriosam reprehenderit libero asperiores, ad iusto illum, accusantium placeat vel dolorem ducimus.
-					</p>
-				</div>
-				<div class="container-fluid container-lg">
-					<div class="row justify-content-center justify-content-lg-around product-wrapper-3">
-						<div class="col-10 col-sm-9 col-md-4 col-lg-4 mb-3 mb-md-0">
-							<div class="our-work__item">
-								<div class="our-work__item-img">
-									<img src="http://placehold.it/250x300">
-									<!-- <div class="img-photo-ceramic-1"></div> -->
-								</div>
-								<div class="our-work__item-body">
-									<h3 class="our-work__item-title">Горизонтальные</h3>
-									<p class="our-work__item-text">
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
-									</p>
-									<span class="our-work__item-btn">Заказать</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-10 col-sm-9 col-md-4 col-lg-4 mb-3 mb-md-0">
-							<div class="our-work__item">
-								<div class="our-work__item-img">
-									<img src="http://placehold.it/250x300">
-									<!-- <div class="img-photo-ceramic-2"></div> -->
-								</div>
-								<div class="our-work__item-body">
-									<h3 class="our-work__item-title">Горизонтальные</h3>
-									<p class="our-work__item-text">
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
-									</p>
-									<span class="our-work__item-btn">Заказать</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-10 col-sm-9 col-md-4 col-lg-4 mb-3 mb-md-0">
-							<div class="our-work__item">
-								<div class="our-work__item-img">
-									<img src="http://placehold.it/250x300">
-									<!-- <div class="img-photo-ceramic-3"></div> -->
-								</div>
-								<div class="our-work__item-body">
-									<h3 class="our-work__item-title">Горизонтальные</h3>
-									<p class="our-work__item-text">
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
-									</p>
-									<span class="our-work__item-btn">Заказать</span>
+									<span class="our-work__item-btn open-modal" data-reason="photo-ceramics-3">Заказать</span>
 								</div>
 							</div>
 						</div>
@@ -426,9 +368,9 @@
 				<div class="container-fluid container-lg">
 					<div class="section-header">
 						<h2 class="section-header__title">Галерея наших работ</h2>
-						<p class="section-header__sub-title">
+						<!-- <p class="section-header__sub-title">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam accusamus voluptatibus architecto esse, similique magni, sed atque laboriosam reprehenderit libero asperiores, ad iusto illum, accusantium placeat vel dolorem ducimus.
-						</p>
+						</p> -->
 					</div>
 
 					<div class="product_gallery">
@@ -437,14 +379,10 @@
 								<div class="gallery_tabs">
 									<span class="gallery_tabs__item active">Резные иконы из дерева, из камня</span>
 									<span class="gallery_tabs__item">Ограды</span>
-									<span class="gallery_tabs__item">Продукция - 3</span>
-									<span class="gallery_tabs__item">Продукция - 4</span>
 								</div>
 								<div class="gallery_wrapper">
 									<div class="wrapper_inner carved-icons active"></div>
 									<div class="wrapper_inner wrapper-fences"></div>
-									<div class="wrapper_inner lorem-1"></div>
-									<div class="wrapper_inner lorem-1"></div>
 								</div>
 							</div>				
 						</div>
@@ -455,7 +393,7 @@
 			</section>
 
 			<section class="section">
-				<div class="section-header">
+				<div class="section-header section-header__line">
 					<h2 class="section-header__title our_advantage__header">Наши преимущества</h2>
 				</div>
 
@@ -464,7 +402,7 @@
 						<div class="row justify-content-evenly">
 							<div class="our_advantage__item col-11 col-md-10 col-lg-4 col-xl-3">
 								<div class="our_advantage__icon">
-									<i class="fa fa-calendar" aria-hidden="true"></i>
+									<img src="img/icons/calendar-with-squares.svg" alt="">
 								</div>
 								<div class="our_advantage__body">
 									<h4 class="our_advantage__title">5 лет на рынке</h4>
@@ -474,7 +412,7 @@
 
 							<div class="our_advantage__item col-11 col-md-10 col-lg-4 col-xl-3">
 								<div class="our_advantage__icon">
-									<i class="fa fa-calendar" aria-hidden="true"></i>
+									<img src="img/icons/high-quality.svg" alt="high-quality">
 								</div>
 								<div class="our_advantage__body">
 									<h4 class="our_advantage__title">Высокое качество</h4>
@@ -484,7 +422,7 @@
 
 							<div class="our_advantage__item col-11 col-md-10 col-lg-4 col-xl-3">
 								<div class="our_advantage__icon">
-									<i class="fa fa-calendar" aria-hidden="true"></i>
+									<img src="img/icons/like.svg" alt="">
 								</div>
 								<div class="our_advantage__body">
 									<h4 class="our_advantage__title">Большой выбор</h4>
@@ -495,9 +433,6 @@
 					</div>
 				</div>
 			</section>
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-				Запустить модальное окно
-			</button>
 		</article>
 		<footer class="footer">
 	<div class="container">
@@ -554,7 +489,7 @@
 							<span class="item_icon">
 								<i class="fa fa-angle-right"></i>
 							</span>
-							<a href="#cast-marble">Изделия из литьевого мрамора</a>
+							<a href="#gallery_ourworks">Галерея наших работ</a>
 						</div>
 					</div>
 				</div>

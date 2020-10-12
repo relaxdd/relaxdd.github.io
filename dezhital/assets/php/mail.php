@@ -22,7 +22,8 @@
 		<p style="margin: 0;margin-bottom: 7px;color: #333;">Номер телефона - <a href="tel:'. $data['user-phone']. '" style="color: black; text-decoration: none;">'. $data['user-phone']. '<a/>,</p>
 		'. $user_message .'
 		<p style="margin: 0; margin-bottom: 7px; color: #333;">Дата отправки - '.  date("d.m.Y"). ',</p>
-		<p style="margin: 0; color: #333;">Время отправки - '.  date("H:i"). ' (МСК)</p>
+		<p style="margin: 0; margin-bottom: 7px; color: #333;">Время отправки - '.  date("H:i"). ' (МСК),</p>
+		<p style="margin: 0; color: #333;">Примечание - '. $data['reason-call']. '</p>
 	</div>';
 
 	$mail = new PHPMailer(true);

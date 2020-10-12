@@ -352,11 +352,13 @@
   -webkit-transition: border-color .3s;
   -o-transition: border-color .3s;
   transition: border-color .3s;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 22px;
+  line-height: 1;
   max-width: 200px;
   text-align: center;
   cursor: pointer;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
 }
 
 .gallery_tabs__item.active {
@@ -513,6 +515,16 @@
   justify-content: space-evenly !important;
 }
 
+.btn-submit-modal {
+  background-color: #5ab578;
+  color: white;
+}
+
+.btn-submit-modal:hover {
+  color: white;
+  background-color: #4D9B67;
+}
+
 * {
   font-family: "Piazzolla", serif;
   color: #333;
@@ -529,7 +541,7 @@
 }
 
 .section.section_gallery {
-  padding: 40px 0;
+  padding: 50px 0 60px;
 }
 
 .top-header {
@@ -787,7 +799,7 @@
 }
 
 .section-header {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -800,6 +812,10 @@
 
 .section-header__bg-form {
   margin-bottom: 30px;
+}
+
+.section-header__line {
+  border-bottom: 1px solid #000;
 }
 
 .section-header__title {
@@ -1030,8 +1046,20 @@ button.disabled {
   border: 2px solid red;
 }
 
-.our_advantage__icon i {
-  font-size: 45px;
+.our_advantage__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.our_advantage__icon > img {
+  height: 60px;
 }
 
 .our_advantage__item {
@@ -1062,11 +1090,11 @@ button.disabled {
 }
 
 .footer * {
-  color: #999999;
+  color: #999;
 }
 
 .footer {
-  background-color: black;
+  background-color: #191819;
   width: 100%;
   color: white;
 }
