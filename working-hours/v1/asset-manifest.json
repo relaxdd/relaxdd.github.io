@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/working-hours/static/css/main.15dc0195.css",
+    "main.js": "/working-hours/static/js/main.fb04ff6b.js",
+    "index.html": "/working-hours/index.html",
+    "main.15dc0195.css.map": "/working-hours/static/css/main.15dc0195.css.map",
+    "main.fb04ff6b.js.map": "/working-hours/static/js/main.fb04ff6b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15dc0195.css",
+    "static/js/main.fb04ff6b.js"
+  ]
+}
