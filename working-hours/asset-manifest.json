@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/working-hours/static/css/main.c23767d0.css",
-    "main.js": "/working-hours/static/js/main.cadbb1ce.js",
+    "main.css": "/working-hours/static/css/main.a2920dd0.css",
+    "main.js": "/working-hours/static/js/main.6368bfd1.js",
     "index.html": "/working-hours/index.html",
     "static/media/caret-down-big.svg": "/working-hours/static/media/caret-down-big.85abb7b4d55338871d48faf1d760f3f4.svg",
     "static/media/remove-bold-red.svg": "/working-hours/static/media/remove-bold-red.a7073ca9b8ce47f2cefd86de62a6a5de.svg",
+    "static/media/edit.svg": "/working-hours/static/media/edit.f1d049a804ffb172167ac9492d477bc1.svg",
     "static/media/select-green.svg": "/working-hours/static/media/select-green.30c3fbd75f8be5286c30663f31c88520.svg",
     "static/media/select.svg": "/working-hours/static/media/select.70ceccdb6acd895af9f9d96544682a0d.svg",
     "static/media/plus.svg": "/working-hours/static/media/plus.797831846d70a2cea846b47bb5cf93e1.svg",
     "static/media/minus.svg": "/working-hours/static/media/minus.009798cdee48e971c709de04597577be.svg",
-    "main.c23767d0.css.map": "/working-hours/static/css/main.c23767d0.css.map",
-    "main.cadbb1ce.js.map": "/working-hours/static/js/main.cadbb1ce.js.map"
+    "main.a2920dd0.css.map": "/working-hours/static/css/main.a2920dd0.css.map",
+    "main.6368bfd1.js.map": "/working-hours/static/js/main.6368bfd1.js.map"
   },
   "entrypoints": [
-    "static/css/main.c23767d0.css",
-    "static/js/main.cadbb1ce.js"
+    "static/css/main.a2920dd0.css",
+    "static/js/main.6368bfd1.js"
   ]
 }
