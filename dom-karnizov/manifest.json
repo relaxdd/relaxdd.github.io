@@ -1,0 +1,56 @@
+{
+  "_auth.page-7450e0be.js": {
+    "css": [
+      "assets/auth-9191ecc4.css"
+    ],
+    "file": "assets/auth.page-7450e0be.js"
+  },
+  "_main-bfe6e75e.js": {
+    "css": [
+      "assets/main-da820a4a.css"
+    ],
+    "file": "assets/main-bfe6e75e.js"
+  },
+  "about.css": {
+    "file": "assets/about-faca5956.css",
+    "src": "about.css"
+  },
+  "auth.css": {
+    "file": "assets/auth-9191ecc4.css",
+    "src": "auth.css"
+  },
+  "checkout.css": {
+    "file": "assets/checkout-149533c1.css",
+    "src": "checkout.css"
+  },
+  "designer.css": {
+    "file": "assets/designer-78b8ecae.css",
+    "src": "designer.css"
+  },
+  "index.css": {
+    "file": "assets/index-23a20abf.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "assets": [
+      "assets/owl.video.play-04360456.png"
+    ],
+    "css": [
+      "assets/index-23a20abf.css"
+    ],
+    "file": "assets/index-5a12752e.js",
+    "imports": [
+      "_main-bfe6e75e.js"
+    ],
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "main.css": {
+    "file": "assets/main-da820a4a.css",
+    "src": "main.css"
+  },
+  "node_modules/owl.carousel/dist/assets/owl.video.play.png": {
+    "file": "assets/owl.video.play-04360456.png",
+    "src": "node_modules/owl.carousel/dist/assets/owl.video.play.png"
+  }
+}
