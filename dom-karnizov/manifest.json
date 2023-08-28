@@ -28,7 +28,7 @@
     "src": "designer.css"
   },
   "index.css": {
-    "file": "assets/index-23a20abf.css",
+    "file": "assets/index-0fa45c39.css",
     "src": "index.css"
   },
   "index.html": {
@@ -36,9 +36,9 @@
       "assets/owl.video.play-04360456.png"
     ],
     "css": [
-      "assets/index-23a20abf.css"
+      "assets/index-0fa45c39.css"
     ],
-    "file": "assets/index-5a12752e.js",
+    "file": "assets/index-25329530.js",
     "imports": [
       "_main-bfe6e75e.js"
     ],
