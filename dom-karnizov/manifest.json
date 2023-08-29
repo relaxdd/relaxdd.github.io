@@ -31,6 +31,10 @@
     "file": "assets/checkout-a4431428.html",
     "src": "checkout.html"
   },
+  "delivery.css": {
+    "file": "assets/delivery-2db6e57a.css",
+    "src": "payment.css"
+  },
   "delivery.html": {
     "file": "assets/delivery-48b2aac6.html",
     "src": "delivery.html"
@@ -64,6 +68,22 @@
   "node_modules/owl.carousel/dist/assets/owl.video.play.png": {
     "file": "assets/owl.video.play-04360456.png",
     "src": "node_modules/owl.carousel/dist/assets/owl.video.play.png"
+  },
+  "payment.css": {
+    "file": "assets/delivery-2db6e57a.css",
+    "src": "payment.css"
+  },
+  "payment.html": {
+    "file": "assets/payment-cbc7b6e7.html",
+    "src": "payment.html"
+  },
+  "price.css": {
+    "file": "assets/price-cdb0d36b.css",
+    "src": "price.css"
+  },
+  "price.html": {
+    "file": "assets/price-9180aba2.html",
+    "src": "price.html"
   },
   "signin.html": {
     "file": "assets/signin-68c5be23.html",
