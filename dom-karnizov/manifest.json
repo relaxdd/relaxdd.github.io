@@ -1,30 +1,42 @@
 {
-  "_auth.page-7450e0be.js": {
+  "_auth.page-48d2634c.js": {
     "css": [
-      "assets/auth-9191ecc4.css"
+      "assets/auth-9b1f611f.css"
     ],
-    "file": "assets/auth.page-7450e0be.js"
+    "file": "assets/auth.page-48d2634c.js"
   },
-  "_main-bfe6e75e.js": {
+  "_main-1094d705.js": {
     "css": [
-      "assets/main-da820a4a.css"
+      "assets/main-80de35c8.css"
     ],
-    "file": "assets/main-bfe6e75e.js"
+    "file": "assets/main-1094d705.js"
   },
   "about.css": {
-    "file": "assets/about-faca5956.css",
+    "file": "assets/about-36cf728f.css",
     "src": "about.css"
   },
+  "about.html": {
+    "file": "assets/about-c23cfeb0.html",
+    "src": "about.html"
+  },
   "auth.css": {
-    "file": "assets/auth-9191ecc4.css",
+    "file": "assets/auth-9b1f611f.css",
     "src": "auth.css"
   },
   "checkout.css": {
-    "file": "assets/checkout-149533c1.css",
+    "file": "assets/checkout-c027b895.css",
     "src": "checkout.css"
   },
+  "checkout.html": {
+    "file": "assets/checkout-a4431428.html",
+    "src": "checkout.html"
+  },
+  "delivery.html": {
+    "file": "assets/delivery-48b2aac6.html",
+    "src": "delivery.html"
+  },
   "designer.css": {
-    "file": "assets/designer-78b8ecae.css",
+    "file": "assets/designer-5173eaeb.css",
     "src": "designer.css"
   },
   "index.css": {
@@ -38,19 +50,27 @@
     "css": [
       "assets/index-0fa45c39.css"
     ],
-    "file": "assets/index-25329530.js",
+    "file": "assets/index-c44f9f4f.js",
     "imports": [
-      "_main-bfe6e75e.js"
+      "_main-1094d705.js"
     ],
     "isEntry": true,
     "src": "index.html"
   },
   "main.css": {
-    "file": "assets/main-da820a4a.css",
+    "file": "assets/main-80de35c8.css",
     "src": "main.css"
   },
   "node_modules/owl.carousel/dist/assets/owl.video.play.png": {
     "file": "assets/owl.video.play-04360456.png",
     "src": "node_modules/owl.carousel/dist/assets/owl.video.play.png"
+  },
+  "signin.html": {
+    "file": "assets/signin-68c5be23.html",
+    "src": "signin.html"
+  },
+  "signup.html": {
+    "file": "assets/signup-a96ad872.html",
+    "src": "signup.html"
   }
 }
