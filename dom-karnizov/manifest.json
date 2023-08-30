@@ -36,7 +36,7 @@
     "src": "html/designer.css"
   },
   "html/index.css": {
-    "file": "assets/index-0fa45c39.css",
+    "file": "assets/index-ef3c4e71.css",
     "src": "html/index.css"
   },
   "html/index.html": {
@@ -44,9 +44,9 @@
       "assets/owl.video.play-04360456.png"
     ],
     "css": [
-      "assets/index-0fa45c39.css"
+      "assets/index-ef3c4e71.css"
     ],
-    "file": "assets/index-a3fb5b2c.js",
+    "file": "assets/index-224f683f.js",
     "imports": [
       "_main-d7cf2a96.js"
     ],
@@ -72,5 +72,9 @@
   "main.css": {
     "file": "assets/main-bf0ab44c.css",
     "src": "main.css"
+  },
+  "taxonomy.css": {
+    "file": "assets/taxonomy-ab11e65a.css",
+    "src": "taxonomy.css"
   }
 }
