@@ -23,6 +23,14 @@
     "file": "assets/about-652e37f4.css",
     "src": "html/about.css"
   },
+  "html/brands.css": {
+    "file": "assets/brands-f6c76be0.css",
+    "src": "html/brands.css"
+  },
+  "html/category/accessories/bahroma/index.css": {
+    "file": "assets/index-db190d55.css",
+    "src": "html/category/accessories/bahroma/index.css"
+  },
   "html/checkout.css": {
     "file": "assets/checkout-c027b895.css",
     "src": "html/checkout.css"
@@ -66,7 +74,7 @@
     "src": "html/price.css"
   },
   "html/services.css": {
-    "file": "assets/services-6586708a.css",
+    "file": "assets/services-684eb514.css",
     "src": "html/services.css"
   },
   "main.css": {
@@ -74,7 +82,7 @@
     "src": "main.css"
   },
   "taxonomy.css": {
-    "file": "assets/taxonomy-ab11e65a.css",
+    "file": "assets/taxonomy-90e0f61f.css",
     "src": "taxonomy.css"
   }
 }
