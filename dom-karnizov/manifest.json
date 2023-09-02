@@ -9,23 +9,23 @@
     ],
     "file": "assets/auth.page-48d2634c.js"
   },
-  "_main-a932fff5.js": {
+  "_main-68a21b21.js": {
     "css": [
       "assets/main-09ef6d8c.css"
     ],
-    "file": "assets/main-a932fff5.js"
+    "file": "assets/main-68a21b21.js"
   },
   "_owl.carousel-92812895.js": {
     "file": "assets/owl.carousel-92812895.js"
   },
-  "_product.page-df5b3d45.js": {
+  "_product.page-98912abd.js": {
     "assets": [
       "assets/owl.video.play-04360456.png"
     ],
     "css": [
       "assets/product-ad63927f.css"
     ],
-    "file": "assets/product.page-df5b3d45.js",
+    "file": "assets/product.page-98912abd.js",
     "imports": [
       "_owl.carousel-92812895.js"
     ]
@@ -69,9 +69,9 @@
     "css": [
       "assets/index-8c5358c1.css"
     ],
-    "file": "assets/index-42ddf3a6.js",
+    "file": "assets/index-e8c8e634.js",
     "imports": [
-      "_main-a932fff5.js",
+      "_main-68a21b21.js",
       "_owl.carousel-92812895.js"
     ],
     "isEntry": true,
