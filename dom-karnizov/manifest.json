@@ -9,11 +9,26 @@
     ],
     "file": "assets/auth.page-48d2634c.js"
   },
-  "_main-d7cf2a96.js": {
+  "_main-95dfe5ff.js": {
     "css": [
-      "assets/main-bf0ab44c.css"
+      "assets/main-cf972d83.css"
     ],
-    "file": "assets/main-d7cf2a96.js"
+    "file": "assets/main-95dfe5ff.js"
+  },
+  "_owl.carousel-92812895.js": {
+    "file": "assets/owl.carousel-92812895.js"
+  },
+  "_product.page-ac15a279.js": {
+    "assets": [
+      "assets/owl.video.play-04360456.png"
+    ],
+    "css": [
+      "assets/product-1da6a68d.css"
+    ],
+    "file": "assets/product.page-ac15a279.js",
+    "imports": [
+      "_owl.carousel-92812895.js"
+    ]
   },
   "auth.css": {
     "file": "assets/auth-9b1f611f.css",
@@ -27,12 +42,8 @@
     "file": "assets/brands-f6c76be0.css",
     "src": "html/brands.css"
   },
-  "html/category/accessories/bahroma/bahroma-dlya-shtor-zolotistogo-cveta-so-steklyarusom.css": {
-    "file": "assets/bahroma-dlya-shtor-zolotistogo-cveta-so-steklyarusom-7481a20b.css",
-    "src": "html/category/accessories/bahroma/bahroma-dlya-shtor-zolotistogo-cveta-so-steklyarusom.css"
-  },
   "html/category/accessories/bahroma/index.css": {
-    "file": "assets/index-db190d55.css",
+    "file": "assets/index-a1931d9e.css",
     "src": "html/category/accessories/bahroma/index.css"
   },
   "html/checkout.css": {
@@ -58,15 +69,16 @@
     "css": [
       "assets/index-ef3c4e71.css"
     ],
-    "file": "assets/index-224f683f.js",
+    "file": "assets/index-da8799d5.js",
     "imports": [
-      "_main-d7cf2a96.js"
+      "_main-95dfe5ff.js",
+      "_owl.carousel-92812895.js"
     ],
     "isEntry": true,
     "src": "html/index.html"
   },
   "html/our-works.css": {
-    "file": "assets/our-works-556be6d9.css",
+    "file": "assets/our-works-8e2ba7ba.css",
     "src": "html/our-works.css"
   },
   "html/payment.css": {
@@ -82,11 +94,15 @@
     "src": "html/services.css"
   },
   "main.css": {
-    "file": "assets/main-bf0ab44c.css",
+    "file": "assets/main-cf972d83.css",
     "src": "main.css"
   },
+  "product.css": {
+    "file": "assets/product-1da6a68d.css",
+    "src": "product.css"
+  },
   "taxonomy.css": {
-    "file": "assets/taxonomy-90e0f61f.css",
+    "file": "assets/taxonomy-fa229168.css",
     "src": "taxonomy.css"
   }
 }
