@@ -18,14 +18,14 @@
   "_owl.carousel-92812895.js": {
     "file": "assets/owl.carousel-92812895.js"
   },
-  "_product.page-ac15a279.js": {
+  "_product.page-10621c77.js": {
     "assets": [
       "assets/owl.video.play-04360456.png"
     ],
     "css": [
       "assets/product-1da6a68d.css"
     ],
-    "file": "assets/product.page-ac15a279.js",
+    "file": "assets/product.page-10621c77.js",
     "imports": [
       "_owl.carousel-92812895.js"
     ]
@@ -69,7 +69,7 @@
     "css": [
       "assets/index-ef3c4e71.css"
     ],
-    "file": "assets/index-da8799d5.js",
+    "file": "assets/index-09cd6695.js",
     "imports": [
       "_main-95dfe5ff.js",
       "_owl.carousel-92812895.js"
