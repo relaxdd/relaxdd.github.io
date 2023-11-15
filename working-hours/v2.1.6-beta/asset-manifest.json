@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/working-hours/static/css/main.3f77dd3f.css",
-    "main.js": "/working-hours/static/js/main.2549b365.js",
-    "index.html": "/working-hours/index.html",
-    "static/media/caret-down-big.svg": "/working-hours/static/media/caret-down-big.85abb7b4d55338871d48faf1d760f3f4.svg",
-    "static/media/remove-bold-red.svg": "/working-hours/static/media/remove-bold-red.a7073ca9b8ce47f2cefd86de62a6a5de.svg",
-    "static/media/edit.svg": "/working-hours/static/media/edit.f1d049a804ffb172167ac9492d477bc1.svg",
-    "static/media/select-green.svg": "/working-hours/static/media/select-green.30c3fbd75f8be5286c30663f31c88520.svg",
-    "static/media/select.svg": "/working-hours/static/media/select.70ceccdb6acd895af9f9d96544682a0d.svg",
-    "static/media/plus.svg": "/working-hours/static/media/plus.797831846d70a2cea846b47bb5cf93e1.svg",
-    "static/media/minus.svg": "/working-hours/static/media/minus.009798cdee48e971c709de04597577be.svg",
-    "main.3f77dd3f.css.map": "/working-hours/static/css/main.3f77dd3f.css.map",
-    "main.2549b365.js.map": "/working-hours/static/js/main.2549b365.js.map"
+    "main.css": "/working-hours/v2.1.6-beta/static/css/main.3f77dd3f.css",
+    "main.js": "/working-hours/v2.1.6-beta/static/js/main.2549b365.js",
+    "index.html": "/working-hours/v2.1.6-beta/index.html",
+    "static/media/caret-down-big.svg": "/working-hours/v2.1.6-beta/static/media/caret-down-big.85abb7b4d55338871d48faf1d760f3f4.svg",
+    "static/media/remove-bold-red.svg": "/working-hours/v2.1.6-beta/static/media/remove-bold-red.a7073ca9b8ce47f2cefd86de62a6a5de.svg",
+    "static/media/edit.svg": "/working-hours/v2.1.6-beta/static/media/edit.f1d049a804ffb172167ac9492d477bc1.svg",
+    "static/media/select-green.svg": "/working-hours/v2.1.6-beta/static/media/select-green.30c3fbd75f8be5286c30663f31c88520.svg",
+    "static/media/select.svg": "/working-hours/v2.1.6-beta/static/media/select.70ceccdb6acd895af9f9d96544682a0d.svg",
+    "static/media/plus.svg": "/working-hours/v2.1.6-beta/static/media/plus.797831846d70a2cea846b47bb5cf93e1.svg",
+    "static/media/minus.svg": "/working-hours/v2.1.6-beta/static/media/minus.009798cdee48e971c709de04597577be.svg",
+    "main.3f77dd3f.css.map": "/working-hours/v2.1.6-beta/static/css/main.3f77dd3f.css.map",
+    "main.2549b365.js.map": "/working-hours/v2.1.6-beta/static/js/main.2549b365.js.map"
   },
   "entrypoints": [
     "static/css/main.3f77dd3f.css",
