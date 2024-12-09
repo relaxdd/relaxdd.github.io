@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Animation</title>
+
+    <style>
+      div {
+        width: 200px;
+        height: 100px;
+        margin: 30px auto;
+        background-color: #20bcd5;
+        border-radius: 5px;
+        transform: rotate(0deg);
+      }
+
+      div:hover {
+        animation: move 1.5s infinite;
+      }
+
+      @keyframes move {
+        0% {
+          transform: rotate(0deg);
+          background-color: #20bcd5;
+        }
+        33% {
+          transform: rotate(20deg);
+          background-color: blue;
+        }
+        66% {
+          transform: rotate(-20deg);
+          background-color: green;
+        }
+        100% {
+          transform: rotate(0deg);
+          background-color: #20bcd5;
+        }
+      }
+
+      @keyframes color {
+        from {
+          background-color: red;
+        }
+        50% {
+          background-color: blue;
+        }
+        to {
+          background-color: #20bcd5;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 style="text-align: center;">Наведи на меня</h2>
+    <div id="div" class="ext" onclick="alerti()"></div>
+  </body>
+
+  <script>
+    function alerti() {
+      alert('вызов сработал')
+    }
+  </script>
+</html>

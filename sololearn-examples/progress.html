@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress</title>
+  </head>
+  <body>
+    <div>
+      Status:
+      <progress id="progress" min="0" max="100" value="35"></progress>
+    </div>
+
+    <button>Change value</button>
+
+    <script>
+      ;(function () {
+        function getRandomValue() {
+          return Math.round(Math.random() * 100)
+        }
+
+        function getAndCheckRandomValue() {
+          let value = getRandomValue()
+
+          while (value < 0 || value > 100) {
+            value = getRandomValue()
+          }
+
+          return value
+        }
+
+        window.addEventListener('load', function () {
+          const btn = document.querySelector('button')
+          const progress = document.querySelector('progress')
+
+          btn.addEventListener('click', () => {
+            progress.value = String(getAndCheckRandomValue())
+          })
+        })
+      })()
+    </script>
+  </body>
+</html>

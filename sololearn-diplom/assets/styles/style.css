@@ -1,0 +1,224 @@
+html {
+  height: 100%;
+  min-height: 100vh;
+  background-image: url('../images/starts-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body, html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #111617;
+  min-height: 100vh;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Название сайта*/
+
+.header-brand {
+  font-size: 1.75rem;
+  color: #20BCD5;
+}
+
+a {
+  text-decoration: none;
+  color: #20BCD5;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.progress-list {
+  margin: 0 auto 20px;
+  padding-left: 20px;
+  list-style: none;
+  display: flex;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+progress {
+  height: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+
+  &::-moz-progress-bar {
+    border: none;
+    background-color: #20BCD5;
+    border-radius: 0.5rem;
+  }
+
+  &::-webkit-progress-bar {
+    border: none;
+    background-color: #20BCD5;
+    border-radius: 0.5rem;
+  }
+
+  &::-webkit-progress-value {
+    background-color: #20BCD5;
+    border-radius: 0.5rem;
+  }
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+/* Блоки */
+
+.section {
+  border-radius: 0.75rem;
+  background-color: rgba(242, 244, 245, 0.8);
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  padding: 1.5rem 2rem;
+}
+
+#box img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.img-circle {
+  border-radius: 100%;
+}
+
+/* Текст в блоках */
+.text {
+  font-size: 18px;
+  margin: 0 0 1.25rem;
+}
+
+#name {
+  font-size: 20px;
+  font-style: italic;
+  margin: 10px;
+}
+
+/* Заголовки блоков */
+
+.section-title {
+  font-size: 20px;
+  color: #20BCD5;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+
+  /* Рамки заголовков */
+
+  & > span {
+    display: inline-block;
+    border: 3px dashed #20BCD5;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+ul {
+  text-align: left;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-nav--list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  column-gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+
+  & > li {
+    display: inline-flex;
+
+    & > a {
+      display: inline-block;
+    }
+  }
+}
+
+/* Класс верхних кнопок ссылки под тегом <i> */
+
+.url {
+  font-size: 16px;
+  background-color: #20BCD5;
+  border-radius: 1.25rem;
+  color: #FFFFFF;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgb(255, 0, 0);
+    color: #FFFFFF;
+    opacity: 1;
+    text-decoration: none;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.75rem;
+}
+
+.socials a {
+  & > img {
+    border-radius: 100%;
+  }
+
+  &:nth-child(1) > img {
+    width: 50px;
+    height: 50px;
+  }
+
+  &:nth-child(2) > img {
+    width: 45px;
+    height: 45px;
+  }
+
+  &:nth-child(3) > img {
+    width: 45px;
+    height: 45px;
+  }
+
+  &:nth-child(4) > img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+#contacts img:hover {
+  opacity: 0.7;
+}
+
+#contacts {
+  text-align: center;
+}

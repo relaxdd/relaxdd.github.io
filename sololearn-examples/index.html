@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My cool shop</title>
+
+    <style>
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      section {
+        padding: 2rem 0;
+      }
+
+      img {
+        max-width: 400px;
+        height: auto;
+      }
+
+      input[type='submit'] {
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: #34495e;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease-out;
+        cursor: pointer;
+      }
+
+      input[type='submit']:hover {
+        background-color: black;
+      }
+
+      #form-wrapper {
+        display: inline-flex;
+        max-width: 250px;
+      }
+
+      .form-row {
+        display: flex;
+        flex-direction: row;
+        column-gap: 0.5rem;
+      }
+
+      .mb-2 {
+        margin-bottom: 1rem;
+      }
+
+      .py-3 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .bg-orange {
+        background-color: #ffa310;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="bg-orange" style="text-align: center; padding: 0.5rem">New Awesome Product</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="container py-3">
+        <img
+          src="https://lecontent.sololearn.com/material-images/54566ff4f28a4f73b5ef5c26e5dfb120-aa4fd972312946b998d9b71a753471f3-CR8.png"
+          alt="preview-page" />
+
+          <h2>Навигация:</h2>
+
+          <nav>
+            <ul>
+              <li><a href="animation.html">Animation</a></li>
+              <li><a href="animation2.html">Animation2</a></li>
+              <li><a href="laserkids.html">Laserkids</a></li>
+              <li><a href="progress.html">Progress</a></li>
+            </ul>
+          </nav>
+
+        <p>Introducing our <strong>latest product</strong>, designed to make your life easier and more efficient.</p>
+
+        <ul>
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+        </ul>
+
+        <h2>Order now!</h2>
+
+        <div id="form-wrapper">
+          <form method="GET" action="index.html" onsubmit="alert('Order confirmed!')">
+            <div class="form-row mb-2">
+              <div>
+                <label for="size">Size:</label>
+
+                <select name="size" id="size">
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="big">Big</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="color">Color:</label>
+
+                <select name="color" id="color">
+                  <option value="blue">Blue</option>
+                  <option value="green">Green</option>
+                  <option value="red">Red</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="pink">Pink</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label for="name">Name<span style="color: red">*</span>:</label>
+              <input type="text" name="name" id="name" required="" />
+            </div>
+
+            <div class="mb-2">
+              <label for="email">Email<span style="color: red">*</span>:</label>
+              <input type="email" name="email" id="email" required="" />
+            </div>
+
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="bg-orange" style="text-align: center; padding: 0.75rem">Made with &lt;3</div>
+        <a href="./progress.html">Progress</a>
+      </div>
+    </footer>
+  </body>
+</html>
