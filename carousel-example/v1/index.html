@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Demo carousel examples - v1</title>
+
+    <link rel="stylesheet" href="../assets/css/sanitize.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-shell">
+          <span class="header-brand">CarouselBrand</span>
+
+          <nav class="header-nav">
+            <ul class="header-nav--list">
+              <li class="header-nav--item">
+                <a href="/v1/index.html" class="header-nav--link">Simple</a>
+              </li>
+
+              <li class="header-nav--item">
+                <a href="/v2/index.html" class="header-nav--link">Advanced</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div id="my-carousel" class="carousel">
+          <div class="carousel-images"></div>
+
+          <div class="carousel-loader spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+          <div class="carousel-buttons">
+            <input class="carousel-buttons--prev" type="button" value="Prev" />
+            <input class="carousel-buttons--next" type="button" value="Next" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/js/main.js" type="text/javascript" defer></script>
+  </body>
+</html>

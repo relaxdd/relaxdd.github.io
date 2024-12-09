@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Demo carousel examples - v2</title>
+
+    <link rel="stylesheet" href="../assets/css/sanitize.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-shell">
+          <span class="header-brand">CarouselBrand</span>
+
+          <nav class="header-nav">
+            <ul class="header-nav--list">
+              <li class="header-nav--item">
+                <a href="/v1/index.html" class="header-nav--link">Simple</a>
+              </li>
+
+              <li class="header-nav--item">
+                <a href="/v2/index.html" class="header-nav--link">Advanced</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div id="my-carousel" class="carousel --carousel-normal"></div>
+
+        <div class="page-config">
+          <form class="page-config--form">
+            <div class="page-config--grid">
+              <div class="page-config--left">
+                <label for="carousel-images">
+                  <span>List all the pictures by line break</span>
+                  <small class="page-config--required">*</small>
+                </label>
+
+                <textarea id="carousel-images" rows="6" name="list-images" required></textarea>
+              </div>
+
+              <div class="page-config--right">
+                <div>
+                  <label for="type-change">Switching type</label>
+
+                  <select id="type-change" name="switching-type">
+                    <option value="normal">Normal</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="interval-ms">
+                    <span>Switching speed</span>
+                    <small class="page-config--required">*</small>
+                  </label>
+
+                  <input id="interval-ms" name="switching-speed" type="number" required min="0" step="500" />
+                </div>
+              </div>
+            </div>
+
+            <div class="page-config--buttons">
+              <input type="submit" value="Commit changes" class="page-config--submit" />
+              <input type="reset" value="Reset" class="page-config--reset" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/js/main.js" type="text/javascript" defer></script>
+  </body>
+</html>
