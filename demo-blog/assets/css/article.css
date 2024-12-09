@@ -1,0 +1,15 @@
+.latest_posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+  grid-column-gap: 1.75rem;
+  min-height: 1500px;
+  align-items: flex-start;
+}
+
+.latest_posts__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.75rem;
+}

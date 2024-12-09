@@ -1,0 +1,85 @@
+:root {
+  --primary-black-color: #111617;
+  --secondary-black-color: #212529;
+
+  --primary-font-family: 'PT Serif Caption', sans-serif;
+  --secondary-font-family: 'PT Serif', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary-black-color);
+  font-family: var(--primary-font-family);
+}
+
+body,
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--secondary-font-family);
+  font-size: 1.3125rem;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  padding-top: 2.5rem;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.content-shell {
+  display: grid;
+  grid-template-columns: 3.25fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+  grid-column-gap: 1.75rem;
+  align-items: flex-start;
+}

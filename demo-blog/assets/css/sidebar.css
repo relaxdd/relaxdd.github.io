@@ -1,0 +1,58 @@
+.page_sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+.page_sidebar__item {
+  border: 1px solid #ced4da;
+}
+
+.page_sidebar__item.__sidebar_sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1.25rem;
+}
+
+.card_body {
+  padding: 1.25rem 1.25rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card_title {
+  margin-bottom: 0.75rem;
+}
+
+.card_text:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.sidebar_tags__item {
+  font-family: var(--secondary-font-family);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--primary-black-color);
+  background-color: #f2f4f5;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+  &:hover {
+    background-color: #5c636a;
+    color: #ffffff;
+  }
+}

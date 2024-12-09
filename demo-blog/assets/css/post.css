@@ -1,0 +1,37 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.post a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+}
+
+.post_thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.post_body {
+  padding: 1.5rem 1rem;
+}
+
+.post_header {
+  margin-bottom: 1rem;
+}
+
+.post_excerpt {
+  margin-bottom: 1.25rem;
+}
+
+.post_preview {
+  transition: all 0.2s ease-in-out;
+}
+
+.post_preview:hover {
+  box-shadow: 0 18px 32px -18px #000;
+  transform: translateY(-6px);
+}
