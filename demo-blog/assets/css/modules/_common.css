@@ -1,6 +1,7 @@
 :root {
-  --primary-black-color: #111617;
-  --secondary-black-color: #212529;
+  --primary-dark-color: #111617;
+  --secondary-dark-color: #212529;
+  --primary-red-color: #d8160c;
 
   --primary-font-family: 'PT Serif Caption', sans-serif;
   --secondary-font-family: 'PT Serif', sans-serif;
@@ -23,7 +24,7 @@ body {
   min-height: 100vh;
   font-size: 14px;
   font-weight: 400;
-  color: var(--secondary-black-color);
+  color: var(--secondary-dark-color);
   font-family: var(--primary-font-family);
 }
 

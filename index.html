@@ -11,13 +11,35 @@
     <link href="https://cdn.skypack.dev/sanitize.css" rel="stylesheet" />
 
     <style>
+      :root {
+        --body-bg-color: #fff;
+        --body-color: #212529;
+        --primary-link-color: #0A58CA;
+        --primary-hover-link-color: var(--primary-link-color);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --body-bg-color: #212529;
+          --body-color: #dee2e6;
+          --primary-link-color: #6EA8FE;
+          --primary-hover-link-color: #8BB9FE;
+        }
+      }
+
+      body {
+        color: var(--body-color);
+        background-color: var(--body-bg-color);
+      }
+
       a {
-        color: #0060df;
+        color: var(--primary-link-color);
         text-decoration: none;
       }
 
       a:hover {
         text-decoration: underline;
+        color: var(--primary-hover-link-color);
       }
 
       .container {

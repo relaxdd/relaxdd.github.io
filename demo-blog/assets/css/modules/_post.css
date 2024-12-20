@@ -20,8 +20,23 @@
 }
 
 .post_header {
+  /* margin-bottom: 0.75rem; */
   margin-bottom: 1rem;
 }
+
+/* .post_header::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  width: 0;
+  transition: width 0.35s;
+  margin-top: 0.25rem;
+}
+
+.post_header:hover::after {
+  width: 100%;
+} */
 
 .post_excerpt {
   margin-bottom: 1.25rem;

@@ -1,6 +1,6 @@
 .footer {
   padding: 1rem 0 .5rem;
-  background-color: var(--primary-black-color);
+  background-color: var(--primary-dark-color);
   color: white;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .footer__copyright {
-  border-top: 2px solid var(--secondary-black-color);
+  border-top: 2px solid var(--secondary-dark-color);
   color: #555D65;
   font-size: 13px;
   margin: 0 auto;

@@ -35,7 +35,7 @@
   background-clip: padding-box;
   background-color: #ffffff;
   border: 1px solid #ced4da;
-  color: var(--secondary-black-color);
+  color: var(--secondary-dark-color);
   display: block;
   font-size: 0.875rem;
   font-weight: 400;
@@ -46,7 +46,7 @@
   &:focus {
     background-color: #ffffff;
     border-color: #343a40;
-    color: var(--secondary-black-color);
+    color: var(--secondary-dark-color);
     outline: 0;
   }
 }
@@ -55,7 +55,7 @@
   flex: 0 1 auto;
   border-radius: 0;
   border: none;
-  color: var(--secondary-black-color);
+  color: var(--secondary-dark-color);
   cursor: pointer;
   display: inline-block;
   font-size: 0.875rem;
