@@ -1,84 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Demo carousel examples - v2</title>
+  <title>Demo carousel examples - v2</title>
 
-    <link rel="stylesheet" href="../assets/css/sanitize.css" />
-    <link rel="stylesheet" href="../assets/css/common.css" />
-    <link rel="stylesheet" href="../assets/css/header.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header-shell">
-          <span class="header-brand">CarouselBrand</span>
+  <link rel="stylesheet" href="../assets/css/sanitize.css" />
+  <link rel="stylesheet" href="../assets/css/common.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-shell">
+      <span class="header-brand">CarouselBrand</span>
 
-          <nav class="header-nav">
-            <ul class="header-nav--list">
-              <li class="header-nav--item">
-                <a href="/carousel-example/v1/index.html" class="header-nav--link">Simple</a>
-              </li>
+      <nav class="header-nav">
+        <ul class="header-nav--list">
+          <li class="header-nav--item">
+            <a href="/carousel-example/v1/index.html" class="header-nav--link">Simple</a>
+          </li>
 
-              <li class="header-nav--item">
-                <a href="/carousel-example/v2/index.html" class="header-nav--link">Advanced</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+          <li class="header-nav--item">
+            <a href="/carousel-example/v2/index.html" class="header-nav--link">Advanced</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 
-    <main>
-      <div class="container">
-        <div id="my-carousel" class="carousel --carousel-normal"></div>
+<main>
+  <div class="container">
+    <div
+      id="my-carousel"
+      class="carousel"
+      data-type="translate"
+    ></div>
 
-        <div class="page-config">
-          <form class="page-config--form">
-            <div class="page-config--grid">
-              <div class="page-config--left">
-                <label for="carousel-images">
-                  <span>List all the pictures by line break</span>
-                  <small class="page-config--required">*</small>
-                </label>
+    <div class="page-config">
+      <form class="page-config--form">
+        <div class="page-config--grid">
+          <div class="page-config--left">
+            <label for="carousel-images">
+              <span>List all the pictures by line break</span>
+              <small class="page-config--required">*</small>
+            </label>
 
-                <textarea id="carousel-images" rows="6" name="list-images" required></textarea>
-              </div>
+            <textarea id="carousel-images" rows="6" name="list-images" required></textarea>
+          </div>
 
-              <div class="page-config--right">
-                <div>
-                  <label for="type-change">Switching type</label>
+          <div class="page-config--right">
+            <div>
+              <label for="type-change">Switching type</label>
 
-                  <select id="type-change" name="switching-type">
-                    <option value="normal">Normal</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="interval-ms">
-                    <span>Switching speed</span>
-                    <small class="page-config--required">*</small>
-                  </label>
-
-                  <input id="interval-ms" name="switching-speed" type="number" required min="0" step="500" />
-                </div>
-              </div>
+              <select id="type-change" name="switching-type">
+                <option value="translate">Translate</option>
+                <option value="blurring">Blurring</option>
+                <option value="magic" disabled>Magic</option>
+              </select>
             </div>
 
-            <div class="page-config--buttons">
-              <input type="submit" value="Commit changes" class="page-config--submit" />
-              <input type="reset" value="Reset" class="page-config--reset" />
-            </div>
-          </form>
-        </div>
-      </div>
-    </main>
+            <div>
+              <label for="interval-ms">
+                <span>Switching speed</span>
+                <small class="page-config--required">*</small>
+              </label>
 
-    <script src="./assets/js/main.js" type="text/javascript" defer></script>
-  </body>
+              <input id="interval-ms" name="switching-speed" type="number" required min="0" step="500" />
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction: column;row-gap: 0.5rem;margin-bottom: 1.25rem;">
+          <label class="form-label">
+            <input type="checkbox" name="pause-on-blur">
+            <span>Pause the carousel when the window is blurred</span>
+          </label>
+
+          <label class="form-label">
+            <input type="checkbox" name="enable-autoplay">
+            <span>Enable auto-playback of slides in the carousel</span>
+          </label>
+        </div>
+
+        <div class="page-config--buttons">
+          <input type="submit" value="Commit changes" class="btn-primary" />
+          <input type="reset" value="Reset" class="btn-primary" />
+          <input type="button" value="Open dialog" id="show-dialog" class="btn-primary" />
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<dialog id="customize-dialog" class="modal-dialog" popover>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Hi, i'm dialog!</h2>
+      <button class="modal-close" data-hider></button>
+    </div>
+
+    <div class="modal-body">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, blanditiis cumque, eius eligendi enim excepturi
+          facilis illum nihil odit reiciendis tempore, veniam. Ad at culpa dicta dignissimos dolor expedita, illo, illum
+          inventore nam natus nisi nostrum officiis quaerat quas quibusdam quo sapiente sed sit temporibus unde. A
+          aspernatur deleniti quia!
+        </p>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="assets/js/main.js" type="text/javascript" defer></script>
+</body>
 </html>

@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": false,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable",
+    ],
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "useUnknownInCatchVariables": true,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnreachableCode": true,
+    "allowJs": false,
+    "esModuleInterop": true,
+    "incremental": true,
+    "baseUrl": "./assets/ts",
+    "outDir": "./assets/js"
+  },
+  "include": [
+    "./assets/ts/**/*.ts"
+  ],
+}

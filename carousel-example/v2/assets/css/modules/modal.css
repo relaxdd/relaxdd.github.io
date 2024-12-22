@@ -1,0 +1,69 @@
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.modal-dialog {
+  --transition-ms: 0.3s;
+
+  position: fixed;
+  left: 50%;
+  translate: -50%;
+  max-height: calc(100dvh - 2rem);
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #FFFFFF;
+  padding: 0;
+  transition: opacity .15s linear, transform var(--transition-ms) ease-out;
+  transform: translate(0, -50px);
+  opacity: 0;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:not(.modal-dialog-centered) {
+    top: 1.75rem;
+  }
+
+  &.modal-dialog-centered {
+    top: 50%;
+    translate: -50% -50%;
+  }
+
+  &.modal-show {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.modal-close {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  opacity: .75;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.modal-body {
+  overflow-y: auto;
+}
