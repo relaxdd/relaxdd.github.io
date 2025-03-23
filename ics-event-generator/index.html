@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Создать файл календаря (.ics)</title>
+
+  <link
+    rel="icon"
+    href="https://static.ngenix.net/2022/11/cropped-ngenix-favicon-blue-without-bckgrng-512x512-v1-32x32.png"
+    sizes="32x32"
+  />
+
+  <link
+    rel="icon"
+    href="https://static.ngenix.net/2022/11/cropped-ngenix-favicon-blue-without-bckgrng-512x512-v1-192x192.png"
+    sizes="192x192"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    href="https://static.ngenix.net/2022/11/cropped-ngenix-favicon-blue-without-bckgrng-512x512-v1-180x180.png"
+  />
+
+  <meta
+    name="msapplication-TileImage"
+    content="https://static.ngenix.net/2022/11/cropped-ngenix-favicon-blue-without-bckgrng-512x512-v1-270x270.png"
+  />
+  <script type="module" crossorigin src="/ics-event-generator/assets/index-DhsYHASI.js"></script>
+  <link rel="stylesheet" crossorigin href="/ics-event-generator/assets/index-Dl8r1Isn.css">
+</head>
+<body>
+<main>
+  <div class="container">
+    <h1 class="ics-title">Создать файл календаря (.ics)</h1>
+
+    <form id="icsForm">
+      <div>
+        <div class="ics-form--row">
+          <label for="summary" class="ics-form--label">Название события:</label>
+          <input type="text" id="summary" name="summary" required class="ics-form--control" />
+        </div>
+
+        <div class="ics-form--grid">
+          <div class="ics-form--row">
+            <label for="start" class="ics-form--label">Дата и время начала:</label>
+            <input type="text" id="start" name="start" required class="ics-form--control" placeholder="дд . мм . гггг, -- : --" />
+          </div>
+
+          <div class="ics-form--row">
+            <label for="end" class="ics-form--label">Дата и время окончания:</label>
+            <input type="text" id="end" name="end" required class="ics-form--control" placeholder="дд . мм . гггг, -- : --" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="ics-form--submit">Создать файл</button>
+    </form>
+  </div>
+</main>
+
+</body>
+</html>
