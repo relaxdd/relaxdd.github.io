@@ -9,8 +9,8 @@
   <title>SimpleTimer Example</title>
 
   <link rel="icon" type="image/svg+xml" href="/simple-timer/vite.svg" />
-  <script type="module" crossorigin src="/simple-timer/assets/index-BDY_lWAz.js"></script>
-  <link rel="stylesheet" crossorigin href="/simple-timer/assets/index-DWrLUm6E.css">
+  <script type="module" crossorigin src="/simple-timer/assets/index-DzHWlu-o.js"></script>
+  <link rel="stylesheet" crossorigin href="/simple-timer/assets/index-C47glZKm.css">
 </head>
 <body>
 <main>
@@ -35,7 +35,7 @@
           </label>
 
           <label class="form-checkbox">
-            <input type="checkbox" name="saveStateInStorage">
+            <input type="checkbox" name="saveInStorage">
             <span>Save the timer state in the browser memory</span>
           </label>
 
@@ -56,6 +56,22 @@
         </div>
 
         <div class="setting_form__fields">
+          <div>
+            <label class="form-label" for="storage-id-field">
+              <span>Storage ID</span>
+            </label>
+
+            <input
+              type="text"
+              name="storageId"
+              id="storage-id-field"
+              class="form-control"
+              minlength="15"
+              maxlength="15"
+              pattern="^[0-9a-zA-Z]+$"
+            >
+          </div>
+
           <div>
             <label class="form-label" for="seconds-field">
               <span>Seconds</span>
@@ -91,6 +107,7 @@
           <div>
             <label class="form-label" for="fraction-digits-field">
               <span>Qty Fraction Digits</span>
+              <small class="form-label--required">*</small>
             </label>
 
             <input
@@ -98,9 +115,9 @@
               name="fractionDigits"
               id="fraction-digits-field"
               class="form-control"
-              value="2"
-              min="1"
-              max="3"
+              value="2" min="1" max="2"
+              pattern="^[1-2]$"
+              required=""
             >
           </div>
 
@@ -133,7 +150,7 @@
         </div>
 
         <div class="setting_form__buttons">
-          <input type="submit" class="btn-primary" value="Commit changes" disabled="">
+          <input type="submit" class="btn-primary" value="Commit changes">
           <input type="reset" class="btn-primary" value="Reset options">
         </div>
       </form>
