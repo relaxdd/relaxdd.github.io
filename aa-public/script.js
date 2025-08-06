@@ -1,138 +1,294 @@
 (function () {
-  const wrapper = document.querySelector('#wrapper');
-  const initialProjects = document.querySelectorAll('#wrapper > li');
-
-  /*
-   * ============================
-   */
-
-  function sortingProjects() {
-    const order = document.querySelector('#order');
-    const orderby = document.querySelector('#orderby');
-
-    function extractTsFromDate(li) {
-      const year = li.dataset?.['year'] ?? '';
-      const month = li.dataset?.['month'] ?? '';
-
-      if (!year) return 0;
-      return new Date(year + (month ? `-${month}` : '')).getTime();
+  class Locality {
+    /**
+     * @returns {URLSearchParams}
+     */
+    static getSearchParams() {
+      return new URL(window.location.href).searchParams;
     }
 
-    function extractInnerText(li) {
-      return li.querySelector('a').innerText;
+    /**
+     * @param {string} key
+     * @returns {string|null}
+     */
+    static getSearchParam(key) {
+      return Locality.getSearchParams().get(key);
     }
 
-    function sortListItems(orderby, order) {
-      if (!orderby) {
-        wrapper.innerHTML = '';
-        wrapper.append(...initialProjects);
-      } else {
-        const projects = document.querySelectorAll('#wrapper > li');
-        const elements = [...projects];
+    /**
+     * @param {string[]} keys
+     * @returns {Record<string, string|null>}
+     */
+    static getSearchParamByKeys(keys) {
+      const obj = {};
+      const searchParams = Locality.getSearchParams();
 
-        elements.sort((a, b) => {
-          switch (true) {
-            case orderby === 'date' && order === 'asc':
-              return extractTsFromDate(a) - extractTsFromDate(b);
-            case orderby === 'date' && order === 'desc':
-              return extractTsFromDate(b) - extractTsFromDate(a);
-            case orderby === 'name' && order === 'asc':
-              return extractInnerText(a).localeCompare(extractInnerText(b));
-            case orderby === 'name' && order === 'desc':
-              return extractInnerText(b).localeCompare(extractInnerText(a));
-            default:
-              return 0;
+      for (const key of keys) {
+        obj[key] = searchParams.get(key);
+      }
+
+      return obj;
+    }
+
+    /**
+     * @param {string} key
+     * @param {string} value
+     */
+    static setSearchParam(key, value = '') {
+      const url = new URL(window.location.href);
+      url.searchParams.set(key, value);
+      window.history.replaceState('', '', url);
+    }
+
+    /**
+     * @param {string} key
+     */
+    static deleteSearchParam(key) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete(key);
+      window.history.replaceState('', '', url);
+    }
+  }
+
+  function main() {
+    const $wrapper = document.querySelector('#wrapper');
+    const $initialProjects = document.querySelectorAll('#wrapper > li');
+
+    const allowed = {
+      order: ['asc', 'desc'],
+      orderby: ['name', 'date'],
+      type: ['php', 'html', 'html_mobile', 'js', 'react'],
+      year: ['2020', '2021', '2022', '2023', '2024', '2025'],
+    };
+
+    /*
+     * ================ Helpers ================
+     */
+
+    /**
+     * @param {string[]} keys
+     * @param {Record<string, string[]>} allowed
+     * @returns {Record<string, string|null>}
+     */
+    function getClearedSearchParams(keys, allowed) {
+      const clear = {};
+      const values = Locality.getSearchParamByKeys(keys);
+
+      for (const key in values) {
+        if (Object.prototype.hasOwnProperty.call(values, key)) {
+          if (key in allowed && values[key] !== null && allowed[key].includes(values[key])) {
+            clear[key] = values[key];
+          } else {
+            Locality.deleteSearchParam(key);
           }
-        });
-
-        wrapper.innerHTML = '';
-        wrapper.append(...elements);
-      }
-    }
-
-    window.addEventListener('load', () => {
-      sortListItems(orderby.value, order.value);
-    });
-
-    orderby.addEventListener('change', (e) => {
-      sortListItems(e.target.value, order.value);
-    });
-
-    order.addEventListener('change', (e) => {
-      sortListItems(orderby.value, e.target.value);
-    });
-  }
-
-  function filteringProjects() {
-    const filter = document.querySelector('#filters');
-    const typeFilter = document.querySelector('#type-filter');
-    const yearFilter = document.querySelector('#date-filter');
-    const projects = document.querySelectorAll('#wrapper > li');
-
-    function replaceState(type, year) {
-      if (!type && !year) {
-        for (const project of projects) {
-          project.style.removeProperty('display');
-        }
-      } else {
-        for (const project of projects) {
-          const years = project.dataset?.['year'] ?? '';
-          const types = project.dataset?.['types'] ?? '';
-
-          if (type && !types) continue;
-          if (year && !years) continue;
-
-          const parse = types.split(';');
-          const display = (type ? parse.includes(type) : true) && (year ? years === year : true);
-
-          if (display) project.style.removeProperty('display');
-          else project.style.setProperty('display', 'none');
         }
       }
+
+      return clear;
     }
 
-    window.addEventListener('load', () => {
-      replaceState(typeFilter.value, yearFilter.value);
-    });
+    /*
+     * ================ Modules ================
+     */
 
-    typeFilter.addEventListener('change', (e) => {
-      replaceState(e.target.value, yearFilter.value);
-    });
+    function sortingProjects() {
+      const $order = document.querySelector('#order');
+      const $orderby = document.querySelector('#orderby');
 
-    yearFilter.addEventListener('change', (e) => {
-      replaceState(typeFilter.value, e.target.value);
-    });
+      function extractTsFromDate(li) {
+        const year = li.dataset?.['year'] ?? '';
+        const month = li.dataset?.['month'] ?? '';
 
-    filter.addEventListener('reset', () => {
-      typeFilter.value = '';
-      yearFilter.value = '';
+        if (!year) return 0;
+        return new Date(year + (month ? `-${month}` : '')).getTime();
+      }
 
-      replaceState('', '');
-    });
-  }
+      function extractInnerText(li) {
+        return li.querySelector('a').innerText;
+      }
 
-  function toggleProjectSections() {
-    const headers = document.querySelectorAll('.projects_section__header');
+      /**
+       * @param {string} orderby
+       * @param {string} order
+       */
+      function insertFormState(orderby, order) {
+        $order.value = order;
+        $orderby.value = orderby;
+      }
 
-    for (const header of headers) {
-      header.addEventListener('click', function (e) {
-        const article = e.target.closest('.projects_section');
-        if (!article) return;
-
-        if (!article.hasAttribute('data-hidden')) {
-          article.setAttribute('data-hidden', '');
+      /**
+       * @param {string} orderby
+       * @param {string} order
+       */
+      function sortListItems(orderby, order) {
+        if (!orderby) {
+          $wrapper.innerHTML = '';
+          $wrapper.append(...$initialProjects);
         } else {
-          article.removeAttribute('data-hidden');
+          const projects = document.querySelectorAll('#wrapper > li');
+          const elements = [...projects];
+
+          elements.sort((a, b) => {
+            switch (true) {
+              case orderby === 'date' && order === 'asc':
+                return extractTsFromDate(a) - extractTsFromDate(b);
+              case orderby === 'date' && order === 'desc':
+                return extractTsFromDate(b) - extractTsFromDate(a);
+              case orderby === 'name' && order === 'asc':
+                return extractInnerText(a).localeCompare(extractInnerText(b));
+              case orderby === 'name' && order === 'desc':
+                return extractInnerText(b).localeCompare(extractInnerText(a));
+              default:
+                return 0;
+            }
+          });
+
+          $wrapper.innerHTML = '';
+          $wrapper.append(...elements);
+        }
+      }
+
+      /*
+       * ===============================
+       */
+
+      window.addEventListener('load', () => {
+        const initial = { order: $order.value, orderby: $orderby.value };
+        const searchQuery = getClearedSearchParams(['order', 'orderby'], allowed);
+        const merged = { ...initial, ...searchQuery };
+
+        sortListItems(merged.orderby, merged.order);
+        insertFormState(merged.orderby, merged.order);
+      });
+
+      $orderby.addEventListener('change', (e) => {
+        sortListItems(e.target.value, $order.value);
+
+        if (!e.target.value) Locality.deleteSearchParam('orderby');
+        else Locality.setSearchParam('orderby', e.target.value);
+      });
+
+      $order.addEventListener('change', (e) => {
+        sortListItems($orderby.value, e.target.value);
+
+        if (!e.target.value || e.target.value === 'asc') {
+          Locality.deleteSearchParam('order');
+        } else {
+          Locality.setSearchParam('order', e.target.value);
         }
       });
     }
+
+    function filteringProjects() {
+      const $filter = document.querySelector('#filters');
+      const $typeFilter = document.querySelector('#type-filter');
+      const $yearFilter = document.querySelector('#date-filter');
+      const $projects = document.querySelectorAll('#wrapper > li');
+
+      /*
+       * ============================
+       */
+
+      /**
+       * @param {string} type
+       * @param {string} year
+       */
+      function insertFormState(type, year) {
+        $typeFilter.value = type;
+        $yearFilter.value = year;
+      }
+
+      /**
+       * @param {string} type
+       * @param {string} year
+       */
+      function replaceState(type, year) {
+        if (!type && !year) {
+          for (const $project of $projects) {
+            $project.style.removeProperty('display');
+          }
+        } else {
+          for (const $project of $projects) {
+            const years = $project.dataset?.['year'] ?? '';
+            const types = $project.dataset?.['types'] ?? '';
+
+            if (type && !types) continue;
+            if (year && !years) continue;
+
+            const parse = types.split(';');
+            const display = (type ? parse.includes(type) : true) && (year ? years === year : true);
+
+            if (display) $project.style.removeProperty('display');
+            else $project.style.setProperty('display', 'none');
+          }
+        }
+      }
+
+      /*
+       * ============================
+       */
+
+      window.addEventListener('load', () => {
+        const initial = { type: $typeFilter.value, year: $yearFilter.value };
+        const searchQuery = getClearedSearchParams(['type', 'year'], allowed);
+        const merged = { ...initial, ...searchQuery };
+
+        replaceState(merged.type, merged.year);
+        insertFormState(merged.type, merged.year);
+      });
+
+      $typeFilter.addEventListener('change', (e) => {
+        replaceState(e.target.value, $yearFilter.value);
+
+        if (!e.target.value) Locality.deleteSearchParam('type');
+        else Locality.setSearchParam('type', e.target.value);
+      });
+
+      $yearFilter.addEventListener('change', (e) => {
+        replaceState($typeFilter.value, e.target.value);
+
+        if (!e.target.value) Locality.deleteSearchParam('year');
+        else Locality.setSearchParam('year', e.target.value);
+      });
+
+      $filter.addEventListener('reset', () => {
+        replaceState('', '');
+        insertFormState('', '');
+
+        Locality.deleteSearchParam('type');
+        Locality.deleteSearchParam('year');
+      });
+    }
+
+    function toggleProjectSections() {
+      const $headers = document.querySelectorAll('.projects_section__header');
+
+      for (const header of $headers) {
+        header.addEventListener('click', function (e) {
+          const $article = e.target.closest('.projects_section');
+          if (!$article) return;
+
+          if (!$article.hasAttribute('data-hidden')) {
+            $article.setAttribute('data-hidden', '');
+          } else {
+            $article.removeAttribute('data-hidden');
+          }
+        });
+      }
+    }
+
+    /*
+     * ============= Initialization =============
+     */
+
+    sortingProjects();
+    filteringProjects();
+    toggleProjectSections();
   }
 
   /*
    * ============================
    */
 
-  sortingProjects();
-  filteringProjects();
-  toggleProjectSections();
+  main();
 })();
