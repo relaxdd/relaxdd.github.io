@@ -21,7 +21,7 @@
         console.log({ year, years });
 
         const parse = types.split(';');
-        const display = (type ? parse.includes(type) : true) && years === year;
+        const display = (type ? parse.includes(type) : true) && (year ? years === year : true);
 
         if (display) project.style.removeProperty('display');
         else project.style.setProperty('display', 'none');
