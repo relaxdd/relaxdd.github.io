@@ -6,122 +6,163 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Navigation by projects | awenn2015</title>
+    <title>Awenn2015 — Project navigation</title>
+    <meta name="description" content="All my rough, demo, or production work is collected here." />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/_public/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/_public/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/_public/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/_public/favicon/site.webmanifest" />
+
     <link href="https://cdn.skypack.dev/sanitize.css" rel="stylesheet" />
-
-    <style>
-      :root {
-        --body-bg-color: #fff;
-        --body-color: #212529;
-        --primary-link-color: #0A58CA;
-        --primary-hover-link-color: var(--primary-link-color);
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --body-bg-color: #212529;
-          --body-color: #dee2e6;
-          --primary-link-color: #6EA8FE;
-          --primary-hover-link-color: #8BB9FE;
-        }
-      }
-
-      body {
-        color: var(--body-color);
-        background-color: var(--body-bg-color);
-        line-height: 1.4;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-      }
-
-      main {
-        padding: 2rem 0;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      a {
-        color: var(--primary-link-color);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-        color: var(--primary-hover-link-color);
-      }
-
-      .container {
-        max-width: 1240px;
-        margin: 0 auto;
-        padding: 0 15px;
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 16px;
-      }
-    </style>
+    <link href="/_public/style.css" rel="stylesheet" />
   </head>
   <body>
     <main>
       <div class="container">
         <h1>Projects of awenn2015</h1>
 
-        <h2>Draft / Demo / Prototype</h2>
+        <div>
+          <h2>Draft / Demo</h2>
 
-        <ul>
-          <li><a href="#">Zere Cargo</a></li>
-          <li><a href="/sololearn-examples/">SoloLearn examples</a></li>
-          <li><a href="/sololearn-diplom/">SoloLearn diplom</a></li>
-          <li><a href="/running-bottom-line/">Running bottom line</a></li>
-          <li><a href="/dezhital/">Дежиталь</a></li>
-          <li><a href="/green-street-wolf/">Green Street Wolf</a></li>
-          <li><a href="/home-master/">Home Master</a></li>
-          <li><a href="/k2-urist/">K2 Urist</a></li>
-          <li><a href="/dom-karnizov/">Дом карнизов</a></li>
-          <li><a href="/bit-test/">BitTest</a></li>
-          <li><a href="/factory-admin/">Factory Admin</a></li>
-          <li><a href="/demo-blog/">Demo Blog</a></li>
-          <li><a href="/demo-vegetable-shop/">Demo Vegetable Shop</a></li>
-          <li><a href="/demo-our-place-shop/">Demo OurPlace Shop</a></li>
-          <li><a href="/alivio-layout/">Alivio Layout</a></li>
-          <li><a href="/air-conditioner-shop/">AirConditioner Shop</a></li>
-          <li><a href="/kwh-consulting/">kWh consulting</a></li>
-          <li><a href="/simple-timer/">Simple Timer</a></li>
-          <li>
-            <a href="/carousel-example/">Carousel example</a>
+          <form class="filters">
+            <select id="type-filter">
+              <option value="">Type</option>
+              <option value="html">HTML</option>
+              <option value="html_mobile">HTML+Adaptive</option>
+              <option value="js">JavaScript</option>
+              <option value="react">React</option>
+              <option value="php">PHP</option>
+            </select>
 
-            <ul>
-              <li><a href="/carousel-example/v1/index.html">Simple</a></li>
-              <li><a href="/carousel-example/v2/index.html">Advanced</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="/working-hours/">Working Hours</a>
+            <select id="date-filter">
+              <option value="">Year</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+            </select>
 
-            <ul>
-              <li><a href="/working-hours/v0.1.0">0.1.0</a></li>
-              <li><a href="/working-hours/v1.0.0">1.0.0</a></li>
-              <li><a href="/working-hours/v2.1.6-beta">2.1.6-beta</a></li>
-              <li><a href="/working-hours/">2.1.6 (Latest)</a></li>
-            </ul>
-          </li>
-        </ul>
+            <input type="reset" value="Reset" />
+          </form>
 
-        <h2>Deployed projects</h2>
+          <ul id="wrapper">
+            <li data-types="html" data-year="2020">
+              <a href="/sololearn-examples/">SoloLearn examples</a>
+            </li>
 
-        <ul>
-          <li><a href="https://wise-voting.ru" target="_blank">Wise Voting (2025)</a></li>
-          <li><a href="https://osvetilo.ru" target="_blank">Osvetilo (2023)</a></li>
-          <li><a href="https://домкарнизов.рф" target="_blank">Дом карнизов (2023)</a></li>
-          <li><a href="https://ngenix.net" target="_blank">NGENIX (2022)</a></li>
-          <li><a href="https://greenstreetwolf.ru" target="_blank">Green Street Wolf (2021)</a></li>
-          <li><a href="https://laserkids.ru" target="_blank">Laserkids (2020)</a></li>
-          <li><a href="https://мирдров73.рф" target="_blank">Мир Дров 73 (2020)</a></li>
-        </ul>
+            <li data-types="html" data-year="2020">
+              <a href="/sololearn-diplom/">SoloLearn diplom</a>
+            </li>
+
+            <li data-types="html;html_mobile" data-year="2021">
+              <a href="/dezhital/">Дежиталь</a>
+            </li>
+
+            <li data-types="html" data-year="2021">
+              <a href="/green-street-wolf/">Green Street Wolf</a>
+            </li>
+
+            <li data-types="html" data-year="2021">
+              <a href="/home-master/">Home Master</a>
+            </li>
+
+            <li data-types="php" data-year="2023">
+              <a href="#">Zere Cargo</a>
+            </li>
+
+            <li data-types="react" data-year="2023">
+              <a href="/working-hours/">Working Hours</a>
+
+              <ul>
+                <li><a href="/working-hours/v0.1.0">0.1.0</a></li>
+                <li><a href="/working-hours/v1.0.0">1.0.0</a></li>
+                <li><a href="/working-hours/v2.1.6-beta">2.1.6-beta</a></li>
+                <li><a href="/working-hours/">2.1.6 (Latest)</a></li>
+              </ul>
+            </li>
+
+            <li data-types="js" data-year="2024">
+              <a href="/carousel-example/">Carousel example</a>
+
+              <ul>
+                <li><a href="/carousel-example/v1/index.html">Simple</a></li>
+                <li><a href="/carousel-example/v2/index.html">Advanced</a></li>
+              </ul>
+            </li>
+
+            <li data-types="js" data-year="2024" data-year="12">
+              <a href="/running-bottom-line/">Running bottom line</a>
+            </li>
+
+            <li data-types="html;html_mobile" data-year="2024">
+              <a href="/k2-urist/">K2 Urist</a>
+            </li>
+
+            <li data-types="html;html_mobile;react" data-year="2024" data-month="02">
+              <a href="/bit-test/">BitTest</a>
+            </li>
+
+            <li data-types="html;html_mobile" data-year="2024" data-month="03">
+              <a href="/dom-karnizov/">Дом карнизов</a>
+            </li>
+
+            <li data-types="react" data-year="2024" data-month="04">
+              <a href="/factory-admin/">Factory Admin</a>
+            </li>
+
+            <li data-types="html" data-year="2024" data-month="12">
+              <a href="/demo-blog/">Demo Blog</a>
+            </li>
+
+            <li data-types="html;react" data-year="2025" data-month="01">
+              <a href="/demo-vegetable-shop/">Demo Vegetable Shop</a>
+            </li>
+
+            <li data-types="html;js" data-year="2025" data-month="03">
+              <a href="/ics-event-generator/">ICS Event Generator</a>
+            </li>
+
+            <li data-types="html" data-year="2025" data-month="06">
+              <a href="/alivio-layout/">Alivio Layout</a>
+            </li>
+
+            <li data-types="html" data-year="2025" data-month="06">
+              <a href="/demo-our-place-shop/">Demo OurPlace Shop</a>
+            </li>
+
+            <li data-types="html;html_mobile" data-year="2025" data-month="06">
+              <a href="/air-conditioner-shop/">AirConditioner Shop</a>
+            </li>
+
+            <li data-types="html;html_mobile" data-year="2025" data-month="07">
+              <a href="/kwh-consulting/">kWh consulting</a>
+            </li>
+
+            <li data-types="js" data-year="2025" data-month="08">
+              <a href="/simple-timer/">Simple Timer</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Deployed projects</h2>
+
+          <ul>
+            <li><a href="https://wise-voting.ru" target="_blank">Wise Voting (2025)</a></li>
+            <li><a href="https://osvetilo.ru" target="_blank">Osvetilo (2023)</a></li>
+            <li><a href="https://домкарнизов.рф" target="_blank">Дом карнизов (2023)</a></li>
+            <li><a href="https://ngenix.net" target="_blank">NGENIX (2022)</a></li>
+            <li><a href="https://greenstreetwolf.ru" target="_blank">Green Street Wolf (2021)</a></li>
+            <li><a href="https://laserkids.ru" target="_blank">Laserkids (2020)</a></li>
+            <li><a href="https://мирдров73.рф" target="_blank">Мир Дров 73 (2020)</a></li>
+          </ul>
+        </div>
       </div>
     </main>
+
+    <script src="/_public/script.js"></script>
   </body>
 </html>
