@@ -69,19 +69,6 @@
             </header>
 
             <div class="projects_section__content">
-              <div class="projects_section__filter">
-                <select id="orderby">
-                  <option value="">Orderby</option>
-                  <option value="name">Name</option>
-                  <option value="date">Date</option>
-                </select>
-
-                <select id="order">
-                  <option value="asc">ASC</option>
-                  <option value="desc">DESC</option>
-                </select>
-              </div>
-
               <form id="filters" class="projects_section__filter">
                 <select id="type-filter">
                   <option value="">Type</option>
@@ -104,6 +91,19 @@
 
                 <input type="reset" value="Reset" />
               </form>
+
+              <div class="projects_section__filter">
+                <select id="orderby">
+                  <option value="">Orderby</option>
+                  <option value="name">Name</option>
+                  <option value="date">Date</option>
+                </select>
+
+                <select id="order">
+                  <option value="asc">ASC</option>
+                  <option value="desc">DESC</option>
+                </select>
+              </div>
 
               <ul class="projects_section__list" id="wrapper">
                 <li data-types="html" data-year="2020">
