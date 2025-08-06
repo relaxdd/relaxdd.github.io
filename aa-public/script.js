@@ -15,10 +15,7 @@
         const types = project.dataset?.['types'] ?? '';
 
         if (type && !types) continue;
-        console.log({ type, types });
-
         if (year && !years) continue;
-        console.log({ year, years });
 
         const parse = types.split(';');
         const display = (type ? parse.includes(type) : true) && (year ? years === year : true);
