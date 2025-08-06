@@ -95,6 +95,10 @@
       const $order = document.querySelector('#order');
       const $orderby = document.querySelector('#orderby');
 
+      /**
+       * @param {HTMLElement} li
+       * @returns {number}
+       */
       function extractTsFromDate(li) {
         const year = li.dataset?.['year'] ?? '';
         const month = li.dataset?.['month'] ?? '';
@@ -103,6 +107,10 @@
         return new Date(year + (month ? `-${month}` : '')).getTime();
       }
 
+      /**
+       * @param {HTMLElement} li
+       * @returns {string}
+       */
       function extractInnerText(li) {
         return li.querySelector('a').innerText;
       }
@@ -110,6 +118,7 @@
       /**
        * @param {string} orderby
        * @param {string} order
+       * @returns {void}
        */
       function insertFormState(orderby, order) {
         $order.value = order;
@@ -119,6 +128,7 @@
       /**
        * @param {string} orderby
        * @param {string} order
+       * @returns {void}
        */
       function sortListItems(orderby, order) {
         if (!orderby) {
@@ -154,8 +164,8 @@
 
       window.addEventListener('load', () => {
         const initial = { order: $order.value, orderby: $orderby.value };
-        const searchQuery = getClearedSearchParams(['order', 'orderby'], allowed);
-        const merged = { ...initial, ...searchQuery };
+        const search = getClearedSearchParams(['order', 'orderby'], allowed);
+        const merged = { ...initial, ...search };
 
         sortListItems(merged.orderby, merged.order);
         insertFormState(merged.orderby, merged.order);
@@ -192,6 +202,7 @@
       /**
        * @param {string} type
        * @param {string} year
+       * @returns {void}
        */
       function insertFormState(type, year) {
         $typeFilter.value = type;
@@ -201,6 +212,7 @@
       /**
        * @param {string} type
        * @param {string} year
+       * @returns {void}
        */
       function replaceState(type, year) {
         if (!type && !year) {
@@ -230,8 +242,8 @@
 
       window.addEventListener('load', () => {
         const initial = { type: $typeFilter.value, year: $yearFilter.value };
-        const searchQuery = getClearedSearchParams(['type', 'year'], allowed);
-        const merged = { ...initial, ...searchQuery };
+        const search = getClearedSearchParams(['type', 'year'], allowed);
+        const merged = { ...initial, ...search };
 
         replaceState(merged.type, merged.year);
         insertFormState(merged.type, merged.year);
