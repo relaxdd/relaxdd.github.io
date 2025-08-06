@@ -20,145 +20,190 @@
   <body>
     <main>
       <div class="container">
-        <h1>Projects of awenn2015</h1>
+        <h1>Projects navigation</h1>
 
-        <div>
-          <h2>Draft / Demo</h2>
+        <div class="projects_sections">
+          <article class="projects_section" data-hidden="">
+            <header class="projects_section__header">
+              <img src="/aa-public/img/caret-down.svg" alt="Caret down" class="projects_section__icon" />
+              <h2 class="projects_section__title">Deployed projects</h2>
+            </header>
 
-          <form class="filters">
-            <select id="type-filter">
-              <option value="">Type</option>
-              <option value="html">HTML</option>
-              <option value="html_mobile">HTML+Adaptive</option>
-              <option value="js">JavaScript</option>
-              <option value="react">React</option>
-              <option value="php">PHP</option>
-            </select>
+            <div class="projects_section__content">
+              <ul class="projects_section__list">
+                <li class="projects_section__item">
+                  <a href="https://wise-voting.ru" target="_blank">Wise Voting (2025)</a>
+                </li>
 
-            <select id="date-filter">
-              <option value="">Year</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-            </select>
+                <li class="projects_section__item">
+                  <a href="https://osvetilo.ru" target="_blank">Osvetilo (2023)</a>
+                </li>
 
-            <input type="reset" value="Reset" />
-          </form>
+                <li class="projects_section__item">
+                  <a href="https://домкарнизов.рф" target="_blank">Дом карнизов (2023)</a>
+                </li>
 
-          <ul id="wrapper">
-            <li data-types="html" data-year="2020">
-              <a target="_blank" href="/sololearn-examples/">SoloLearn examples</a>
-            </li>
+                <li class="projects_section__item">
+                  <a href="https://ngenix.net" target="_blank">NGENIX (2022)</a>
+                </li>
 
-            <li data-types="html" data-year="2020">
-              <a target="_blank" href="/sololearn-diplom/">SoloLearn diplom</a>
-            </li>
+                <li class="projects_section__item">
+                  <a href="https://greenstreetwolf.ru" target="_blank">Green Street Wolf (2021)</a>
+                </li>
 
-            <li data-types="html;html_mobile" data-year="2021">
-              <a target="_blank" href="/dezhital/">Дежиталь</a>
-            </li>
+                <li class="projects_section__item">
+                  <a href="https://laserkids.ru" target="_blank">Laserkids (2020)</a>
+                </li>
 
-            <li data-types="html" data-year="2021">
-              <a target="_blank" href="/green-street-wolf/">Green Street Wolf</a>
-            </li>
-
-            <li data-types="html" data-year="2021">
-              <a target="_blank" href="/home-master/">Home Master</a>
-            </li>
-
-            <li data-types="php" data-year="2023">
-              <a target="_blank" href="#">Zere Cargo</a>
-            </li>
-
-            <li data-types="react" data-year="2023">
-              <a href="/working-hours/">Working Hours</a>
-
-              <ul>
-                <li><a target="_blank" href="/working-hours/v0.1.0">0.1.0</a></li>
-                <li><a target="_blank" href="/working-hours/v1.0.0">1.0.0</a></li>
-                <li><a target="_blank" href="/working-hours/v2.1.6-beta">2.1.6-beta</a></li>
-                <li><a target="_blank" href="/working-hours/">2.1.6 (Latest)</a></li>
+                <li class="projects_section__item">
+                  <a href="https://мирдров73.рф" target="_blank">Мир Дров 73 (2020)</a>
+                </li>
               </ul>
-            </li>
+            </div>
+          </article>
 
-            <li data-types="js" data-year="2024">
-              <a href="/carousel-example/">Carousel example</a>
+          <article class="projects_section">
+            <header class="projects_section__header">
+              <img src="/aa-public/img/caret-down.svg" alt="Caret down" class="projects_section__icon" />
+              <h2 class="projects_section__title">Draft / Demo</h2>
+            </header>
 
-              <ul>
-                <li><a target="_blank" href="/carousel-example/v1/index.html">Simple</a></li>
-                <li><a target="_blank" href="/carousel-example/v2/index.html">Advanced</a></li>
+            <div class="projects_section__content">
+              <div class="projects_section__filter">
+                <select id="orderby">
+                  <option value="">Orderby</option>
+                  <option value="name">Name</option>
+                  <option value="date">Date</option>
+                </select>
+
+                <select id="order">
+                  <option value="asc">ASC</option>
+                  <option value="desc">DESC</option>
+                </select>
+              </div>
+
+              <form id="filters" class="projects_section__filter">
+                <select id="type-filter">
+                  <option value="">Type</option>
+                  <option value="html">HTML</option>
+                  <option value="html_mobile">HTML+Adaptive</option>
+                  <option value="js">JavaScript</option>
+                  <option value="react">React</option>
+                  <option value="php">PHP</option>
+                </select>
+
+                <select id="date-filter">
+                  <option value="">Year</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                </select>
+
+                <input type="reset" value="Reset" />
+              </form>
+
+              <ul class="projects_section__list" id="wrapper">
+                <li data-types="html" data-year="2020">
+                  <a target="_blank" href="/sololearn-examples/">SoloLearn examples</a>
+                </li>
+
+                <li data-types="html" data-year="2020">
+                  <a target="_blank" href="/sololearn-diplom/">SoloLearn diplom</a>
+                </li>
+
+                <li data-types="html;html_mobile" data-year="2021">
+                  <a target="_blank" href="/dezhital/">Дежиталь</a>
+                </li>
+
+                <li data-types="html" data-year="2021">
+                  <a target="_blank" href="/green-street-wolf/">Green Street Wolf</a>
+                </li>
+
+                <li data-types="html" data-year="2021">
+                  <a target="_blank" href="/home-master/">Home Master</a>
+                </li>
+
+                <li data-types="php" data-year="2023">
+                  <a target="_blank" href="#">Zere Cargo</a>
+                </li>
+
+                <li data-types="react" data-year="2023">
+                  <a href="/working-hours/">Working Hours</a>
+
+                  <ul>
+                    <li><a target="_blank" href="/working-hours/v0.1.0">0.1.0</a></li>
+                    <li><a target="_blank" href="/working-hours/v1.0.0">1.0.0</a></li>
+                    <li><a target="_blank" href="/working-hours/v2.1.6-beta">2.1.6-beta</a></li>
+                    <li><a target="_blank" href="/working-hours/">2.1.6 (Latest)</a></li>
+                  </ul>
+                </li>
+
+                <li data-types="js" data-year="2024">
+                  <a href="/carousel-example/">Carousel example</a>
+
+                  <ul>
+                    <li><a target="_blank" href="/carousel-example/v1/index.html">Simple</a></li>
+                    <li><a target="_blank" href="/carousel-example/v2/index.html">Advanced</a></li>
+                  </ul>
+                </li>
+
+                <li data-types="js" data-year="2024" data-year="12">
+                  <a target="_blank" href="/running-bottom-line/">Running bottom line</a>
+                </li>
+
+                <li data-types="html;html_mobile" data-year="2024">
+                  <a target="_blank" href="/k2-urist/">K2 Urist</a>
+                </li>
+
+                <li data-types="html;html_mobile;react" data-year="2024" data-month="02">
+                  <a target="_blank" href="/bit-test/">BitTest</a>
+                </li>
+
+                <li data-types="html;html_mobile" data-year="2024" data-month="03">
+                  <a target="_blank" href="/dom-karnizov/">Дом карнизов</a>
+                </li>
+
+                <li data-types="react" data-year="2024" data-month="04">
+                  <a target="_blank" href="/factory-admin/">Factory Admin</a>
+                </li>
+
+                <li data-types="html" data-year="2024" data-month="12">
+                  <a target="_blank" href="/demo-blog/">Demo Blog</a>
+                </li>
+
+                <li data-types="html;react" data-year="2025" data-month="01">
+                  <a target="_blank" href="/demo-vegetable-shop/">Demo Vegetable Shop</a>
+                </li>
+
+                <li data-types="html;js" data-year="2025" data-month="03">
+                  <a target="_blank" href="/ics-event-generator/">ICS Event Generator</a>
+                </li>
+
+                <li data-types="html" data-year="2025" data-month="06">
+                  <a target="_blank" href="/alivio-layout/">Alivio Layout</a>
+                </li>
+
+                <li data-types="html" data-year="2025" data-month="06">
+                  <a target="_blank" href="/demo-our-place-shop/">Demo OurPlace Shop</a>
+                </li>
+
+                <li data-types="html;html_mobile" data-year="2025" data-month="06">
+                  <a target="_blank" href="/air-conditioner-shop/">AirConditioner Shop</a>
+                </li>
+
+                <li data-types="html;html_mobile" data-year="2025" data-month="07">
+                  <a target="_blank" href="/kwh-consulting/">kWh consulting</a>
+                </li>
+
+                <li data-types="js" data-year="2025" data-month="08">
+                  <a target="_blank" href="/simple-timer/">Simple Timer</a>
+                </li>
               </ul>
-            </li>
-
-            <li data-types="js" data-year="2024" data-year="12">
-              <a target="_blank" href="/running-bottom-line/">Running bottom line</a>
-            </li>
-
-            <li data-types="html;html_mobile" data-year="2024">
-              <a target="_blank" href="/k2-urist/">K2 Urist</a>
-            </li>
-
-            <li data-types="html;html_mobile;react" data-year="2024" data-month="02">
-              <a target="_blank" href="/bit-test/">BitTest</a>
-            </li>
-
-            <li data-types="html;html_mobile" data-year="2024" data-month="03">
-              <a target="_blank" href="/dom-karnizov/">Дом карнизов</a>
-            </li>
-
-            <li data-types="react" data-year="2024" data-month="04">
-              <a target="_blank" href="/factory-admin/">Factory Admin</a>
-            </li>
-
-            <li data-types="html" data-year="2024" data-month="12">
-              <a target="_blank" href="/demo-blog/">Demo Blog</a>
-            </li>
-
-            <li data-types="html;react" data-year="2025" data-month="01">
-              <a target="_blank" href="/demo-vegetable-shop/">Demo Vegetable Shop</a>
-            </li>
-
-            <li data-types="html;js" data-year="2025" data-month="03">
-              <a target="_blank" href="/ics-event-generator/">ICS Event Generator</a>
-            </li>
-
-            <li data-types="html" data-year="2025" data-month="06">
-              <a target="_blank" href="/alivio-layout/">Alivio Layout</a>
-            </li>
-
-            <li data-types="html" data-year="2025" data-month="06">
-              <a target="_blank" href="/demo-our-place-shop/">Demo OurPlace Shop</a>
-            </li>
-
-            <li data-types="html;html_mobile" data-year="2025" data-month="06">
-              <a target="_blank" href="/air-conditioner-shop/">AirConditioner Shop</a>
-            </li>
-
-            <li data-types="html;html_mobile" data-year="2025" data-month="07">
-              <a target="_blank" href="/kwh-consulting/">kWh consulting</a>
-            </li>
-
-            <li data-types="js" data-year="2025" data-month="08">
-              <a target="_blank" href="/simple-timer/">Simple Timer</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h2>Deployed projects</h2>
-
-          <ul>
-            <li><a href="https://wise-voting.ru" target="_blank">Wise Voting (2025)</a></li>
-            <li><a href="https://osvetilo.ru" target="_blank">Osvetilo (2023)</a></li>
-            <li><a href="https://домкарнизов.рф" target="_blank">Дом карнизов (2023)</a></li>
-            <li><a href="https://ngenix.net" target="_blank">NGENIX (2022)</a></li>
-            <li><a href="https://greenstreetwolf.ru" target="_blank">Green Street Wolf (2021)</a></li>
-            <li><a href="https://laserkids.ru" target="_blank">Laserkids (2020)</a></li>
-            <li><a href="https://мирдров73.рф" target="_blank">Мир Дров 73 (2020)</a></li>
-          </ul>
+            </div>
+          </article>
         </div>
       </div>
     </main>
