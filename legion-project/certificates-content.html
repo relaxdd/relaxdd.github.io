@@ -16,8 +16,8 @@
     
     
     
-    <script type="module" crossorigin src="/legion-project/assets/main-ByXeMdn3.js"></script>
-    <link rel="stylesheet" crossorigin href="/legion-project/assets/main-DvwKt6i-.css">
+    <script type="module" crossorigin src="/legion-project/assets/main-Cp6vtgDn.js"></script>
+    <link rel="stylesheet" crossorigin href="/legion-project/assets/main-BzfIM_c_.css">
     <link rel="stylesheet" crossorigin href="/legion-project/assets/certificates-content-B3NkyIU_.css">
   </head>
 
@@ -646,15 +646,24 @@
       </div>
     </main>
 
+    
       <style>
         #dev-site-now-version {
           position: fixed;
+          z-index: 15000;
           bottom: 15px;
           left: 15px;
           padding: 10px 15px;
           background: var(--sidebar-background-color1);
           border-radius: 50px;
           border: 1px solid #424244;
+          transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+          opacity: 1;
+    
+          &[data-hidden] {
+            opacity: 0;
+            transform: translateX(-100%);
+          }
         }
     
         #dev-site-now-version span {
@@ -663,9 +672,10 @@
         }
       </style>
     
-      <div id="dev-site-now-version" title="13.10.2025, 20:15:00">
-        <span><strong>Ver:</strong> 13.10.1955969</span>
+      <div id="dev-site-now-version" title="14.10.2025, 01:45:00" data-hidden="">
+        <span><strong>Ver:</strong> 13.10.1955991</span>
       </div>
+    
     
     
   </body>
