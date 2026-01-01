@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Всплывание текста по очереди</title>
+
+    <link href="https://cdn.skypack.dev/sanitize.css" rel="stylesheet" />
+
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        height: 100%;
+        max-width: 100vw;
+      }
+
+      body {
+        min-height: 100vh;
+      }
+
+      .carousel_wrapper {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel_shell {
+        max-width: 600px;
+      }
+
+      .carousel_items {
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .carousel_item {
+        opacity: 0;
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        visibility: hidden;
+      }
+      .carousel_item[data-visible='true'] {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .carousel_item:not([data-visible='true']) {
+        left: -9999px;
+        position: absolute;
+        top: -9999px;
+      }
+
+      .carousel_buttons {
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+      }
+
+      #link-btn,
+      .carousel_button {
+        display: inline-block;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: #34495e;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease-out;
+        border-radius: 0.25rem;
+      }
+
+      #link-btn:hover,
+      .carousel_button:hover {
+        background-color: #111617;
+      }
+
+      #link-wrp {
+        text-align: center;
+      }
+
+      #link-btn {
+        text-decoration: none;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel_wrapper">
+      <div class="carousel_shell">
+        <div class="carousel_items">
+          <div class="carousel_item" data-visible="true">
+            <p>
+              1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit ipsum ea perferendis nobis
+              sint doloribus explicabo consequuntur illo natus, nihil porro, cumque aliquam, iste nemo debitis id enim
+              voluptatem. Unde animi facilis corrupti tempore?
+            </p>
+          </div>
+
+          <div class="carousel_item" data-visible="false">
+            <p>
+              2. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore reprehenderit, placeat ut non, ipsum,
+              aperiam aut repellat autem ea nam soluta facere itaque optio voluptas praesentium. Fuga facilis quia
+              exercitationem quod neque iusto, ad hic!
+            </p>
+          </div>
+
+          <div class="carousel_item" data-visible="false">
+            <p>
+              3. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint odio rerum odit tempora est
+              consectetur laudantium excepturi dolor tempore nulla, eveniet vitae ipsam ullam accusantium totam sed
+              error veniam aut explicabo doloribus numquam repellat!
+            </p>
+          </div>
+
+          <div class="carousel_item" data-visible="false">
+            <p>
+              4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum impedit alias maiores quod sequi nemo
+              dignissimos reprehenderit commodi, perspiciatis adipisci vero dolore facilis. Obcaecati nemo quibusdam
+              voluptatibus tempore? Sapiente incidunt consequatur quidem culpa at molestiae?
+            </p>
+          </div>
+
+          <div class="carousel_item" data-visible="false">
+            <div id="link-wrp">
+              <p>Хотите заказать наши услуги? закажите обратный звонок!</p>
+              <a href="https://google.com" id="link-btn" target="_blank">Кнопка со ссылкой</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel_buttons">
+          <button class="carousel_button" data-type="prev">Prev</button>
+          <button class="carousel_button" data-type="stop">Stop</button>
+          <button class="carousel_button" data-type="next">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const list = document.querySelectorAll('.carousel_item');
+        const buttons = document.querySelectorAll('.carousel_button');
+
+        let _current = 0;
+        let _interval = 0;
+
+        /*
+         * ==============================
+         */
+
+        /**
+         * @param {string} type
+         * @param {number} index
+         */
+        function getNextIndex(type, index) {
+          switch (true) {
+            case type === 'next' && index !== list.length - 1:
+              return index + 1;
+            case type === 'next' && index === list.length - 1:
+              return 0;
+            case type === 'prev' && index !== 0:
+              return index - 1;
+            case type === 'prev' && index === 0:
+              return list.length - 1;
+            default:
+              return index;
+          }
+        }
+
+        /**
+         * @param {number} index
+         */
+        function changeActiveSlide(index) {
+          for (const item of list) {
+            item.setAttribute('data-visible', 'false');
+          }
+
+          list.item(index).setAttribute('data-visible', 'true');
+        }
+
+        function initializeInterval(index) {
+          _current = index;
+
+          clearInterval(_interval);
+          changeActiveSlide(index);
+
+          return setInterval(() => {
+            const nextIndex = getNextIndex('next', _current);
+
+            _current = nextIndex;
+            changeActiveSlide(nextIndex);
+          }, 3000);
+        }
+
+        function onButtonsClickHandler() {
+          const type = this.dataset.type;
+
+          if (type === 'stop') {
+            alert('Пока не реализованно.');
+            return;
+          }
+
+          const active = document.querySelector('.carousel_item[data-visible="true"]');
+          const index = [...list].indexOf(active);
+          const nextIndex = getNextIndex(type, index);
+
+          _interval = initializeInterval(nextIndex);
+        }
+
+        /*
+         * ==============================
+         */
+
+        _interval = initializeInterval(0);
+
+        for (const btn of buttons) {
+          btn.addEventListener('click', onButtonsClickHandler);
+        }
+      })();
+    </script>
+  </body>
+</html>
