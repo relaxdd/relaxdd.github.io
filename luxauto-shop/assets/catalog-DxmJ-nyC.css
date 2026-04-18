@@ -1,1 +1,0 @@
-.products_stock__grid{display:grid;grid-template-columns:repeat(3,1fr);row-gap:25px;column-gap:18px}@media screen and (max-width:1199.5px){.products_stock__grid{row-gap:20px;column-gap:15px;grid-template-columns:repeat(2,1fr)}}@media screen and (max-width:742.5px){.products_stock__grid{column-gap:10px}}
