@@ -1,11 +1,21 @@
 {
-  "src/pages/index.html": {
-    "file": "assets/index.html-DHujXgT8.js",
-    "name": "index.html",
-    "src": "src/pages/index.html",
-    "isEntry": true,
+  "_main-Bi4tXFGN.css": {
+    "file": "assets/main-Bi4tXFGN.css",
+    "src": "_main-Bi4tXFGN.css"
+  },
+  "_main-DPSNbZMM.js": {
+    "file": "assets/main-DPSNbZMM.js",
+    "name": "main",
     "css": [
-      "assets/index-DE7HMEMk.css"
+      "assets/main-Bi4tXFGN.css"
     ]
+  },
+  "src/pages/catalog.html": {
+    "file": "assets/catalog-DxmJ-nyC.css",
+    "src": "src/pages/catalog.html"
+  },
+  "src/pages/index.html": {
+    "file": "assets/index-3ZVAmoYv.css",
+    "src": "src/pages/index.html"
   }
 }
