@@ -1,14 +1,11 @@
 {
-  "_main-CKH0rvtk.css": {
-    "file": "assets/main-CKH0rvtk.css",
-    "src": "_main-CKH0rvtk.css"
+  "_main-DUCVgKPT.js": {
+    "file": "assets/main-DUCVgKPT.js",
+    "name": "main"
   },
-  "_main-n8YnPU9i.js": {
-    "file": "assets/main-n8YnPU9i.js",
-    "name": "main",
-    "css": [
-      "assets/main-CKH0rvtk.css"
-    ]
+  "_style-DRsiRLO1.css": {
+    "file": "assets/style-DRsiRLO1.css",
+    "src": "_style-DRsiRLO1.css"
   },
   "src/pages/catalog.html": {
     "file": "assets/catalog-BHqOw6ex.css",
@@ -17,5 +14,9 @@
   "src/pages/index.html": {
     "file": "assets/index-pfzRoTec.css",
     "src": "src/pages/index.html"
+  },
+  "src/pages/leasing.html": {
+    "file": "assets/leasing-CynzdPOL.css",
+    "src": "src/pages/leasing.html"
   }
 }
