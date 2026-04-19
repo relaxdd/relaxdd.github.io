@@ -1,13 +1,13 @@
 {
-  "_main-C9FpWWF7.css": {
-    "file": "assets/main-C9FpWWF7.css",
-    "src": "_main-C9FpWWF7.css"
+  "_main-CKH0rvtk.css": {
+    "file": "assets/main-CKH0rvtk.css",
+    "src": "_main-CKH0rvtk.css"
   },
-  "_main-aUaqNFn_.js": {
-    "file": "assets/main-aUaqNFn_.js",
+  "_main-n8YnPU9i.js": {
+    "file": "assets/main-n8YnPU9i.js",
     "name": "main",
     "css": [
-      "assets/main-C9FpWWF7.css"
+      "assets/main-CKH0rvtk.css"
     ]
   },
   "src/pages/catalog.html": {
@@ -15,7 +15,7 @@
     "src": "src/pages/catalog.html"
   },
   "src/pages/index.html": {
-    "file": "assets/index-3ZVAmoYv.css",
+    "file": "assets/index-pfzRoTec.css",
     "src": "src/pages/index.html"
   }
 }
