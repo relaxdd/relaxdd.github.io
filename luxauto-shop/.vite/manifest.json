@@ -1,26 +1,26 @@
 {
-  "_main-DUCVgKPT.js": {
-    "file": "assets/main-DUCVgKPT.js",
+  "_main-CcF8PslN.js": {
+    "file": "assets/main-CcF8PslN.js",
     "name": "main"
   },
-  "_style-DiGmgyiS.css": {
-    "file": "assets/style-DiGmgyiS.css",
-    "src": "_style-DiGmgyiS.css"
+  "_style-DbzVu-g9.css": {
+    "file": "assets/style-DbzVu-g9.css",
+    "src": "_style-DbzVu-g9.css"
   },
   "src/pages/buyback.html": {
-    "file": "assets/buyback-O-fCix6H.css",
+    "file": "assets/buyback-_bd6-qup.css",
     "src": "src/pages/buyback.html"
   },
   "src/pages/catalog.html": {
-    "file": "assets/catalog-BHqOw6ex.css",
+    "file": "assets/catalog-kmOP48bo.css",
     "src": "src/pages/catalog.html"
   },
   "src/pages/index.html": {
-    "file": "assets/index-pfzRoTec.css",
+    "file": "assets/index-o7AfRz1K.css",
     "src": "src/pages/index.html"
   },
   "src/pages/leasing.html": {
-    "file": "assets/leasing-DmkV-T-t.css",
+    "file": "assets/leasing-DUESxSvX.css",
     "src": "src/pages/leasing.html"
   }
 }
