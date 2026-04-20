@@ -3,9 +3,13 @@
     "file": "assets/main-DUCVgKPT.js",
     "name": "main"
   },
-  "_style-DRsiRLO1.css": {
-    "file": "assets/style-DRsiRLO1.css",
-    "src": "_style-DRsiRLO1.css"
+  "_style-DiGmgyiS.css": {
+    "file": "assets/style-DiGmgyiS.css",
+    "src": "_style-DiGmgyiS.css"
+  },
+  "src/pages/buyback.html": {
+    "file": "assets/buyback-O-fCix6H.css",
+    "src": "src/pages/buyback.html"
   },
   "src/pages/catalog.html": {
     "file": "assets/catalog-BHqOw6ex.css",
@@ -16,7 +20,7 @@
     "src": "src/pages/index.html"
   },
   "src/pages/leasing.html": {
-    "file": "assets/leasing-CynzdPOL.css",
+    "file": "assets/leasing-DmkV-T-t.css",
     "src": "src/pages/leasing.html"
   }
 }
