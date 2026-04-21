@@ -3,24 +3,28 @@
     "file": "assets/main-DYWIhax3.js",
     "name": "main"
   },
-  "_style-DbzVu-g9.css": {
-    "file": "assets/style-DbzVu-g9.css",
-    "src": "_style-DbzVu-g9.css"
+  "_style-CQjDJcsJ.css": {
+    "file": "assets/style-CQjDJcsJ.css",
+    "src": "_style-CQjDJcsJ.css"
   },
   "src/pages/buyback.html": {
-    "file": "assets/buyback-bnqJ-qNo.css",
+    "file": "assets/buyback-DDTG1nIl.css",
     "src": "src/pages/buyback.html"
   },
   "src/pages/catalog.html": {
-    "file": "assets/catalog-kmOP48bo.css",
+    "file": "assets/catalog-COKMP8Ig.css",
     "src": "src/pages/catalog.html"
   },
   "src/pages/index.html": {
-    "file": "assets/index-o7AfRz1K.css",
+    "file": "assets/index-CBJoldaC.css",
     "src": "src/pages/index.html"
   },
   "src/pages/leasing.html": {
-    "file": "assets/leasing-DUESxSvX.css",
+    "file": "assets/leasing-D18aOuZC.css",
     "src": "src/pages/leasing.html"
+  },
+  "src/pages/purchase.html": {
+    "file": "assets/purchase-C1eK0gpC.css",
+    "src": "src/pages/purchase.html"
   }
 }
