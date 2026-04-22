@@ -1,42 +1,42 @@
 {
-  "_main-DYWIhax3.js": {
-    "file": "assets/main-DYWIhax3.js",
+  "_main-Ban7tWUu.js": {
+    "file": "assets/main-Ban7tWUu.js",
     "name": "main"
   },
-  "_style-09wjBdFc.css": {
-    "file": "assets/style-09wjBdFc.css",
-    "src": "_style-09wjBdFc.css"
+  "_style-BwWdR4P1.css": {
+    "file": "assets/style-BwWdR4P1.css",
+    "src": "_style-BwWdR4P1.css"
   },
   "src/pages/about.html": {
-    "file": "assets/about-ChpTneXr.css",
+    "file": "assets/about-DJAhhqNo.css",
     "src": "src/pages/about.html"
   },
   "src/pages/buyback.html": {
-    "file": "assets/buyback-BRIKtxrB.css",
+    "file": "assets/buyback-kD_DCVS1.css",
     "src": "src/pages/buyback.html"
   },
   "src/pages/catalog.html": {
-    "file": "assets/catalog-B1Je6qbS.css",
+    "file": "assets/catalog-ByjzvnmL.css",
     "src": "src/pages/catalog.html"
   },
   "src/pages/index.html": {
-    "file": "assets/index-BcYvkIoy.css",
+    "file": "assets/index-B9pJQeWI.css",
     "src": "src/pages/index.html"
   },
   "src/pages/leasing.html": {
-    "file": "assets/leasing-DR5x-St5.css",
+    "file": "assets/leasing-BW_7EiL3.css",
     "src": "src/pages/leasing.html"
   },
   "src/pages/ordering.html": {
-    "file": "assets/ordering-Dwpmeiin.css",
+    "file": "assets/ordering-DHeDwT6T.css",
     "src": "src/pages/ordering.html"
   },
   "src/pages/product.html": {
-    "file": "assets/product-BsufF6X7.css",
+    "file": "assets/product-BtAwTe8R.css",
     "src": "src/pages/product.html"
   },
   "src/pages/purchase.html": {
-    "file": "assets/purchase-B6ym4Qt2.css",
+    "file": "assets/purchase-CNqc14zR.css",
     "src": "src/pages/purchase.html"
   }
 }
