@@ -1,0 +1,1 @@
+import{D as e,Z as t}from"./jsx-runtime-C_Ji-0ei.js";import{s as n}from"./provider-CQNaw7A7.js";var r=n();t();function i(t){let n=(0,r.c)(3),i=t===void 0?`/`:t,a=e(),o;return n[0]!==i||n[1]!==a?(o=()=>{window.history.state&&window.history.state.idx>0?a(-1):a(i,{replace:!0})},n[0]=i,n[1]=a,n[2]=o):o=n[2],o}export{i as t};
