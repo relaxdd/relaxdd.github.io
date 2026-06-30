@@ -1,1 +1,0 @@
-var e=`/assets/LaTantrique_CircleLogo_Black-BpE93VHL.svg`;export{e as t};
